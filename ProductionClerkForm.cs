@@ -28,7 +28,17 @@ namespace PremiumLivingSystem
             SetupMaterialSkin();
             UpdateStaffInfo();
             SetLanguageComboBoxValue();
-            btnApproveTransfers.Visible = UserSession.IsSupervisor;  
+            btnApproveTransfers.Visible = UserSession.IsSupervisor;
+
+            // Position btnCreateMaterialRequest directly below btnCreateTransfer
+            // (btnCreateTransfer.Location comes from .resx, so we copy it at runtime)
+            btnCreateMaterialRequest.Location = new System.Drawing.Point(
+                btnCreateTransfer.Location.X,
+                btnCreateTransfer.Location.Y + btnCreateTransfer.Height + 10);
+            // Match the width of btnCreateTransfer
+            btnCreateMaterialRequest.Size = new System.Drawing.Size(
+                btnCreateTransfer.Width,
+                btnCreateTransfer.Height);
         }
 
         private void SetupMaterialSkin()
@@ -135,6 +145,12 @@ namespace PremiumLivingSystem
         {
             UcTransfer ucTransfer = new UcTransfer();
             ShowUserControl(ucTransfer);
+        }
+
+        private void btnCreateMaterialRequest_Click(object sender, EventArgs e)
+        {
+            UcCreateMaterialRequest ucMaterialRequest = new UcCreateMaterialRequest();
+            ShowUserControl(ucMaterialRequest);
         }
 
         private void btnSearchTransfer_Click(object sender, EventArgs e)

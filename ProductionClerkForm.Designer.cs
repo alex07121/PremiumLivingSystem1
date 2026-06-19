@@ -21,6 +21,7 @@
             this.btnApproveTransfers = new System.Windows.Forms.Button();
             this.btnSearchTransfer = new System.Windows.Forms.Button();
             this.btnCreateTransfer = new System.Windows.Forms.Button();
+            this.btnCreateMaterialRequest = new System.Windows.Forms.Button();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -33,6 +34,7 @@
             this.panel2.Controls.Add(this.btnApproveTransfers);
             this.panel2.Controls.Add(this.btnSearchTransfer);
             this.panel2.Controls.Add(this.btnCreateTransfer);
+            this.panel2.Controls.Add(this.btnCreateMaterialRequest);
             this.panel2.Name = "panel2";
             resources.ApplyResources(this.btnApproveTransfers, "btnApproveTransfers");
             this.btnApproveTransfers.Name = "btnApproveTransfers";
@@ -46,6 +48,15 @@
             this.btnCreateTransfer.Name = "btnCreateTransfer";
             this.btnCreateTransfer.UseVisualStyleBackColor = true;
             this.btnCreateTransfer.Click += new System.EventHandler(this.btnCreateTransfer_Click);
+            // btnCreateMaterialRequest — positioned below btnCreateTransfer
+            this.btnCreateMaterialRequest.Name = "btnCreateMaterialRequest";
+            this.btnCreateMaterialRequest.UseVisualStyleBackColor = true;
+            this.btnCreateMaterialRequest.Text = "Create Material Request";
+            // Position: same X as btnCreateTransfer, Y offset by +60 (default button height + margin)
+            // We copy the location from btnCreateTransfer at runtime in the .cs constructor
+            // because btnCreateTransfer's location comes from the .resx resource.
+            this.btnCreateMaterialRequest.Size = new System.Drawing.Size(200, 50);
+            this.btnCreateMaterialRequest.Click += new System.EventHandler(this.btnCreateMaterialRequest_Click);
             resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLanguage.FormattingEnabled = true;
@@ -79,6 +90,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSearchTransfer;
         private System.Windows.Forms.Button btnCreateTransfer;
+        private System.Windows.Forms.Button btnCreateMaterialRequest;
         private System.Windows.Forms.ComboBox cmbLanguage;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label2;
