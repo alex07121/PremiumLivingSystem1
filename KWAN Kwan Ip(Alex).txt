@@ -1,0 +1,20 @@
+KWAN Kwan Ip(Alex)
+Create Order
+Submit Complaint
+Handling Goods Received / Confirm Delivery Receipt
+option:
+Submit Return / Replacement Request
+
+(HUGO)
+Manage Order Details
+→ Extend: Modify Order Quantity
+→ Extend: Modify Delivery Date
+View Order Status
+
+
+(Alex cheung)
+Record of inward goods  
+
+
+(desmond)
+Generate Delivery Note & Reply Slip

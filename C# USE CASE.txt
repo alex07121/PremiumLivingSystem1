@@ -1,0 +1,34 @@
+Home plan Specialist:
+Create Customer (finished by KWAN Alex)
+Submit return / Replacement Request (finished by KWAN Alex)
+Place Standard Order (finished by KWAN Alex)
+Place Custom Order (finished by KWNA Alex)
+Submit Complaint (finished by KWAN Alex)
+Track Shipment (finished by KWAN Alex)
+
+Inventory Cleck:
+Check Product Stock Level (finished by KWAN Alex)
+Process Return / Replacement (finished by KWAN Alex)
+Arrange Shipment (finished by KWAN Alex)
+Update Product (finished by KWAN Alex)
+Update Raw Materials / Products (Not finish)
+
+
+Sales Representative :
+Manage Order Details (Finished by KWAN Alex)
+View Order Status  (Finished by KWAN Alex)
+
+
+Finance Staff:
+Generate invoice (Not finish)
+Option:
+Verify payment (Not finish)
+
+
+Logistics Staff:
+Generate Delivery Note (Not finish)
+Arrange Shipment(finished by KWAN Alex)
+Reply Slip(Not finish)
+Update Shipment (finished by KWAN Alex)
+
+
