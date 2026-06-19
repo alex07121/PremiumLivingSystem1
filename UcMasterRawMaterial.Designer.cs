@@ -28,6 +28,8 @@
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.txtStockQty = new System.Windows.Forms.TextBox();
             this.txtReorder = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -66,6 +68,12 @@
             this.txtStockQty.Name = "txtStockQty";
             resources.ApplyResources(this.txtReorder, "txtReorder");
             this.txtReorder.Name = "txtReorder";
+            // lblPrice + txtPrice — positioned at runtime in Load (next to txtReorder)
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Text = "Purchase Price:";
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 27);
             resources.ApplyResources(this.cmbSupplier, "cmbSupplier");
             this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupplier.FormattingEnabled = true;
@@ -96,11 +104,13 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbSupplier);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtReorder);
             this.Controls.Add(this.txtStockQty);
             this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblReorder);
             this.Controls.Add(this.lblStockQty);
             this.Controls.Add(this.lblUnit);
@@ -129,6 +139,8 @@
         private System.Windows.Forms.TextBox txtUnit;
         private System.Windows.Forms.TextBox txtStockQty;
         private System.Windows.Forms.TextBox txtReorder;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.ComboBox cmbSupplier;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;

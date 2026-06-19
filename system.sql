@@ -1,7 +1,26 @@
 -- ============================================================
 -- Premium Living Furniture Co. Ltd.
 -- ITP4915M System Development Project 2025/2026
--- Complete SQL v4.0
+-- Complete SQL v5.0
+--
+-- What's new in v5.4:
+--   [Transfer]       ADD 'Delivering' status + DeliveredBy/DeliveringDate columns
+--                    Logistics Staff handles delivery between Issued and Received
+--
+-- What's new in v5.3:
+--   [MaterialRequest] REDESIGNED — split into MaterialRequest (header) +
+--                      MaterialRequestItem (items) for multi-material per request
+--
+-- What's new in v5.2:
+--   [BOM]            NEW TABLE ProductMaterial (Bill of Materials)
+--                    links Product → RawMaterial with QuantityPerUnit
+--
+-- What's new in v5.1:
+--   [RawMaterial]    ADD UnitPurchasePrice column (standard cost for PO auto-fill)
+--
+-- What's new in v5.0:
+--   [Procurement]   NEW TABLE PurchaseOrder + PurchaseOrderItem
+--                   + triggers + sample data + summary view
 --
 -- What's new in v4.0:
 --   [Quotation]      NEW TABLE Quotation + QuotationItem
@@ -21,9 +40,15 @@ COLLATE utf8mb4_unicode_ci;
 USE PLFCDB;
 
 SET FOREIGN_KEY_CHECKS = 0;
+-- [v5.0 NEW] Procurement tables (drop items first, then header)
+DROP TABLE IF EXISTS PurchaseOrderItem;
+DROP TABLE IF EXISTS PurchaseOrder;
+-- [v5.3 NEW] MaterialRequestItem must drop before MaterialRequest
+DROP TABLE IF EXISTS MaterialRequestItem;
 DROP TABLE IF EXISTS QuotationItem;
 DROP TABLE IF EXISTS Quotation;
 DROP TABLE IF EXISTS ProductionTracking;
+DROP TABLE IF EXISTS MaterialRequestItem;       -- [v5.3 NEW] items before header
 DROP TABLE IF EXISTS MaterialRequest;
 DROP TABLE IF EXISTS RawMaterialTransferItem;
 DROP TABLE IF EXISTS RawMaterialTransfer;
@@ -34,6 +59,7 @@ DROP TABLE IF EXISTS ReturnRequest;
 DROP TABLE IF EXISTS ComplaintImage;
 DROP TABLE IF EXISTS Complaint;
 DROP TABLE IF EXISTS RawMaterialMovement;
+DROP TABLE IF EXISTS ProductMaterial;       -- [v5.2 NEW] BOM: must drop before RawMaterial & Product
 DROP TABLE IF EXISTS RawMaterial;
 DROP TABLE IF EXISTS ReplySlip;
 DROP TABLE IF EXISTS DeliveryTracking;
@@ -77,6 +103,7 @@ INSERT INTO ID_Sequence (SeqName, CurrentVal) VALUES
 ('ReplySlip', 0),
 ('RawMaterial', 0),
 ('RawMaterialMovement', 0),
+('ProductMaterial', 0),       -- [v5.2 NEW] BOM
 ('Complaint', 0),
 ('ComplaintImage', 0),
 ('ReturnRequest', 0),
@@ -87,7 +114,11 @@ INSERT INTO ID_Sequence (SeqName, CurrentVal) VALUES
 ('QuotationItem', 0),
 ('ProductionTracking', 0),
 ('MaterialRequest', 0),
-('RawMaterialTransferItem', 0);
+('MaterialRequestItem', 0),       -- [v5.3 NEW]
+('RawMaterialTransferItem', 0),
+-- [v5.0 NEW]
+('PurchaseOrder', 0),
+('PurchaseOrderItem', 0);
 
 -- ============================================================
 -- MODULE 1: JOBS & STAFF
@@ -297,12 +328,13 @@ CREATE TABLE ReplySlip (
 -- ============================================================
 
 CREATE TABLE RawMaterial (
-  MaterialID   VARCHAR(20) PRIMARY KEY,
-  SupplierID   VARCHAR(20),
-  MaterialName VARCHAR(150) NOT NULL,
-  Unit         VARCHAR(20) NOT NULL,
-  StockQty     DECIMAL(12,2) DEFAULT 0,
-  ReorderLevel DECIMAL(12,2) NOT NULL,
+  MaterialID          VARCHAR(20) PRIMARY KEY,
+  SupplierID          VARCHAR(20),
+  MaterialName        VARCHAR(150) NOT NULL,
+  Unit                VARCHAR(20) NOT NULL,
+  StockQty            DECIMAL(12,2) DEFAULT 0,
+  ReorderLevel        DECIMAL(12,2) NOT NULL,
+  UnitPurchasePrice   DECIMAL(12,2) DEFAULT 0,   -- [v5.1 NEW] standard cost for auto-fill in PO
   FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID)
 );
 
@@ -315,6 +347,26 @@ CREATE TABLE RawMaterialMovement (
   RecordedBy   VARCHAR(20) NOT NULL,
   FOREIGN KEY (MaterialID) REFERENCES RawMaterial(MaterialID),
   FOREIGN KEY (RecordedBy) REFERENCES Staff(StaffID)
+);
+
+-- ============================================================
+-- MODULE 5A2: BILL OF MATERIALS (BOM)  [v5.2 NEW]
+-- Links Product to RawMaterial — defines how much of each
+-- raw material is needed to produce 1 unit of a product.
+-- Used by: Material Request auto-calc, production planning.
+-- ID Format: PM-NNN (global sequence)
+-- ============================================================
+
+CREATE TABLE ProductMaterial (
+  ProductMaterialID  VARCHAR(20) PRIMARY KEY,
+  ProductID          VARCHAR(20) NOT NULL,
+  MaterialID         VARCHAR(20) NOT NULL,
+  QuantityPerUnit    DECIMAL(12,2) NOT NULL,    -- material needed per 1 product unit
+  Unit               VARCHAR(20) NOT NULL,      -- copied from RawMaterial.Unit
+  Remarks            VARCHAR(255),
+  FOREIGN KEY (ProductID)  REFERENCES Product(ProductID),
+  FOREIGN KEY (MaterialID) REFERENCES RawMaterial(MaterialID),
+  UNIQUE (ProductID, MaterialID)                -- one BOM line per product-material pair
 );
 
 -- ============================================================
@@ -335,11 +387,19 @@ CREATE TABLE ProductionTracking (
   FOREIGN KEY (AssignedTo)  REFERENCES Staff(StaffID)
 );
 
+-- ============================================================
+-- MODULE 5B2: MATERIAL REQUEST  [v5.3 REDESIGNED — header + items]
+-- Production Clerk requests raw materials from Inventory.
+-- One Request (header) can contain multiple Materials (items).
+-- ID Format:
+--   MaterialRequest:     MR-NNNN  (global sequence)
+--   MaterialRequestItem: MRI-NNN  (global sequence)
+-- Status Flow: Requested → Approved → Fulfilled
+-- ============================================================
+
 CREATE TABLE MaterialRequest (
   RequestID             VARCHAR(20) PRIMARY KEY,
-  OrderItemID           VARCHAR(20) NOT NULL,
-  MaterialID            VARCHAR(20) NOT NULL,
-  Quantity              DECIMAL(12,2) NOT NULL,
+  OrderItemID           VARCHAR(20) NULL,            -- nullable: general requests need no specific order item
   UrgencyLevel          ENUM('Low','Medium','High','Urgent') NOT NULL DEFAULT 'Medium',
   RequiredDeliveryDate  DATE,
   RequestDate           DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -349,9 +409,19 @@ CREATE TABLE MaterialRequest (
   ApprovedDate          DATETIME,
   Remarks               TEXT,
   FOREIGN KEY (OrderItemID) REFERENCES OrderItem(OrderItemID),
-  FOREIGN KEY (MaterialID)  REFERENCES RawMaterial(MaterialID),
   FOREIGN KEY (RequestedBy) REFERENCES Staff(StaffID),
   FOREIGN KEY (ApprovedBy)  REFERENCES Staff(StaffID)
+);
+
+CREATE TABLE MaterialRequestItem (
+  RequestItemID   VARCHAR(20) PRIMARY KEY,
+  RequestID       VARCHAR(20) NOT NULL,
+  MaterialID      VARCHAR(20) NOT NULL,
+  Quantity        DECIMAL(12,2) NOT NULL,
+  Unit            VARCHAR(20) NOT NULL,             -- snapshot from RawMaterial.Unit
+  Remarks         VARCHAR(255),
+  FOREIGN KEY (RequestID)  REFERENCES MaterialRequest(RequestID) ON DELETE CASCADE,
+  FOREIGN KEY (MaterialID) REFERENCES RawMaterial(MaterialID)
 );
 
 -- ============================================================
@@ -368,19 +438,22 @@ CREATE TABLE RawMaterialTransfer (
   RequestedBy    VARCHAR(20) NOT NULL,
   FromLocation   VARCHAR(100),
   ToLocation     VARCHAR(100),
-  Status         ENUM('Draft','Pending','Approved','Issued','Received','Cancelled')
+  Status         ENUM('Draft','Pending','Approved','Issued','Delivering','Received','Cancelled')
                  NOT NULL DEFAULT 'Draft',
-  ApprovedBy     VARCHAR(20),
-  IssuedBy       VARCHAR(20),
-  ReceivedBy     VARCHAR(20),
-  ApprovedDate   DATE NULL,
-  IssuedDate     DATE NULL,
-  ReceivedDate   DATE NULL,
-  Remarks        TEXT,
+  ApprovedBy       VARCHAR(20),
+  IssuedBy         VARCHAR(20),
+  DeliveredBy      VARCHAR(20),     -- [v5.4 NEW] Logistics Staff who handles delivery
+  ReceivedBy       VARCHAR(20),
+  ApprovedDate     DATE NULL,
+  IssuedDate       DATE NULL,
+  DeliveringDate   DATETIME NULL,   -- [v5.4 NEW] when Logistics picks up for delivery
+  ReceivedDate     DATE NULL,
+  Remarks          TEXT,
   FOREIGN KEY (OrderID)     REFERENCES `Order`(OrderID),
   FOREIGN KEY (RequestedBy) REFERENCES Staff(StaffID),
   FOREIGN KEY (ApprovedBy)  REFERENCES Staff(StaffID),
   FOREIGN KEY (IssuedBy)    REFERENCES Staff(StaffID),
+  FOREIGN KEY (DeliveredBy) REFERENCES Staff(StaffID),
   FOREIGN KEY (ReceivedBy)  REFERENCES Staff(StaffID)
 );
 
@@ -396,6 +469,78 @@ CREATE TABLE RawMaterialTransferItem (
   FOREIGN KEY (TransferID) REFERENCES RawMaterialTransfer(TransferID),
   FOREIGN KEY (MaterialID) REFERENCES RawMaterial(MaterialID),
   FOREIGN KEY (ProductID)  REFERENCES Product(ProductID)
+);
+
+-- ============================================================
+-- MODULE 5D: PROCUREMENT (PURCHASE ORDER)  [v5.0 NEW]
+-- Inventory Clerks issue Purchase Orders to Suppliers when stock
+-- falls below the reorder threshold (Case Study §7.4).
+-- ID Format:
+--   PurchaseOrder:     PO-YYYYMMDD-NNN   (daily sequence)
+--   PurchaseOrderItem: POI-NNN           (global sequence)
+-- Status Flow:
+--   Draft -> Sent -> PartiallyReceived -> Received
+--                 \-> Cancelled
+-- Payment Flow:
+--   Unpaid -> Partial -> Paid  (managed by Finance Dept)
+-- ============================================================
+
+CREATE TABLE PurchaseOrder (
+  PurchaseOrderID      VARCHAR(30) PRIMARY KEY,
+  SupplierID           VARCHAR(20) NOT NULL,
+  OrderDate            DATE NOT NULL DEFAULT (CURRENT_DATE),
+  ExpectedDeliveryDate DATE,                                  -- when goods should arrive
+  ActualDeliveryDate   DATE NULL,                              -- filled when fully received
+
+  -- Lifecycle
+  Status        ENUM('Draft','Sent','PartiallyReceived','Received','Cancelled')
+                NOT NULL DEFAULT 'Draft',
+  PaymentStatus ENUM('Unpaid','Partial','Paid') NOT NULL DEFAULT 'Unpaid',
+  PaymentMethod ENUM('Cash','Cheque','BankTransfer','CreditCard','FPS')
+                DEFAULT 'BankTransfer',
+
+  -- Money (denormalized for report convenience; items carry line totals)
+  SubTotal    DECIMAL(14,2) NOT NULL DEFAULT 0,
+  TaxAmount   DECIMAL(14,2) NOT NULL DEFAULT 0,
+  TotalAmount DECIMAL(14,2) NOT NULL DEFAULT 0,
+
+  -- Audit / approval
+  CreatedBy     VARCHAR(20) NOT NULL,                          -- Inventory Clerk who issues PO
+  CreatedAt     DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  ApprovedBy    VARCHAR(20) NULL,                              -- Supervisor approval (optional)
+  ApprovedDate  DATETIME NULL,
+  SentDate      DATETIME NULL,                                 -- when PO was emailed to supplier
+
+  Remarks TEXT,
+
+  FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID),
+  FOREIGN KEY (CreatedBy)  REFERENCES Staff(StaffID),
+  FOREIGN KEY (ApprovedBy) REFERENCES Staff(StaffID)
+);
+
+CREATE TABLE PurchaseOrderItem (
+  POItemID            VARCHAR(20) PRIMARY KEY,
+  PurchaseOrderID     VARCHAR(30) NOT NULL,
+  MaterialID          VARCHAR(20) NOT NULL,
+
+  -- Snapshot of the order (price/qty locked at PO time)
+  Quantity      DECIMAL(12,2) NOT NULL,
+  Unit          VARCHAR(20) NOT NULL,                           -- copied from RawMaterial at PO time
+  UnitPrice     DECIMAL(12,2) NOT NULL,
+  LineTotal     DECIMAL(14,2) GENERATED ALWAYS AS (Quantity * UnitPrice) STORED,
+
+  -- Goods receipt tracking (filled incrementally as deliveries arrive)
+  ReceivedQty     DECIMAL(12,2) NOT NULL DEFAULT 0,
+  OutstandingQty  DECIMAL(12,2) GENERATED ALWAYS AS (Quantity - ReceivedQty) STORED,
+
+  -- Optional link to the MaterialRequest that triggered this purchase
+  MaterialRequestID VARCHAR(20) NULL,
+
+  Remarks VARCHAR(255),
+
+  FOREIGN KEY (PurchaseOrderID)   REFERENCES PurchaseOrder(PurchaseOrderID) ON DELETE CASCADE,
+  FOREIGN KEY (MaterialID)        REFERENCES RawMaterial(MaterialID),
+  FOREIGN KEY (MaterialRequestID) REFERENCES MaterialRequest(RequestID)
 );
 
 -- ============================================================
@@ -504,6 +649,8 @@ DROP TRIGGER IF EXISTS trg_deliverytracking_id;
 DROP TRIGGER IF EXISTS trg_replyslip_id;
 DROP TRIGGER IF EXISTS trg_rawmaterial_id;
 DROP TRIGGER IF EXISTS trg_rawmaterialmovement_id;
+-- [v5.2 NEW]
+DROP TRIGGER IF EXISTS trg_productmaterial_id;
 DROP TRIGGER IF EXISTS trg_complaint_id;
 DROP TRIGGER IF EXISTS trg_complaintimage_id;
 DROP TRIGGER IF EXISTS trg_returnrequest_id;
@@ -515,8 +662,13 @@ DROP TRIGGER IF EXISTS trg_quotation_id;
 DROP TRIGGER IF EXISTS trg_quotationitem_id;
 DROP TRIGGER IF EXISTS trg_productiontracking_id;
 DROP TRIGGER IF EXISTS trg_materialrequest_id;
+-- [v5.3 NEW]
+DROP TRIGGER IF EXISTS trg_materialrequestitem_id;
 DROP TRIGGER IF EXISTS trg_rawmaterialtransfer_id;
 DROP TRIGGER IF EXISTS trg_rawmaterialtransferitem_id;
+-- [v5.0 NEW]
+DROP TRIGGER IF EXISTS trg_purchaseorder_id;
+DROP TRIGGER IF EXISTS trg_purchaseorderitem_id;
 
 DELIMITER $$
 
@@ -652,6 +804,15 @@ BEGIN
   SET NEW.MovementID = CONCAT('MOV-', LPAD(n, 3, '0'));
 END$$
 
+-- [v5.2 NEW] BOM trigger: PM-NNN
+CREATE TRIGGER trg_productmaterial_id BEFORE INSERT ON ProductMaterial FOR EACH ROW
+BEGIN
+  DECLARE n INT;
+  UPDATE ID_Sequence SET CurrentVal = CurrentVal + 1 WHERE SeqName = 'ProductMaterial';
+  SELECT CurrentVal INTO n FROM ID_Sequence WHERE SeqName = 'ProductMaterial';
+  SET NEW.ProductMaterialID = CONCAT('PM-', LPAD(n, 3, '0'));
+END$$
+
 CREATE TRIGGER trg_complaint_id BEFORE INSERT ON Complaint FOR EACH ROW
 BEGIN
   DECLARE n INT;
@@ -741,6 +902,15 @@ BEGIN
     SET NEW.RequestID = CONCAT('MR-', LPAD(n, 4, '0'));
 END$$
 
+-- [v5.3 NEW] Material Request Item ID: MRI-NNN
+CREATE TRIGGER trg_materialrequestitem_id BEFORE INSERT ON MaterialRequestItem FOR EACH ROW
+BEGIN
+    DECLARE n INT;
+    UPDATE ID_Sequence SET CurrentVal = CurrentVal + 1 WHERE SeqName = 'MaterialRequestItem';
+    SELECT CurrentVal INTO n FROM ID_Sequence WHERE SeqName = 'MaterialRequestItem';
+    SET NEW.RequestItemID = CONCAT('MRI-', LPAD(n, 3, '0'));
+END$$
+
 CREATE TRIGGER trg_rawmaterialtransfer_id BEFORE INSERT ON RawMaterialTransfer FOR EACH ROW
 BEGIN
     DECLARE today_str VARCHAR(6);
@@ -762,6 +932,30 @@ BEGIN
     SET NEW.TransferItemID = CONCAT('RTI-', LPAD(n, 3, '0'));
 END$$
 
+-- [v5.0 NEW] Procurement triggers
+-- Purchase Order ID:  PO-YYYYMMDD-NNN  (daily sequence)
+CREATE TRIGGER trg_purchaseorder_id BEFORE INSERT ON PurchaseOrder FOR EACH ROW
+BEGIN
+    DECLARE today_str VARCHAR(8);
+    DECLARE daily_count INT;
+    SET today_str = DATE_FORMAT(NEW.OrderDate, '%Y%m%d');
+    INSERT INTO ID_Sequence (SeqName, CurrentVal)
+        VALUES (CONCAT('PurchaseOrder_', today_str), 1)
+        ON DUPLICATE KEY UPDATE CurrentVal = CurrentVal + 1;
+    SELECT CurrentVal INTO daily_count
+        FROM ID_Sequence WHERE SeqName = CONCAT('PurchaseOrder_', today_str);
+    SET NEW.PurchaseOrderID = CONCAT('PO-', today_str, '-', LPAD(daily_count, 3, '0'));
+END$$
+
+-- Purchase Order Item ID:  POI-NNN  (global sequence)
+CREATE TRIGGER trg_purchaseorderitem_id BEFORE INSERT ON PurchaseOrderItem FOR EACH ROW
+BEGIN
+    DECLARE n INT;
+    UPDATE ID_Sequence SET CurrentVal = CurrentVal + 1 WHERE SeqName = 'PurchaseOrderItem';
+    SELECT CurrentVal INTO n FROM ID_Sequence WHERE SeqName = 'PurchaseOrderItem';
+    SET NEW.POItemID = CONCAT('POI-', LPAD(n, 3, '0'));
+END$$
+
 DELIMITER ;
 
 -- ============================================================
@@ -776,20 +970,20 @@ INSERT INTO Jobs (Job_ID, Job_Title, System_Role) VALUES
 (NULL, 'Logistics Staff',        'Logistics'),
 (NULL, 'Production Clerk',      'Production');
 
-INSERT INTO Staff (StaffID, Job_ID, StaffName, Username, PasswordHash, IsSupervisor, IsActive) VALUES
-(NULL, 'J-001', 'Chan Siu Ming',  'chansiuming', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
-(NULL, 'J-001', 'Ho Tsz Kwan',   'hotszkwan',   '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
-(NULL, 'J-003', 'Wong Mei Ling', 'wongmeiling', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
-(NULL, 'J-003', 'Fung Wai Sze',  'fungwaisze',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
-(NULL, 'J-004', 'Ng Chun Fai',   'ngchunfai',   '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
-(NULL, 'J-004', 'Yuen Hoi Ting', 'yuenhoiting', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
-(NULL, 'J-005', 'Cheung Ho Yin', 'cheunghoyin', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
-(NULL, 'J-005', 'Kwok Man Kit',  'kwokmankit',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
-(NULL, 'J-002', 'Lee Pui Shan',  'leepuishan',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
-(NULL, 'J-002', 'Mak Sui Ying',  'maksuiying',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
-(NULL, 'J-001', 'Admin User',    'admin',        '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm', TRUE,  TRUE),
-(NULL, 'J-006', 'Lam Wai Keung', 'lamwaikeung',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
-(NULL, 'J-006', 'Tang Sze Yu',   'tangszyu',     '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE);
+INSERT INTO Staff (StaffID, Job_ID, StaffName, Phone, Username, PasswordHash, IsSupervisor, IsActive) VALUES
+(NULL, 'J-001', 'Chan Siu Ming',  '6123 4567', 'chansiuming', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
+(NULL, 'J-001', 'Ho Tsz Kwan',   '6234 5678', 'hotszkwan',   '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
+(NULL, 'J-003', 'Wong Mei Ling', '6345 6789', 'wongmeiling', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
+(NULL, 'J-003', 'Fung Wai Sze',  '6456 7890', 'fungwaisze',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
+(NULL, 'J-004', 'Ng Chun Fai',   '6567 8901', 'ngchunfai',   '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
+(NULL, 'J-004', 'Yuen Hoi Ting', '6678 9012', 'yuenhoiting', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
+(NULL, 'J-005', 'Cheung Ho Yin', '6789 0123', 'cheunghoyin', '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
+(NULL, 'J-005', 'Kwok Man Kit',  '6890 1234', 'kwokmankit',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
+(NULL, 'J-002', 'Lee Pui Shan',  '6901 2345', 'leepuishan',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE),
+(NULL, 'J-002', 'Mak Sui Ying',  '6012 3456', 'maksuiying',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
+(NULL, 'J-001', 'Admin User',    '9111 1111', 'admin',        '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm', TRUE,  TRUE),
+(NULL, 'J-006', 'Lam Wai Keung', '6120 3456', 'lamwaikeung',  '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  FALSE, TRUE),
+(NULL, 'J-006', 'Tang Sze Yu',   '6230 4567', 'tangszyu',     '$2b$12$eM2dLHePJVrHSNgjF/xuVO1HB6OlkF3vf6cYXzwA5GdXD/dYgZ3Lm',  TRUE,  TRUE);
 
 INSERT INTO Supplier (SupplierID, SupplierName, Phone, Email) VALUES
 (NULL, 'Guangzhou Wood Supply Co.', '020-88001234', 'supply@gzwood.cn'),
@@ -838,19 +1032,19 @@ INSERT INTO Customer (CustomerID, CustomerType, CustomerName, Phone, Email, Addr
 -- [FIXED] RawMaterial INSERTed BEFORE MaterialRequest (FK dependency)
 -- ============================================================
 
-INSERT INTO RawMaterial (MaterialID, SupplierID, MaterialName, Unit, StockQty, ReorderLevel) VALUES
-(NULL, 'SUP-001', 'Solid Oak Wood',      'm³',  45.00, 10.00),
-(NULL, 'SUP-001', 'MDF Board',           'pcs', 320.00,50.00),
-(NULL, 'SUP-001', 'Plywood Sheet',       'pcs', 180.00,40.00),
-(NULL, 'SUP-002', 'Fabric Grey',         'm²',  800.00,100.00),
-(NULL, 'SUP-002', 'Fabric Beige',        'm²',  650.00,100.00),
-(NULL, 'SUP-002', 'Leather Brown',       'm²',  250.00,50.00),
-(NULL, 'SUP-002', 'Leather Black',       'm²',  190.00,50.00),
-(NULL, 'SUP-003', 'Steel Frame 50mm',    'pcs', 180.00,30.00),
-(NULL, 'SUP-003', 'Metal Bracket Set',   'set',  95.00,20.00),
-(NULL, 'SUP-004', 'High-Density Foam',   'pcs', 110.00,20.00),
-(NULL, 'SUP-004', 'Soft Cushion Filling','kg',  230.00,40.00),
-(NULL, 'SUP-005', 'Tempered Glass 8mm',  'pcs',  40.00,10.00);
+INSERT INTO RawMaterial (MaterialID, SupplierID, MaterialName, Unit, StockQty, ReorderLevel, UnitPurchasePrice) VALUES
+(NULL, 'SUP-001', 'Solid Oak Wood',      'm³',  45.00, 10.00,  450.00),
+(NULL, 'SUP-001', 'MDF Board',           'pcs', 320.00,50.00,   35.00),
+(NULL, 'SUP-001', 'Plywood Sheet',       'pcs', 180.00,40.00,   38.00),
+(NULL, 'SUP-002', 'Fabric Grey',         'm²',  800.00,100.00,  70.00),
+(NULL, 'SUP-002', 'Fabric Beige',        'm²',  650.00,100.00,  68.00),
+(NULL, 'SUP-002', 'Leather Brown',       'm²',  250.00,50.00,  220.00),
+(NULL, 'SUP-002', 'Leather Black',       'm²',  190.00,50.00,  215.00),
+(NULL, 'SUP-003', 'Steel Frame 50mm',    'pcs', 180.00,30.00,  150.00),
+(NULL, 'SUP-003', 'Metal Bracket Set',   'set',  95.00,20.00,  150.00),
+(NULL, 'SUP-004', 'High-Density Foam',   'pcs', 110.00,20.00,  150.00),
+(NULL, 'SUP-004', 'Soft Cushion Filling','kg',  230.00,40.00,  100.00),
+(NULL, 'SUP-005', 'Tempered Glass 8mm',  'pcs',  40.00,10.00,  120.00);
 
 INSERT INTO RawMaterialMovement (MovementID, MaterialID, MovementType, Quantity, MovementDate, RecordedBy) VALUES
 (NULL, 'MAT-001', 'Inbound',  20.00, '2026-01-05 09:00:00', 'S-005'),
@@ -958,30 +1152,40 @@ INSERT INTO ProductionTracking (TrackingID, OrderItemID, Step, Status, AssignedT
 (NULL, 'OI-006', 'Varnishing', 'Pending',    NULL,     NULL,                   NULL,                  NULL),
 (NULL, 'OI-006', 'Drying',     'Pending',    NULL,     NULL,                   NULL,                  NULL);
 
-INSERT INTO MaterialRequest (RequestID, OrderItemID, MaterialID, Quantity,
+-- [v5.3 REDESIGNED] MaterialRequest (header) + MaterialRequestItem (items)
+INSERT INTO MaterialRequest (RequestID, OrderItemID,
     UrgencyLevel, RequiredDeliveryDate, RequestedBy, Status, ApprovedBy, ApprovedDate, Remarks) VALUES
-(NULL, 'OI-006', 'MAT-001', 15.00, 'High',   '2026-03-20', 'S-005', 'Approved',  'S-006', '2026-03-16 09:00:00', 'Solid Oak for bed frames'),
-(NULL, 'OI-006', 'MAT-009', 20.00, 'Medium', '2026-03-22', 'S-005', 'Requested', NULL,     NULL,                  'Metal bracket sets for bed assembly'),
-(NULL, 'OI-008', 'MAT-004', 30.00, 'Low',    '2026-03-25', 'S-006', 'Requested', NULL,     NULL,                  'Grey fabric for dining chairs');
+(NULL, 'OI-006', 'High',   '2026-03-20', 'S-005', 'Approved',  'S-006', '2026-03-16 09:00:00', 'Solid Oak + brackets for bed frames'),
+(NULL, 'OI-006', 'Medium', '2026-03-22', 'S-005', 'Requested', NULL,     NULL,                  'Metal bracket sets for bed assembly'),
+(NULL, 'OI-008', 'Low',    '2026-03-25', 'S-006', 'Requested', NULL,     NULL,                  'Grey fabric for dining chairs');
+
+-- Material Request Items (RequestItemID auto-generated by trigger → MRI-NNN)
+INSERT INTO MaterialRequestItem (RequestItemID, RequestID, MaterialID, Quantity, Unit, Remarks) VALUES
+-- MR-0001 (Approved — bed frame materials)
+(NULL, 'MR-0001', 'MAT-001', 15.00, 'm³',  'Solid Oak Wood for bed frames'),
+-- MR-0002 (Requested — bracket sets)
+(NULL, 'MR-0002', 'MAT-009', 20.00, 'set', 'Metal bracket sets for bed assembly'),
+-- MR-0003 (Requested — grey fabric)
+(NULL, 'MR-0003', 'MAT-004', 30.00, 'm²',  'Grey fabric for dining chairs');
 
 INSERT INTO RawMaterialTransfer (TransferID, TransferDate, TransferType,
     OrderID, ProductionID, RequestedBy, FromLocation, ToLocation, Status,
-    ApprovedBy, IssuedBy, ReceivedBy,
-    ApprovedDate, IssuedDate, ReceivedDate, Remarks) VALUES
+    ApprovedBy, IssuedBy, DeliveredBy, ReceivedBy,
+    ApprovedDate, IssuedDate, DeliveringDate, ReceivedDate, Remarks) VALUES
 (NULL, '2026-03-16', 'RawMaterial_Out', 'ORD-20260203-1', 'PROD-001', 'S-005',
-    'Main Warehouse', 'Production Workshop A', 'Issued',
-    'S-006', 'S-005', NULL,
-    '2026-03-16', '2026-03-16', NULL,
+    'Main Warehouse', 'Production Workshop A', 'Delivering',
+    'S-006', 'S-005', 'S-007', NULL,
+    '2026-03-16', '2026-03-16', '2026-03-17 09:00:00', NULL,
     'Solid Oak Wood and Metal Brackets for bed frame production (Order ORD-20260203-1)'),
 (NULL, '2026-03-20', 'RawMaterial_Out', NULL, 'PROD-002', 'S-006',
     'Main Warehouse', 'Production Workshop B', 'Approved',
-    'S-005', NULL, NULL,
-    '2026-03-20', NULL, NULL,
+    'S-005', NULL, NULL, NULL,
+    '2026-03-20', NULL, NULL, NULL,
     'Fabric and Foam replenishment for dining chair production'),
 (NULL, '2026-04-01', 'Product_In', 'ORD-20260108-1', 'PROD-003', 'S-005',
     'Production Workshop A', 'Finished Goods Warehouse', 'Pending',
-    NULL, NULL, NULL,
-    NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL,
     'Completed Luxury 3-Seat Sofa + Coffee Table ready for transfer');
 
 INSERT INTO RawMaterialTransferItem (TransferItemID, TransferID, MaterialID,
@@ -1106,3 +1310,167 @@ INSERT INTO InvoiceItem (InvItemID, InvoiceID, ProductID, Quantity, UnitCost, Di
 (NULL, 'INV-009', 'P-005', 2,   980.00,    0.00,  1960.00),
 (NULL, 'INV-009', 'P-006', 2,   760.00,    0.00,  1520.00),
 (NULL, 'INV-010', 'P-011', 1,  8500.00,    0.00,  8500.00);
+
+-- ============================================================
+-- [v5.0 NEW] PROCUREMENT SAMPLE DATA
+--   5 Purchase Orders covering all 5 statuses
+--   9 Purchase Order Items (incl. partial receipt scenario)
+-- ============================================================
+
+INSERT INTO PurchaseOrder
+  (PurchaseOrderID, SupplierID, OrderDate, ExpectedDeliveryDate, ActualDeliveryDate,
+   Status, PaymentStatus, PaymentMethod,
+   SubTotal, TaxAmount, TotalAmount,
+   CreatedBy, CreatedAt, ApprovedBy, ApprovedDate, SentDate, Remarks)
+VALUES
+  -- PO 1: Fully received, paid — Solid Oak Wood restock
+  ('PO-20260110-001', 'SUP-001', '2026-01-10', '2026-01-25', '2026-01-24',
+   'Received', 'Paid', 'BankTransfer',
+   18000.00, 0.00, 18000.00,
+   'S-005', '2026-01-10 09:30:00', 'S-006', '2026-01-10 11:00:00',
+   '2026-01-10 14:00:00', 'Restock Solid Oak Wood — triggered by low stock alert'),
+
+  -- PO 2: Partially received, partial payment — Grey Fabric
+  ('PO-20260215-001', 'SUP-002', '2026-02-15', '2026-03-01', NULL,
+   'PartiallyReceived', 'Partial', 'BankTransfer',
+   42000.00, 0.00, 42000.00,
+   'S-005', '2026-02-15 10:00:00', 'S-006', '2026-02-15 14:00:00',
+   '2026-02-15 16:00:00', 'Quarterly fabric restock — 600m2 split delivery'),
+
+  -- PO 3: Sent, unpaid — Steel Frames for upcoming production
+  ('PO-20260305-001', 'SUP-003', '2026-03-05', '2026-03-22', NULL,
+   'Sent', 'Unpaid', 'Cheque',
+   27000.00, 0.00, 27000.00,
+   'S-006', '2026-03-05 09:15:00', 'S-005', '2026-03-05 10:30:00',
+   '2026-03-05 13:00:00', 'Steel frames for office chair production batch'),
+
+  -- PO 4: Draft, not yet sent — Foam for cushion production
+  ('PO-20260318-001', 'SUP-004', '2026-03-18', '2026-04-05', NULL,
+   'Draft', 'Unpaid', 'BankTransfer',
+   16500.00, 0.00, 16500.00,
+   'S-006', '2026-03-18 11:00:00', NULL, NULL,
+   NULL, 'Pending supervisor approval — high-density foam + filling'),
+
+  -- PO 5: Cancelled — supplier out of stock
+  ('PO-20260220-001', 'SUP-005', '2026-02-20', '2026-03-10', NULL,
+   'Cancelled', 'Unpaid', 'CreditCard',
+   4800.00, 0.00, 4800.00,
+   'S-005', '2026-02-20 14:30:00', 'S-006', '2026-02-20 15:00:00',
+   NULL, 'Cancelled — supplier cannot meet required delivery date');
+
+-- Purchase Order Items (POItemID auto-generated by trigger; pass NULL)
+INSERT INTO PurchaseOrderItem
+  (POItemID, PurchaseOrderID, MaterialID, Quantity, Unit, UnitPrice,
+   ReceivedQty, MaterialRequestID, Remarks)
+VALUES
+  -- PO 1 items — fully received
+  (NULL, 'PO-20260110-001', 'MAT-001',  40.00, 'm3',  450.00,
+   40.00, NULL, 'Solid Oak Wood — 40m3 at $450/m3'),
+  (NULL, 'PO-20260110-001', 'MAT-003',  60.00, 'pcs',  35.00,
+   60.00, NULL, 'Plywood Sheet — 60pcs at $35/pc'),
+
+  -- PO 2 items — partial receipt (400 of 600m2 arrived)
+  (NULL, 'PO-20260215-001', 'MAT-004', 600.00, 'm2',   70.00,
+   400.00, NULL, 'Fabric Grey — 600m2, 400 received'),
+
+  -- PO 3 items — not yet received
+  (NULL, 'PO-20260305-001', 'MAT-008',  90.00, 'pcs',  150.00,
+   0.00,   NULL, 'Steel Frame 50mm — 90pcs'),
+  (NULL, 'PO-20260305-001', 'MAT-009',  90.00, 'set',  150.00,
+   0.00,   NULL, 'Metal Bracket Set — 90 sets'),
+
+  -- PO 4 items — draft, not received
+  (NULL, 'PO-20260318-001', 'MAT-010',  60.00, 'pcs',  150.00,
+   0.00,   'MR-0001', 'High-Density Foam — linked to MR-0001'),
+  (NULL, 'PO-20260318-001', 'MAT-011',  75.00, 'kg',   100.00,
+   0.00,   'MR-0001', 'Soft Cushion Filling — linked to MR-0001');
+
+-- ============================================================
+-- [v5.0 NEW] VIEW — open procurement summary
+--   Lists all Sent / PartiallyReceived POs sorted by ExpectedDeliveryDate
+-- ============================================================
+CREATE OR REPLACE VIEW vw_OpenProcurement AS
+SELECT
+    po.PurchaseOrderID,
+    po.SupplierID,
+    sup.SupplierName,
+    po.OrderDate,
+    po.ExpectedDeliveryDate,
+    po.Status,
+    po.PaymentStatus,
+    po.TotalAmount,
+    COUNT(poi.POItemID) AS ItemCount,
+    SUM(poi.OutstandingQty) AS TotalOutstanding
+FROM PurchaseOrder po
+JOIN Supplier sup           ON po.SupplierID = sup.SupplierID
+LEFT JOIN PurchaseOrderItem poi ON po.PurchaseOrderID = poi.PurchaseOrderID
+WHERE po.Status IN ('Sent','PartiallyReceived')
+GROUP BY po.PurchaseOrderID, sup.SupplierName
+ORDER BY po.ExpectedDeliveryDate;
+
+-- ============================================================
+-- [v5.2 NEW] BILL OF MATERIALS SAMPLE DATA
+--   Defines raw materials required per 1 unit of each product.
+--   Run after Product and RawMaterial are populated.
+-- ============================================================
+
+INSERT INTO ProductMaterial (ProductMaterialID, ProductID, MaterialID, QuantityPerUnit, Unit, Remarks) VALUES
+-- P-001: Luxury 3-Seat Sofa
+(NULL, 'P-001', 'MAT-001', 0.30, 'm³',  'Solid oak frame'),
+(NULL, 'P-001', 'MAT-004', 12.00, 'm²', 'Grey fabric upholstery'),
+(NULL, 'P-001', 'MAT-008', 1.00, 'pcs', 'Steel frame reinforcement'),
+(NULL, 'P-001', 'MAT-010', 3.00, 'pcs', 'High-density foam cushions'),
+(NULL, 'P-001', 'MAT-009', 1.00, 'set', 'Metal brackets for assembly'),
+
+-- P-002: Solid Wood Dining Table
+(NULL, 'P-002', 'MAT-001', 0.50, 'm³',  'Solid oak tabletop + legs'),
+(NULL, 'P-002', 'MAT-009', 1.00, 'set', 'Metal brackets for leg joints'),
+
+-- P-003: Ergonomic Office Chair
+(NULL, 'P-003', 'MAT-008', 1.00, 'pcs', 'Steel frame base'),
+(NULL, 'P-003', 'MAT-004', 2.50, 'm²',  'Fabric back + seat'),
+(NULL, 'P-003', 'MAT-010', 1.00, 'pcs', 'Foam seat cushion'),
+(NULL, 'P-003', 'MAT-009', 1.00, 'set', 'Bracket set for assembly'),
+
+-- P-004: King Size Bed Frame
+(NULL, 'P-004', 'MAT-001', 0.80, 'm³',  'Solid oak frame'),
+(NULL, 'P-004', 'MAT-003', 4.00, 'pcs',  'Plywood slats base'),
+(NULL, 'P-004', 'MAT-009', 2.00, 'set',  'Bracket sets for frame assembly'),
+
+-- P-005: Coffee Table
+(NULL, 'P-005', 'MAT-001', 0.15, 'm³',  'Oak legs + frame'),
+(NULL, 'P-005', 'MAT-012', 1.00, 'pcs',  'Tempered glass top'),
+
+-- P-006: Bookshelf 5-Tier
+(NULL, 'P-006', 'MAT-002', 5.00, 'pcs',  'MDF shelves'),
+(NULL, 'P-006', 'MAT-009', 1.00, 'set',  'Bracket set for wall mounting'),
+
+-- P-007: TV Console 180cm
+(NULL, 'P-007', 'MAT-001', 0.25, 'm³',  'Oak frame'),
+(NULL, 'P-007', 'MAT-012', 1.00, 'pcs',  'Tempered glass doors'),
+(NULL, 'P-007', 'MAT-009', 1.00, 'set',  'Bracket set for assembly'),
+
+-- P-008: Dining Chair (Set of 4)
+(NULL, 'P-008', 'MAT-001', 0.10, 'm³',  'Oak frame per chair (×4)'),
+(NULL, 'P-008', 'MAT-004', 4.00, 'm²',  'Grey fabric seats (×4)'),
+(NULL, 'P-008', 'MAT-010', 4.00, 'pcs',  'Foam cushions (×4)'),
+
+-- P-009: Custom L-Shape Sofa
+(NULL, 'P-009', 'MAT-006', 18.00, 'm²', 'Brown leather upholstery'),
+(NULL, 'P-009', 'MAT-008', 2.00, 'pcs',  'Steel frames (L-shape)'),
+(NULL, 'P-009', 'MAT-010', 5.00, 'pcs',  'Foam cushions'),
+(NULL, 'P-009', 'MAT-011', 10.00, 'kg',  'Soft cushion filling'),
+
+-- P-010: Custom Built-in Wardrobe
+(NULL, 'P-010', 'MAT-002', 12.00, 'pcs', 'MDF panels for wardrobe'),
+(NULL, 'P-010', 'MAT-003', 4.00, 'pcs',  'Plywood backing'),
+(NULL, 'P-010', 'MAT-009', 3.00, 'set',  'Bracket sets for installation'),
+
+-- P-011: Custom Dining Set
+(NULL, 'P-011', 'MAT-001', 0.60, 'm³',  'Oak table + chair frames'),
+(NULL, 'P-011', 'MAT-005', 6.00, 'm²',  'Beige fabric chair seats'),
+(NULL, 'P-011', 'MAT-010', 6.00, 'pcs',  'Foam cushions for chairs'),
+
+-- P-012: Custom Study Desk
+(NULL, 'P-012', 'MAT-001', 0.20, 'm³',  'Oak desk frame'),
+(NULL, 'P-012', 'MAT-012', 1.00, 'pcs',  'Tempered glass desktop');

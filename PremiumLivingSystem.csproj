@@ -209,6 +209,12 @@
     <Compile Include="Sales_Representative_Form.Designer.cs">
       <DependentUpon>Sales_Representative_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcAddCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     </Compile>
     <Compile Include="UcCreateMaterialRequest.Designer.cs">
       <DependentUpon>UcCreateMaterialRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcCreateProcurement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcCreateProcurement.Designer.cs">
+      <DependentUpon>UcCreateProcurement.cs</DependentUpon>
     </Compile>
     <Compile Include="UcMasterCategory.cs">
       <SubType>UserControl</SubType>
@@ -311,11 +323,23 @@
     <Compile Include="UcProcessReturn.Designer.cs">
       <DependentUpon>UcProcessReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcSearchMaterialRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcSearchMaterialRequest.Designer.cs">
+      <DependentUpon>UcSearchMaterialRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcSearchOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UcSearchOrder.Designer.cs">
       <DependentUpon>UcSearchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcSearchProcurement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcSearchProcurement.Designer.cs">
+      <DependentUpon>UcSearchProcurement.cs</DependentUpon>
     </Compile>
     <Compile Include="UcSearchProduct.cs">
       <SubType>UserControl</SubType>
@@ -472,6 +496,9 @@
     <EmbeddedResource Include="Sales_Representative_Form.resx">
       <DependentUpon>Sales_Representative_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcAddCustomer.resx">
       <DependentUpon>UcAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -507,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcCreateOrder.zh-HK.resx">
       <DependentUpon>UcCreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcCreateProcurement.resx">
+      <DependentUpon>UcCreateProcurement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcMasterCategory.resx">
       <DependentUpon>UcMasterCategory.cs</DependentUpon>
@@ -579,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCSearchDelivery.zh-Hans-HK.resx">
       <DependentUpon>UCSearchDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcSearchMaterialRequest.resx">
+      <DependentUpon>UcSearchMaterialRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcSearchOrder.resx">
       <DependentUpon>UcSearchOrder.cs</DependentUpon>

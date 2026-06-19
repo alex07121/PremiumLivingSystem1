@@ -26,28 +26,48 @@
             this.button5 = new System.Windows.Forms.Button();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            // 
+            // btnLogout
+            // 
             resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnAddTrackRecord
+            // 
             resources.ApplyResources(this.btnAddTrackRecord, "btnAddTrackRecord");
             this.btnAddTrackRecord.Name = "btnAddTrackRecord";
             this.btnAddTrackRecord.UseVisualStyleBackColor = true;
             this.btnAddTrackRecord.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnsearchd
+            // 
             resources.ApplyResources(this.btnsearchd, "btnsearchd");
             this.btnsearchd.Name = "btnsearchd";
             this.btnsearchd.UseVisualStyleBackColor = true;
             this.btnsearchd.Click += new System.EventHandler(this.btnsearchd_Click);
+            // 
+            // panel2
+            // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnHandGood);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button1);
@@ -55,14 +75,23 @@
             this.panel2.Controls.Add(this.btnsearchd);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // btnHandGood
+            // 
             resources.ApplyResources(this.btnHandGood, "btnHandGood");
             this.btnHandGood.Name = "btnHandGood";
             this.btnHandGood.UseVisualStyleBackColor = true;
             this.btnHandGood.Click += new System.EventHandler(this.btnHandGood_Click);
+            // 
+            // button5
+            // 
             resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cmbLanguage
+            // 
             this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLanguage.FormattingEnabled = true;
             this.cmbLanguage.Items.AddRange(new object[] {
@@ -70,8 +99,21 @@
             resources.GetString("cmbLanguage.Items1")});
             resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.Name = "cmbLanguage";
+            // 
+            // mainPanel
+            // 
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // Logistics_Staff_Form
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cmbLanguage);
@@ -97,5 +139,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btnHandGood;
+        private System.Windows.Forms.Button button2;
     }
 }

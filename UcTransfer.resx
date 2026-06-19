@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="lblTransferNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -181,7 +181,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTransferNo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="txtTransferNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>259, 90</value>
@@ -205,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtTransferNo.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -235,7 +235,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="dtpTransferDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>819, 90</value>
@@ -259,7 +259,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dtpTransferDate.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="lblOrderID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -289,10 +289,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblOrderID.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="txtOrderID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1260, 90</value>
+    <value>1297, 90</value>
   </data>
   <data name="txtOrderID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>7, 4, 7, 4</value>
@@ -313,60 +313,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtOrderID.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lblProductionID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblProductionID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1561, 99</value>
-  </data>
-  <data name="lblProductionID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 0, 7, 0</value>
-  </data>
-  <data name="lblProductionID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 27</value>
-  </data>
-  <data name="lblProductionID.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblProductionID.Text" xml:space="preserve">
-    <value>Production ID:</value>
-  </data>
-  <data name="&gt;&gt;lblProductionID.Name" xml:space="preserve">
-    <value>lblProductionID</value>
-  </data>
-  <data name="&gt;&gt;lblProductionID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblProductionID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblProductionID.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="txtProductionID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1750, 90</value>
-  </data>
-  <data name="txtProductionID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 4, 7, 4</value>
-  </data>
-  <data name="txtProductionID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 40</value>
-  </data>
-  <data name="txtProductionID.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;txtProductionID.Name" xml:space="preserve">
-    <value>txtProductionID</value>
-  </data>
-  <data name="&gt;&gt;txtProductionID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtProductionID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtProductionID.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="rbProduct.AutoSize" type="System.Boolean, mscorlib">
@@ -494,6 +440,9 @@
   </data>
   <data name="txtReqPhone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>7, 4, 7, 4</value>
+  </data>
+  <data name="txtReqPhone.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <data name="txtReqPhone.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 40</value>

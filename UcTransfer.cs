@@ -11,9 +11,25 @@ namespace PremiumLivingSystem
 {
     public partial class UcTransfer : UserControl
     {
+        // When set before the control is shown, UcTransfer_Load will call
+        // PrefillFromMaterialRequest() after all initialization is done.
+        // This avoids the "DataGridView has no columns" error that occurs
+        // when PrefillFromMaterialRequest is called before Load fires.
+        private string _pendingRequestID = null;
+
         public UcTransfer()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Queues a Material Request ID for pre-filling. The actual pre-fill
+        /// happens at the end of UcTransfer_Load, after SetupDataGridView
+        /// and other initialization have completed.
+        /// </summary>
+        public void SetPendingRequestID(string requestID)
+        {
+            _pendingRequestID = requestID;
         }
 
         private void UcTransfer_Load(object sender, EventArgs e)
@@ -35,6 +51,14 @@ namespace PremiumLivingSystem
             // Default to Material mode
             rbMaterial.Checked = true;
             LoadItemList();
+
+            // If a pending Material Request ID was set (e.g. via TransferForm),
+            // pre-fill the form now that all controls are initialized.
+            if (!string.IsNullOrEmpty(_pendingRequestID))
+            {
+                PrefillFromMaterialRequest(_pendingRequestID);
+                _pendingRequestID = null;
+            }
         }
 
         // ================================================================
@@ -288,7 +312,7 @@ namespace PremiumLivingSystem
             // Use dtpReqDate for TransferDate -- it's the Requested By signature date
             string transferDate = dtpReqDate.Value.ToString("yyyy-MM-dd");
             string orderId = string.IsNullOrWhiteSpace(txtOrderID.Text) ? null : txtOrderID.Text.Trim();
-            string prodId = string.IsNullOrWhiteSpace(txtProductionID.Text) ? null : txtProductionID.Text.Trim();
+         
             string reqBy = txtReqBy.Text.Trim();
             string fromLoc = txtFromLocation.Text.Trim();
             string toLoc = txtToLocation.Text.Trim();
@@ -308,7 +332,7 @@ namespace PremiumLivingSystem
                  ApprovedBy, ApprovedDate, IssuedBy, IssuedDate,
                  ReceivedBy, ReceivedDate, Remarks)
                 VALUES
-                (@tDate, @tType, @oId, @pId,
+                (@tDate, @tType, @oId, null,
                  @reqBy, @from, @to, @status,
                  @appBy, @appDate, @issBy, @issDate,
                  @recBy, @recDate, @remarks)";
@@ -326,7 +350,6 @@ namespace PremiumLivingSystem
                     cmdHeader.Parameters.AddWithValue("@tDate", transferDate);
                     cmdHeader.Parameters.AddWithValue("@tType", transferType);
                     cmdHeader.Parameters.AddWithValue("@oId", (object)orderId ?? DBNull.Value);
-                    cmdHeader.Parameters.AddWithValue("@pId", (object)prodId ?? DBNull.Value);
                     cmdHeader.Parameters.AddWithValue("@reqBy", reqBy);
                     cmdHeader.Parameters.AddWithValue("@from", (object)fromLoc ?? DBNull.Value);
                     cmdHeader.Parameters.AddWithValue("@to", (object)toLoc ?? DBNull.Value);
@@ -451,7 +474,7 @@ namespace PremiumLivingSystem
         private void ClearForm()
         {
             txtOrderID.Clear();
-            txtProductionID.Clear();
+
             txtFromLocation.Clear();
             txtToLocation.Clear();
             txtRemarks.Clear();
@@ -612,6 +635,169 @@ namespace PremiumLivingSystem
 
             btnPrint.Visible = true;
             return bitmap;
+        }
+
+        // ================================================================
+        // PREFILL FROM MATERIAL REQUEST — called by UcSearchMaterialRequest
+        // when Inventory Clerk clicks "Create Transfer" on an Approved request.
+        // Loads all MaterialRequestItem rows and fills the DataGridView.
+        // ================================================================
+        public void PrefillFromMaterialRequest(string requestID)
+        {
+            // Defensive: ensure DataGridView columns exist before adding rows.
+            // Normally SetupDataGridView() runs in UcTransfer_Load before this
+            // method is called (via SetPendingRequestID), but this guard
+            // protects against direct callers that bypass the Load sequence.
+            if (dgvItems.Columns.Count == 0)
+                SetupDataGridView();
+
+            // Query the MaterialRequest table by RequestID.
+            // Pulls ALL data from the MaterialRequest row itself:
+            //   RequestedBy, RequiredDeliveryDate, UrgencyLevel, Remarks, OrderItemID
+            // plus the OrderID (resolved via OrderItem join) so the transfer
+            // can be linked back to the originating sales order.
+            string headerQuery = @"
+                SELECT mr.RequestID,
+                       mr.OrderItemID,
+                       mr.UrgencyLevel,
+                       mr.RequiredDeliveryDate,
+                       mr.RequestDate,
+                       mr.RequestedBy,
+                       mr.Status,
+                       mr.Remarks,
+                       oi.OrderID
+                FROM MaterialRequest mr
+                LEFT JOIN OrderItem oi ON mr.OrderItemID = oi.OrderItemID
+                WHERE mr.RequestID = @rid";
+
+            string itemsQuery = @"
+                SELECT mri.MaterialID,
+                       rm.MaterialName,
+                       mri.Quantity,
+                       mri.Unit
+                FROM MaterialRequestItem mri
+                JOIN RawMaterial rm ON mri.MaterialID = rm.MaterialID
+                WHERE mri.RequestID = @rid
+                ORDER BY mri.MaterialID";
+
+            // Lookup staff details for the RequestedBy field
+            string staffQuery = @"
+                SELECT s.StaffID, s.StaffName, j.Job_Title, s.Phone
+                FROM Staff s
+                JOIN Jobs j ON s.Job_ID = j.Job_ID
+                WHERE s.StaffID = @staffId";
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
+                {
+                    conn.Open();
+
+                    // 1. Load the MaterialRequest row by RequestID
+                    string orderID = "";
+                    string remarks = "";
+                    string requestedBy = "";
+                    DateTime requiredDate = DateTime.Now;
+                    string urgency = "";
+                    bool headerFound = false;
+
+                    using (MySqlCommand cmd = new MySqlCommand(headerQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@rid", requestID);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                headerFound = true;
+                                orderID = reader["OrderID"] == DBNull.Value ? "" : reader["OrderID"].ToString();
+                                remarks = reader["Remarks"] == DBNull.Value ? "" : reader["Remarks"].ToString();
+                                requestedBy = reader["RequestedBy"] == DBNull.Value ? "" : reader["RequestedBy"].ToString();
+                                if (reader["RequiredDeliveryDate"] != DBNull.Value)
+                                    requiredDate = Convert.ToDateTime(reader["RequiredDeliveryDate"]);
+                                urgency = reader["UrgencyLevel"] == DBNull.Value ? "" : reader["UrgencyLevel"].ToString();
+                            }
+                        }
+                    }
+
+                    if (!headerFound)
+                    {
+                        MessageBox.Show("Material Request " + requestID + " not found.",
+                            "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // 2. Pre-fill OrderID (from OrderItem join)
+                    if (!string.IsNullOrEmpty(orderID))
+                        txtOrderID.Text = orderID;
+
+                    // 3. Pre-fill RequestedBy + staff details (from MaterialRequest.RequestedBy)
+                    if (!string.IsNullOrEmpty(requestedBy))
+                    {
+                        txtReqBy.Text = requestedBy;
+                        using (MySqlCommand cmd = new MySqlCommand(staffQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@staffId", requestedBy);
+                            using (MySqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    txtReqName.Text = reader["StaffName"].ToString();
+                                    txtReqPos.Text = reader["Job_Title"].ToString();
+                                    txtReqPhone.Text = reader["Phone"] == DBNull.Value ? "" : reader["Phone"].ToString();
+                                }
+                            }
+                        }
+                    }
+
+                    // 4. Pre-fill Required Date (from MaterialRequest.RequiredDeliveryDate)
+                    dtpReqDate.Value = requiredDate;
+
+                    // 5. Pre-fill Remarks (combine MaterialRequest.Remarks + urgency + source)
+                    string remarksParts = "From Material Request " + requestID;
+                    if (!string.IsNullOrEmpty(urgency))
+                        remarksParts += " [Urgency: " + urgency + "]";
+                    if (!string.IsNullOrEmpty(remarks))
+                        remarksParts += ": " + remarks;
+                    txtRemarks.Text = remarksParts;
+
+                    // 6. Load all MaterialRequestItem rows into the DataGridView
+                    using (MySqlCommand cmd = new MySqlCommand(itemsQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@rid", requestID);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string materialID = reader["MaterialID"].ToString();
+                                string materialName = reader["MaterialName"].ToString();
+                                decimal qty = Convert.ToDecimal(reader["Quantity"]);
+                                string unit = reader["Unit"].ToString();
+
+                                dgvItems.Rows.Add(materialID, materialName,
+                                    qty.ToString("F2"), unit);
+                            }
+                        }
+                    }
+
+                    // 7. Set TransferType to RawMaterial_Out (warehouse → production)
+                    rbMaterial.Checked = true;
+
+                    // 8. Default locations
+                    txtFromLocation.Text = "Main Warehouse";
+                    txtToLocation.Text = "Production Workshop";
+
+                    MessageBox.Show(
+                        "Transfer form pre-filled from Material Request " + requestID + ".\n" +
+                        dgvItems.Rows.Count + " material item(s) loaded.\n" +
+                        "Please verify From/To locations and submit.",
+                        "Pre-filled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error pre-filling from Material Request: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

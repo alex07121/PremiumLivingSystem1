@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace PremiumLivingSystem
 {
-    public partial class UcApprovedTransfers : UserControl
+    public partial class UcApproveTransfers : UserControl
     {
-        public UcApprovedTransfers() { InitializeComponent(); }
+        public UcApproveTransfers() { InitializeComponent(); }
 
         private void UcApprovedTransfers_Load(object sender, EventArgs e)
         {

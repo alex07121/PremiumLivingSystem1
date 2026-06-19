@@ -23,6 +23,8 @@ namespace PremiumLivingSystem
             btnMasterProduct.Visible = UserSession.IsSupervisor;
             btnMasterSupplier.Visible = UserSession.IsSupervisor;
             btnRawMaterial.Visible = UserSession.IsSupervisor;
+            btnApproveTransfers.Visible = UserSession.IsSupervisor;
+
         }
 
         
@@ -149,11 +151,11 @@ namespace PremiumLivingSystem
 
         private void ShowUserControl(UserControl uc)
         {
-            if (mainPanel != null)
+            if (btnCreateProcurement != null)
             {
-                mainPanel.Controls.Clear();
+                btnCreateProcurement.Controls.Clear();
                 uc.Dock = DockStyle.Fill;
-                mainPanel.Controls.Add(uc);
+                btnCreateProcurement.Controls.Add(uc);
                 currentUcType = uc.GetType();
             }
         }
@@ -226,13 +228,13 @@ namespace PremiumLivingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UcApprovedTransfers uc = new UcApprovedTransfers();
+            UcApproveTransfers uc = new UcApproveTransfers();
             ShowUserControl(uc);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            UcApprovedTransfers uc = new UcApprovedTransfers();
+            UcApproveTransfers uc = new UcApproveTransfers();
             ShowUserControl(uc);
         }
 
@@ -293,6 +295,36 @@ namespace PremiumLivingSystem
         {
             UcMasterCategory ucMasterCategory = new UcMasterCategory();
             ShowUserControl(ucMasterCategory);
+        }
+
+        private void btnSearchProcurement_Click_1(object sender, EventArgs e)
+        {
+            UcSearchProcurement uc = new UcSearchProcurement();
+            ShowUserControl(uc);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UcCreateProcurement uc = new UcCreateProcurement();
+            ShowUserControl(uc);
+        }
+
+        private void btnSearchMaterialRequest_Click(object sender, EventArgs e)
+        {
+            UcSearchMaterialRequest uc = new UcSearchMaterialRequest();
+            ShowUserControl(uc);
+        }
+
+        private void btnApproveTransfers_Click(object sender, EventArgs e)
+        {
+            UcApproveTransfers uc = new UcApproveTransfers();
+            ShowUserControl(uc);
+        }
+
+        private void btnCreateTransfer_Click(object sender, EventArgs e)
+        {
+            UcTransfer uc = new UcTransfer();
+            ShowUserControl(uc);
         }
     }
 }

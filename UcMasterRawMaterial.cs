@@ -17,6 +17,15 @@ namespace PremiumLivingSystem
             LoadSuppliers();
             LoadMaterials();
             ClearFields();
+
+            // Position lblPrice + txtPrice to the right of lblReorder + txtReorder
+            // (other controls use .resx layout, so we position at runtime)
+            lblPrice.Location = new System.Drawing.Point(
+                lblReorder.Location.X + lblReorder.Width + 80,
+                lblReorder.Location.Y);
+            txtPrice.Location = new System.Drawing.Point(
+                txtReorder.Location.X + txtReorder.Width + 30,
+                txtReorder.Location.Y);
         }
 
         private void SetupListView()
@@ -28,6 +37,7 @@ namespace PremiumLivingSystem
             lvMaterials.Columns.Add("Unit", 60);
             lvMaterials.Columns.Add("StockQty", 80);
             lvMaterials.Columns.Add("ReorderLvl", 80);
+            lvMaterials.Columns.Add("Price", 90);
         }
 
         private void LoadSuppliers()
@@ -61,9 +71,9 @@ namespace PremiumLivingSystem
             try
             {
                 lvMaterials.Items.Clear();
-                string query = @"SELECT rm.MaterialID, rm.MaterialName, s.SupplierName, rm.Unit, rm.StockQty, rm.ReorderLevel 
-                                 FROM RawMaterial rm 
-                                 LEFT JOIN Supplier s ON rm.SupplierID = s.SupplierID 
+                string query = @"SELECT rm.MaterialID, rm.MaterialName, s.SupplierName, rm.Unit, rm.StockQty, rm.ReorderLevel, rm.UnitPurchasePrice
+                                 FROM RawMaterial rm
+                                 LEFT JOIN Supplier s ON rm.SupplierID = s.SupplierID
                                  ORDER BY rm.MaterialID";
                 using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
                 {
@@ -78,6 +88,7 @@ namespace PremiumLivingSystem
                         item.SubItems.Add(reader["Unit"]?.ToString() ?? "");
                         item.SubItems.Add(reader["StockQty"]?.ToString() ?? "0");
                         item.SubItems.Add(reader["ReorderLevel"]?.ToString() ?? "0");
+                        item.SubItems.Add(Convert.ToDecimal(reader["UnitPurchasePrice"]).ToString("F2"));
                         lvMaterials.Items.Add(item);
                     }
                     reader.Close();
@@ -99,6 +110,7 @@ namespace PremiumLivingSystem
                 txtUnit.Text = item.SubItems[3].Text;
                 txtStockQty.Text = item.SubItems[4].Text;
                 txtReorder.Text = item.SubItems[5].Text;
+                txtPrice.Text = item.SubItems[6].Text;
 
                 string supName = item.SubItems[2].Text;
                 for (int i = 0; i < cmbSupplier.Items.Count; i++)
@@ -138,8 +150,8 @@ namespace PremiumLivingSystem
 
             try
             {
-                string query = @"INSERT INTO RawMaterial (SupplierID, MaterialName, Unit, StockQty, ReorderLevel) 
-                                 VALUES (@supId, @name, @unit, @qty, @reorder)";
+                string query = @"INSERT INTO RawMaterial (SupplierID, MaterialName, Unit, StockQty, ReorderLevel, UnitPurchasePrice)
+                                 VALUES (@supId, @name, @unit, @qty, @reorder, @price)";
                 using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
                 {
                     MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -148,6 +160,7 @@ namespace PremiumLivingSystem
                     cmd.Parameters.AddWithValue("@unit", txtUnit.Text.Trim());
                     cmd.Parameters.AddWithValue("@qty", decimal.TryParse(txtStockQty.Text.Trim(), out decimal q) ? q : 0);
                     cmd.Parameters.AddWithValue("@reorder", decimal.TryParse(txtReorder.Text.Trim(), out decimal r) ? r : 0);
+                    cmd.Parameters.AddWithValue("@price", decimal.TryParse(txtPrice.Text.Trim(), out decimal p) ? p : 0);
                     conn.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
@@ -177,8 +190,8 @@ namespace PremiumLivingSystem
 
             try
             {
-                string query = @"UPDATE RawMaterial SET SupplierID = @supId, MaterialName = @name, Unit = @unit, 
-                                 StockQty = @qty, ReorderLevel = @reorder WHERE MaterialID = @id";
+                string query = @"UPDATE RawMaterial SET SupplierID = @supId, MaterialName = @name, Unit = @unit,
+                                 StockQty = @qty, ReorderLevel = @reorder, UnitPurchasePrice = @price WHERE MaterialID = @id";
                 using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
                 {
                     MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -188,6 +201,7 @@ namespace PremiumLivingSystem
                     cmd.Parameters.AddWithValue("@unit", txtUnit.Text.Trim());
                     cmd.Parameters.AddWithValue("@qty", decimal.TryParse(txtStockQty.Text.Trim(), out decimal q) ? q : 0);
                     cmd.Parameters.AddWithValue("@reorder", decimal.TryParse(txtReorder.Text.Trim(), out decimal r) ? r : 0);
+                    cmd.Parameters.AddWithValue("@price", decimal.TryParse(txtPrice.Text.Trim(), out decimal p) ? p : 0);
                     conn.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
@@ -213,6 +227,7 @@ namespace PremiumLivingSystem
             txtUnit.Clear();
             txtStockQty.Clear();
             txtReorder.Clear();
+            txtPrice.Clear();
             cmbSupplier.SelectedIndex = -1;
             lvMaterials.SelectedItems.Clear();
         }
@@ -229,9 +244,9 @@ namespace PremiumLivingSystem
             try
             {
                 lvMaterials.Items.Clear();
-                string query = @"SELECT rm.MaterialID, rm.MaterialName, s.SupplierName, rm.Unit, rm.StockQty, rm.ReorderLevel 
-                                 FROM RawMaterial rm 
-                                 LEFT JOIN Supplier s ON rm.SupplierID = s.SupplierID 
+                string query = @"SELECT rm.MaterialID, rm.MaterialName, s.SupplierName, rm.Unit, rm.StockQty, rm.ReorderLevel, rm.UnitPurchasePrice
+                                 FROM RawMaterial rm
+                                 LEFT JOIN Supplier s ON rm.SupplierID = s.SupplierID
                                  WHERE rm.MaterialID LIKE @kw OR rm.MaterialName LIKE @kw OR s.SupplierName LIKE @kw
                                  ORDER BY rm.MaterialID";
                 using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
@@ -248,6 +263,7 @@ namespace PremiumLivingSystem
                         item.SubItems.Add(reader["Unit"]?.ToString() ?? "");
                         item.SubItems.Add(reader["StockQty"]?.ToString() ?? "0");
                         item.SubItems.Add(reader["ReorderLevel"]?.ToString() ?? "0");
+                        item.SubItems.Add(Convert.ToDecimal(reader["UnitPurchasePrice"]).ToString("F2"));
                         lvMaterials.Items.Add(item);
                     }
                     reader.Close();

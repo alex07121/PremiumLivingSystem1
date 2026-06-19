@@ -26,6 +26,7 @@ namespace PremiumLivingSystem
             listTransfers.Columns.Add("To", 120);
             listTransfers.Columns.Add("Req By", 70);
             listTransfers.Columns.Add("Issued By", 80);
+            listTransfers.Columns.Add("Status", 90);  // [v5.4 NEW]
 
             listItems.Columns.Clear();
             listItems.Columns.Add("Item ID", 120);
@@ -36,10 +37,14 @@ namespace PremiumLivingSystem
 
         private void LoadAllIssued()
         {
+            // [v5.4] Show both 'Issued' (awaiting delivery) and 'Delivering' (in transit)
             string query = @"
                 SELECT TransferID, TransferDate, TransferType, OrderID, ProductionID,
-                       FromLocation, ToLocation, RequestedBy, IssuedBy
-                FROM RawMaterialTransfer WHERE Status = 'Issued' ORDER BY IssuedDate DESC";
+                       FromLocation, ToLocation, RequestedBy, IssuedBy, Status,
+                       DeliveredBy, DeliveringDate
+                FROM RawMaterialTransfer
+                WHERE Status IN ('Issued', 'Delivering')
+                ORDER BY IssuedDate DESC";
 
             try
             {
@@ -60,6 +65,9 @@ namespace PremiumLivingSystem
                         item.SubItems.Add(r["ToLocation"]?.ToString() ?? "");
                         item.SubItems.Add(r["RequestedBy"].ToString());
                         item.SubItems.Add(r["IssuedBy"]?.ToString() ?? "");
+                        // Store Status in Tag for button enable/disable logic
+                        item.Tag = r["Status"].ToString();
+                        item.SubItems.Add(r["Status"].ToString());
                         listTransfers.Items.Add(item);
                     }
                     r.Close();
@@ -74,8 +82,8 @@ namespace PremiumLivingSystem
             if (string.IsNullOrEmpty(kw)) { LoadAllIssued(); return; }
 
             string query = @"SELECT TransferID, TransferDate, TransferType, OrderID, ProductionID,
-                FromLocation, ToLocation, RequestedBy, IssuedBy
-                FROM RawMaterialTransfer WHERE Status='Issued' AND TransferID=@tId";
+                FromLocation, ToLocation, RequestedBy, IssuedBy, Status
+                FROM RawMaterialTransfer WHERE Status IN ('Issued','Delivering') AND TransferID=@tId";
 
             try
             {
@@ -98,10 +106,12 @@ namespace PremiumLivingSystem
                         item.SubItems.Add(r["ToLocation"]?.ToString() ?? "");
                         item.SubItems.Add(r["RequestedBy"].ToString());
                         item.SubItems.Add(r["IssuedBy"]?.ToString() ?? "");
+                        item.Tag = r["Status"].ToString();
+                        item.SubItems.Add(r["Status"].ToString());
                         listTransfers.Items.Add(item);
                     }
                     r.Close();
-                    if (!f) MessageBox.Show("No issued transfer found.");
+                    if (!f) MessageBox.Show("No transfer found.");
                 }
             }
             catch (Exception ex) { MessageBox.Show("Error loading data: " + ex.Message); }
@@ -109,8 +119,19 @@ namespace PremiumLivingSystem
 
         private void listTransfers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnReceive.Enabled = listTransfers.SelectedItems.Count > 0;
             LoadItems();
+
+            if (listTransfers.SelectedItems.Count == 0)
+            {
+                btnStartDelivery.Enabled = false;
+                btnReceive.Enabled = false;
+                return;
+            }
+
+            // Enable buttons based on Status (stored in Tag)
+            string status = listTransfers.SelectedItems[0].Tag?.ToString() ?? "";
+            btnStartDelivery.Enabled = (status == "Issued");       // Issued → Delivering
+            btnReceive.Enabled = (status == "Delivering");         // Delivering → Received
         }
 
         private void LoadItems()
@@ -149,9 +170,15 @@ namespace PremiumLivingSystem
             if (listTransfers.SelectedItems.Count == 0) return;
             string tid = listTransfers.SelectedItems[0].Text;
 
+            // T3 style: YesNo confirmation
+            var confirm = MessageBox.Show(
+                "Confirm goods received for Transfer " + tid + "?",
+                "Confirm Received", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm != DialogResult.Yes) return;
+
             try
             {
-                string query = "UPDATE RawMaterialTransfer SET Status='Received', ReceivedBy=@staff, ReceivedDate=CURDATE() WHERE TransferID=@tId";
+                string query = "UPDATE RawMaterialTransfer SET Status='Received', ReceivedBy=@staff, ReceivedDate=CURDATE() WHERE TransferID=@tId AND Status='Delivering'";
                 using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
                 {
                     MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -161,6 +188,49 @@ namespace PremiumLivingSystem
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                         MessageBox.Show($"Transfer {tid} received. Goods confirmed.", "Received");
+                    else
+                        MessageBox.Show("Cannot receive. Transfer must be in 'Delivering' status.");
+                }
+                LoadAllIssued();
+            }
+            catch (Exception ex) { MessageBox.Show("Error updating record: " + ex.Message); }
+        }
+
+        // ================================================================
+        // START DELIVERY — Logistics Staff picks up goods and starts delivery
+        // Status: Issued → Delivering
+        // ================================================================
+        private void btnStartDelivery_Click(object sender, EventArgs e)
+        {
+            if (listTransfers.SelectedItems.Count == 0) return;
+            string tid = listTransfers.SelectedItems[0].Text;
+
+            // T3 style: YesNo confirmation
+            var confirm = MessageBox.Show(
+                "Start delivery for Transfer " + tid + "?\n\n" +
+                "Status will change to 'Delivering'.\n" +
+                "DeliveredBy and DeliveringDate will be recorded.",
+                "Confirm Start Delivery", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                string query = @"UPDATE RawMaterialTransfer
+                                 SET Status='Delivering',
+                                     DeliveredBy=@staff,
+                                     DeliveringDate=NOW()
+                                 WHERE TransferID=@tId AND Status='Issued'";
+                using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@staff", UserSession.CurrentStaffId ?? "S-001");
+                    cmd.Parameters.AddWithValue("@tId", tid);
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                        MessageBox.Show($"Transfer {tid} is now out for delivery.", "Delivering");
+                    else
+                        MessageBox.Show("Cannot start delivery. Transfer must be in 'Issued' status.");
                 }
                 LoadAllIssued();
             }

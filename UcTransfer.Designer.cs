@@ -22,8 +22,6 @@
             this.dtpTransferDate = new System.Windows.Forms.DateTimePicker();
             this.lblOrderID = new System.Windows.Forms.Label();
             this.txtOrderID = new System.Windows.Forms.TextBox();
-            this.lblProductionID = new System.Windows.Forms.Label();
-            this.txtProductionID = new System.Windows.Forms.TextBox();
             this.grpType = new System.Windows.Forms.GroupBox();
             this.rbProduct = new System.Windows.Forms.RadioButton();
             this.rbMaterial = new System.Windows.Forms.RadioButton();
@@ -117,16 +115,6 @@
             resources.ApplyResources(this.txtOrderID, "txtOrderID");
             this.txtOrderID.Name = "txtOrderID";
             // 
-            // lblProductionID
-            // 
-            resources.ApplyResources(this.lblProductionID, "lblProductionID");
-            this.lblProductionID.Name = "lblProductionID";
-            // 
-            // txtProductionID
-            // 
-            resources.ApplyResources(this.txtProductionID, "txtProductionID");
-            this.txtProductionID.Name = "txtProductionID";
-            // 
             // grpType
             // 
             this.grpType.Controls.Add(this.rbProduct);
@@ -170,6 +158,7 @@
             // 
             resources.ApplyResources(this.txtReqPhone, "txtReqPhone");
             this.txtReqPhone.Name = "txtReqPhone";
+            this.txtReqPhone.ReadOnly = true;
             // 
             // lblReqPos
             // 
@@ -464,8 +453,6 @@
             this.Controls.Add(this.grpItems);
             this.Controls.Add(this.grpRequestor);
             this.Controls.Add(this.grpType);
-            this.Controls.Add(this.txtProductionID);
-            this.Controls.Add(this.lblProductionID);
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.lblOrderID);
             this.Controls.Add(this.dtpTransferDate);
@@ -501,8 +488,6 @@
         private System.Windows.Forms.DateTimePicker dtpTransferDate;
         private System.Windows.Forms.Label lblOrderID;
         private System.Windows.Forms.TextBox txtOrderID;
-        private System.Windows.Forms.Label lblProductionID;
-        private System.Windows.Forms.TextBox txtProductionID;
         private System.Windows.Forms.GroupBox grpType;
         private System.Windows.Forms.RadioButton rbProduct;
         private System.Windows.Forms.RadioButton rbMaterial;

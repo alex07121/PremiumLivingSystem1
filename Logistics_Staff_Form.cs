@@ -167,5 +167,11 @@ namespace PremiumLivingSystem
             UcConfirmGoodsReceived ucConfirmGoodsReceived = new UcConfirmGoodsReceived();
             ShowUserControl(ucConfirmGoodsReceived);
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            UcReceivableTransfers uc = new UcReceivableTransfers();
+            ShowUserControl(uc);
+        }
     }
 }
