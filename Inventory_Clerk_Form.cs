@@ -4,7 +4,6 @@ using System.Threading;
 using System.Globalization;
 using MaterialSkin;
 using MaterialSkin.Controls;
-using PLFC_Project;
 
 namespace PremiumLivingSystem
 {
@@ -14,37 +13,40 @@ namespace PremiumLivingSystem
 
         public Inventory_Clerk_Form()
         {
+          
             ApplyLanguage();
             InitializeComponent();
             SetupMaterialSkin();
-
-            // 🔹 新增：初始化按鈕文字
-            SetButtonTexts();
-
-            UpdateStaffInfo();
+            UpdateStaffInfo();      
             SetLanguageComboBoxValue();
             btnMasterCategory.Visible = UserSession.IsSupervisor;
             btnMasterProduct.Visible = UserSession.IsSupervisor;
             btnMasterSupplier.Visible = UserSession.IsSupervisor;
             btnRawMaterial.Visible = UserSession.IsSupervisor;
             btnApproveTransfers.Visible = UserSession.IsSupervisor;
+
         }
 
+        
         private void SetupMaterialSkin()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
+
+          
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
+            
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue800,
-                Primary.Blue900,
-                Primary.Blue500,
-                Accent.LightBlue200,
-                TextShade.WHITE
+                Primary.Blue800,      
+                Primary.Blue900,     
+                Primary.Blue500,     
+                Accent.LightBlue200,  
+                TextShade.WHITE      
             );
         }
 
+ 
         private void UpdateStaffInfo()
         {
             if (UserSession.CurrentCulture == "zh-Hans-HK")
@@ -64,10 +66,12 @@ namespace PremiumLivingSystem
 
         private void ApplyRoleVisibility()
         {
+            // Supervisor-only: Staff management
             if (btnMasterSupplier != null)
                 btnMasterSupplier.Visible = UserSession.IsSupervisor;
         }
 
+  
         private void ApplyLanguage()
         {
             if (DesignModeHelper.IsDesignMode())
@@ -80,31 +84,39 @@ namespace PremiumLivingSystem
             }
         }
 
+    
         private void SetLanguageComboBoxValue()
         {
+         
             cmbLanguage.SelectedIndexChanged -= cmbLanguage_SelectedIndexChanged;
 
+         
             if (UserSession.CurrentCulture == "zh-Hans-HK")
             {
                 cmbLanguage.SelectedIndex = 1;
             }
             else
             {
-                cmbLanguage.SelectedIndex = 0;
+                cmbLanguage.SelectedIndex = 0; 
             }
 
+       
             cmbLanguage.SelectedIndexChanged += cmbLanguage_SelectedIndexChanged;
         }
 
+
         private void RefreshFormText()
         {
+           
             ApplyLanguage();
+
+          
             UpdateStaffInfo();
+
+          
             SetLanguageComboBoxValue();
 
-            // 🔹 新增：切換語言時更新按鈕文字
-            SetButtonTexts();
-
+        
             if (currentUcType != null)
             {
                 UserControl newUc = (UserControl)Activator.CreateInstance(currentUcType);
@@ -112,10 +124,13 @@ namespace PremiumLivingSystem
             }
         }
 
+    
         private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
+         
             if (cmbLanguage.SelectedIndex == 0)
             {
+                
                 if (UserSession.CurrentCulture != "en")
                 {
                     UserSession.CurrentCulture = "en";
@@ -124,6 +139,7 @@ namespace PremiumLivingSystem
             }
             else if (cmbLanguage.SelectedIndex == 1)
             {
+               
                 if (UserSession.CurrentCulture != "zh-Hans-HK")
                 {
                     UserSession.CurrentCulture = "zh-Hans-HK";
@@ -131,6 +147,7 @@ namespace PremiumLivingSystem
                 }
             }
         }
+
 
         private void ShowUserControl(UserControl uc)
         {
@@ -143,65 +160,23 @@ namespace PremiumLivingSystem
             }
         }
 
-        // 🔹 新增：集中管理所有按鈕文字
-        private void SetButtonTexts()
-        {
-            bool isChinese = UserSession.CurrentCulture == "zh-Hans-HK";
-
-            // 依截圖順序設定按鈕文字
-            if (button4 != null)
-                button4.Text = isChinese ? "入庫記錄" : "Record of inward goods";
-
-            if (button1 != null)
-                button1.Text = isChinese ? "搜尋產品" : "Search Product";
-
-            if (btnMasterSupplier != null)
-                btnMasterSupplier.Text = isChinese ? "供應商資料管理" : "Master Supplier";
-
-            if (btnMasterProduct != null)
-                btnMasterProduct.Text = isChinese ? "產品資料管理" : "Master Product";
-
-            if (btnRawMaterial != null)
-                btnRawMaterial.Text = isChinese ? "原材料資料管理" : "Master Raw Material";
-
-            if (btnMasterCategory != null)
-                btnMasterCategory.Text = isChinese ? "分類資料管理" : "Master Category";
-
-            
-                if (btnSearchProcurement != null)
-                btnSearchProcurement.Text = isChinese ? "搜尋採購" : "Search Procurement";
-
-            if (btnCreateProcur != null)
-                btnCreateProcur.Text = isChinese ? "建立採購" : "Create Procurement";
-
-            if (btnSearchMaterialRequest != null)
-                btnSearchMaterialRequest.Text = isChinese ? "搜尋物料申請" : "Search Material Request";
-
-            if (btnApproveTransfers != null)
-                btnApproveTransfers.Text = isChinese ? "發出轉撥" : "Issue Transfers";
-
-            if (btnCreateTransfer != null)
-                btnCreateTransfer.Text = isChinese ? "建立轉撥" : "Create Transfer";
-
-            if (btnApprovedTransfer != null)
-                btnApprovedTransfer.Text = isChinese ? "已核准轉撥" : "Approved Transfer";
-
-            if (button2 != null)
-                button2.Text = isChinese ? "登出" : "Logout";
-        }
 
         private void btnAddNewItem_Click(object sender, EventArgs e)
         {
+
         }
 
+        
         private void btnManageReturns_Click(object sender, EventArgs e)
         {
             UcProcessReturn uc = new UcProcessReturn();
             ShowUserControl(uc);
         }
 
+        
         private void btnLogout_Click(object sender, EventArgs e)
         {
+           
             string message;
             string title;
 
@@ -216,17 +191,24 @@ namespace PremiumLivingSystem
                 title = "Confirm Logout";
             }
 
+          
             DialogResult result = MessageBox.Show(message, title,
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+          
             if (result == DialogResult.Yes)
             {
+               
                 UserSession.CurrentStaffId = null;
                 UserSession.CurrentName = null;
+
+              
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }
+
+     
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -240,6 +222,10 @@ namespace PremiumLivingSystem
             ShowUserControl(uc);
         }
 
+
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             UcApproveTransfers uc = new UcApproveTransfers();
@@ -252,26 +238,31 @@ namespace PremiumLivingSystem
             ShowUserControl(uc);
         }
 
+        // Master Data — Supplier
         private void btnMasterSupplier_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UcMasterSupplier());
         }
 
+        // Master Data — Product
         private void btnMasterProduct_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UcMasterProduct());
         }
 
+        // Master Data — Raw Material
         private void btnMasterRawMaterial_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UcMasterRawMaterial());
         }
 
+        // Master Data — Product Category
         private void btnMasterCategory_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UcMasterCategory());
         }
 
+        // Master Data — Staff (Supervisor only)
         private void btnMasterStaff_Click(object sender, EventArgs e)
         {
             if (!UserSession.IsSupervisor)
