@@ -119,13 +119,22 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
+    <value>56, 12</value>
   </data>
   <data name="lblSearch.Text" xml:space="preserve">
-    <value>轉撥單號：</value>
+    <value>轉撥單號:</value>
   </data>
   <data name="btnSearch.Text" xml:space="preserve">
     <value>搜尋</value>
+  </data>
+  <data name="lblItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 218</value>
+  </data>
+  <data name="lblItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 16</value>
+  </data>
+  <data name="lblItems.Text" xml:space="preserve">
+    <value>物品:</value>
   </data>
   <data name="btnApprove.Text" xml:space="preserve">
     <value>核准</value>

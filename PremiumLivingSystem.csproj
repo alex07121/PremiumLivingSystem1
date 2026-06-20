@@ -532,6 +532,9 @@
     <EmbeddedResource Include="UcApprovedTransfers.resx">
       <DependentUpon>UcApprovedTransfers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcApprovedTransfers.zh-Hans-HK.resx">
+      <DependentUpon>UcApprovedTransfers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcApprovedTransfers.zh-HK.resx">
       <DependentUpon>UcApprovedTransfers.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,7 +559,13 @@
     <EmbeddedResource Include="UcCreateProcurement.resx">
       <DependentUpon>UcCreateProcurement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcCreateProcurement.zh-Hans-HK.resx">
+      <DependentUpon>UcCreateProcurement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcMasterCategory.resx">
+      <DependentUpon>UcMasterCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMasterCategory.zh-Hans-HK.resx">
       <DependentUpon>UcMasterCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcMasterCategory.zh-HK.resx">
@@ -571,10 +580,16 @@
     <EmbeddedResource Include="UcMasterProduct.resx">
       <DependentUpon>UcMasterProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcMasterProduct.zh-Hans-HK.resx">
+      <DependentUpon>UcMasterProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcMasterProduct.zh-HK.resx">
       <DependentUpon>UcMasterProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcMasterRawMaterial.resx">
+      <DependentUpon>UcMasterRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMasterRawMaterial.zh-Hans-HK.resx">
       <DependentUpon>UcMasterRawMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcMasterRawMaterial.zh-HK.resx">
@@ -583,16 +598,25 @@
     <EmbeddedResource Include="UcMasterStaff.resx">
       <DependentUpon>UcMasterStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcMasterStaff.zh-Hans-HK.resx">
+      <DependentUpon>UcMasterStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcMasterStaff.zh-HK.resx">
       <DependentUpon>UcMasterStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcMasterSupplier.resx">
       <DependentUpon>UcMasterSupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcMasterSupplier.zh-Hans-HK.resx">
+      <DependentUpon>UcMasterSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcMasterSupplier.zh-HK.resx">
       <DependentUpon>UcMasterSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcPendingTransfers.resx">
+      <DependentUpon>UcPendingTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcPendingTransfers.zh-Hans-HK.resx">
       <DependentUpon>UcPendingTransfers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcPendingTransfers.zh-HK.resx">
@@ -637,6 +661,9 @@
     <EmbeddedResource Include="UcSearchMaterialRequest.resx">
       <DependentUpon>UcSearchMaterialRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcSearchMaterialRequest.zh-Hans-HK.resx">
+      <DependentUpon>UcSearchMaterialRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcSearchOrder.resx">
       <DependentUpon>UcSearchOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -651,6 +678,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcSalesSummaryReport.resx">
       <DependentUpon>UcSalesSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcSearchProcurement.zh-Hans-HK.resx">
+      <DependentUpon>UcSearchProcurement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcSearchProduct.resx">
       <DependentUpon>UcSearchProduct.cs</DependentUpon>
@@ -689,6 +719,9 @@
       <DependentUpon>ProcessOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcTransfer.resx">
+      <DependentUpon>UcTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcTransfer.zh-Hans-HK.resx">
       <DependentUpon>UcTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcTransfer.zh-HK.resx">

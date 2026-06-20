@@ -120,6 +120,9 @@
   <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;pbProductImage.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -153,9 +156,6 @@
   <data name="lblPrice.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="lblCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 12</value>
-  </data>
   <data name="txtPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 22</value>
   </data>
@@ -180,17 +180,14 @@
   <data name="&gt;&gt;lblPrice.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="lblID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lvProducts.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="btnUploadImage.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
   </data>
   <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
     <value>$this</value>
@@ -219,6 +216,9 @@
   <data name="lblName.Text" xml:space="preserve">
     <value>Name:</value>
   </data>
+  <data name="lblStock.Text" xml:space="preserve">
+    <value>Stock:</value>
+  </data>
   <data name="&gt;&gt;lblCategory.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -231,14 +231,11 @@
   <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
     <value>openFileDialog1</value>
   </data>
-  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
+  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
+    <value>txtID</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UcMasterProduct</value>
-  </data>
-  <data name="&gt;&gt;txtPrice.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="lblPrice.Location" type="System.Drawing.Point, System.Drawing">
     <value>280, 23</value>
@@ -261,9 +258,6 @@
   <data name="&gt;&gt;lblID.Name" xml:space="preserve">
     <value>lblID</value>
   </data>
-  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
-    <value>txtID</value>
-  </data>
   <data name="&gt;&gt;lblStock.Name" xml:space="preserve">
     <value>lblStock</value>
   </data>
@@ -276,11 +270,8 @@
   <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
     <value>txtSearch</value>
   </data>
-  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
-    <value>lblName</value>
-  </data>
-  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblID.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>605, 46</value>
@@ -291,8 +282,11 @@
   <data name="&gt;&gt;btnUploadImage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lblID.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="&gt;&gt;txtPrice.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
   </data>
   <data name="lblID.Text" xml:space="preserve">
     <value>Product ID:</value>
@@ -306,17 +300,14 @@
   <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;lblID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnUploadImage.Name" xml:space="preserve">
-    <value>btnUploadImage</value>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 12</value>
   </data>
   <data name="&gt;&gt;lblStock.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+  <data name="lblID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
     <value>$this</value>
@@ -342,17 +333,14 @@
   <data name="btnClear.Text" xml:space="preserve">
     <value>Clear</value>
   </data>
-  <data name="lvProducts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 122</value>
-  </data>
   <data name="btnSearch.Text" xml:space="preserve">
     <value>Search</value>
   </data>
   <data name="&gt;&gt;btnUploadImage.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lblID.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
@@ -381,14 +369,17 @@
   <data name="&gt;&gt;txtStock.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="lblCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;cmbCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -410,6 +401,9 @@
   </data>
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
   </data>
   <data name="&gt;&gt;lblPrice.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -486,6 +480,9 @@
   <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
   <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -519,9 +516,6 @@
   <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;cmbCategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="pbProductImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
@@ -537,11 +531,17 @@
   <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
+  <data name="btnUploadImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
   <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 23</value>
   </data>
   <data name="&gt;&gt;lblStock.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="lblCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lvProducts.Name" xml:space="preserve">
     <value>lvProducts</value>
@@ -549,8 +549,8 @@
   <data name="&gt;&gt;pbProductImage.Name" xml:space="preserve">
     <value>pbProductImage</value>
   </data>
-  <data name="lblStock.Text" xml:space="preserve">
-    <value>Stock:</value>
+  <data name="lblCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 12</value>
   </data>
   <data name="lblPrice.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -564,14 +564,14 @@
   <data name="pbProductImage.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="btnUploadImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
+  <data name="&gt;&gt;btnUploadImage.Name" xml:space="preserve">
+    <value>btnUploadImage</value>
   </data>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
+  <data name="lvProducts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 122</value>
   </data>
-  <data name="txtPrice.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="btnUploadImage.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

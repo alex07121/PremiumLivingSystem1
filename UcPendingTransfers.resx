@@ -121,21 +121,14 @@
   <data name="lblSearch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="dgvTransfers.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="listTransfers.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel Transfer</value>
+  <data name="&gt;&gt;listItems.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblSearch.Text" xml:space="preserve">
     <value>Transfer ID:</value>
-  </data>
-  <data name="&gt;&gt;lblTransfers.Name" xml:space="preserve">
-    <value>lblTransfers</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblTransfers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 16</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -143,39 +136,40 @@
   <data name="lblItems.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="dgvItems.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="dgvItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>549, 127</value>
+  <data name="&gt;&gt;listTransfers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
     <value>btnSearch</value>
   </data>
   <data name="btnApprove.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnApprove.Location" type="System.Drawing.Point, System.Drawing">
     <value>600, 236</value>
   </data>
-  <data name="btnSearch.Text" xml:space="preserve">
-    <value>Search</value>
+  <data name="&gt;&gt;listTransfers.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dgvTransfers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="listItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
+  </data>
+  <data name="listTransfers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 32</value>
   </data>
   <data name="&gt;&gt;lblSearch.Name" xml:space="preserve">
     <value>lblSearch</value>
   </data>
-  <data name="&gt;&gt;dgvItems.Name" xml:space="preserve">
-    <value>dgvItems</value>
-  </data>
-  <data name="&gt;&gt;lblTransfers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnCancel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSearch.Parent" xml:space="preserve">
     <value>$this</value>
@@ -183,23 +177,29 @@
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 20</value>
   </data>
-  <data name="&gt;&gt;dgvItems.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnApprove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="btnApprove.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt, style=Bold</value>
   </data>
-  <data name="lblItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 10</value>
+  <data name="&gt;&gt;listItems.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listTransfers.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="&gt;&gt;dgvTransfers.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="listItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 128</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblItems.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 35</value>
@@ -207,7 +207,7 @@
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>724, 236</value>
   </data>
-  <data name="btnApprove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="listTransfers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
@@ -216,8 +216,8 @@
   <data name="&gt;&gt;btnApprove.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="dgvTransfers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 32</value>
+  <data name="lblItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 222</value>
   </data>
   <data name="lblSearch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -225,38 +225,47 @@
   <data name="&gt;&gt;lblItems.Name" xml:space="preserve">
     <value>lblItems</value>
   </data>
-  <data name="&gt;&gt;dgvItems.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>Search</value>
   </data>
   <data name="lblItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 12</value>
+    <value>49, 16</value>
   </data>
   <data name="&gt;&gt;lblItems.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 7</value>
+  </data>
+  <data name="listItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 236</value>
+  </data>
   <data name="&gt;&gt;btnApprove.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="&gt;&gt;lblTransfers.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;btnApprove.Name" xml:space="preserve">
+    <value>btnApprove</value>
+  </data>
+  <data name="btnApprove.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dgvTransfers.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel Transfer</value>
+  </data>
+  <data name="&gt;&gt;listItems.Name" xml:space="preserve">
+    <value>listItems</value>
+  </data>
+  <data name="listTransfers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 185</value>
   </data>
   <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 12</value>
-  </data>
-  <data name="dgvTransfers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>823, 184</value>
   </data>
   <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
     <value>txtSearch</value>
@@ -264,47 +273,29 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
-  <data name="lblTransfers.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt, style=Bold</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UcPendingTransfers</value>
   </data>
   <data name="&gt;&gt;lblSearch.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;dgvTransfers.Name" xml:space="preserve">
-    <value>dgvTransfers</value>
-  </data>
-  <data name="&gt;&gt;dgvItems.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 6</value>
   </data>
   <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
     <value>btnCancel</value>
   </data>
-  <data name="lblTransfers.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="dgvItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 236</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UcPendingTransfers</value>
-  </data>
-  <data name="lblTransfers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 222</value>
-  </data>
-  <data name="lblItems.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="lblTransfers.Text" xml:space="preserve">
-    <value>Items:</value>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 6</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listTransfers.Name" xml:space="preserve">
+    <value>listTransfers</value>
+  </data>
+  <data name="lblItems.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="btnApprove.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 35</value>
@@ -312,17 +303,11 @@
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 22</value>
   </data>
-  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 7</value>
+  <data name="lblItems.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="txtSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -330,23 +315,23 @@
   <data name="btnApprove.Text" xml:space="preserve">
     <value>Approve</value>
   </data>
-  <data name="&gt;&gt;btnApprove.Name" xml:space="preserve">
-    <value>btnApprove</value>
+  <data name="lblItems.Text" xml:space="preserve">
+    <value>Items:</value>
   </data>
   <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;dgvTransfers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="listItems.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="lblSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
   </data>
-  <data name="lblTransfers.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -357,8 +342,8 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>849, 374</value>
   </data>
-  <data name="&gt;&gt;lblTransfers.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btnApprove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblItems.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -368,9 +353,6 @@
   </data>
   <data name="&gt;&gt;lblSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnApprove.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -118,19 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
+  <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 12</value>
   </data>
-  <data name="lblSearch.Text" xml:space="preserve">
-    <value>轉撥單號：</value>
+  <data name="lblID.Text" xml:space="preserve">
+    <value>供應商編號:</value>
+  </data>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>姓名:</value>
+  </data>
+  <data name="lblPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblPhone.Text" xml:space="preserve">
+    <value>電話:</value>
+  </data>
+  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 12</value>
+  </data>
+  <data name="lblEmail.Text" xml:space="preserve">
+    <value>電子郵件:</value>
+  </data>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 287</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>清除</value>
   </data>
   <data name="btnSearch.Text" xml:space="preserve">
     <value>搜尋</value>
-  </data>
-  <data name="btnApprove.Text" xml:space="preserve">
-    <value>核准</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>取消轉撥</value>
   </data>
 </root>

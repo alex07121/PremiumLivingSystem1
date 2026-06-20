@@ -37,6 +37,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // lvMaterials
+            // 
             resources.ApplyResources(this.lvMaterials, "lvMaterials");
             this.lvMaterials.FullRowSelect = true;
             this.lvMaterials.GridLines = true;
@@ -45,57 +48,115 @@
             this.lvMaterials.UseCompatibleStateImageBehavior = false;
             this.lvMaterials.View = System.Windows.Forms.View.Details;
             this.lvMaterials.SelectedIndexChanged += new System.EventHandler(this.lvMaterials_SelectedIndexChanged);
+            // 
+            // lblID
+            // 
             resources.ApplyResources(this.lblID, "lblID");
             this.lblID.Name = "lblID";
+            // 
+            // lblName
+            // 
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
+            // 
+            // lblSupplier
+            // 
             resources.ApplyResources(this.lblSupplier, "lblSupplier");
             this.lblSupplier.Name = "lblSupplier";
+            // 
+            // lblUnit
+            // 
             resources.ApplyResources(this.lblUnit, "lblUnit");
             this.lblUnit.Name = "lblUnit";
+            // 
+            // lblStockQty
+            // 
             resources.ApplyResources(this.lblStockQty, "lblStockQty");
             this.lblStockQty.Name = "lblStockQty";
+            // 
+            // lblReorder
+            // 
             resources.ApplyResources(this.lblReorder, "lblReorder");
             this.lblReorder.Name = "lblReorder";
+            // 
+            // txtID
+            // 
             resources.ApplyResources(this.txtID, "txtID");
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
+            // 
+            // txtName
+            // 
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
+            // 
+            // txtUnit
+            // 
             resources.ApplyResources(this.txtUnit, "txtUnit");
             this.txtUnit.Name = "txtUnit";
+            // 
+            // txtStockQty
+            // 
             resources.ApplyResources(this.txtStockQty, "txtStockQty");
             this.txtStockQty.Name = "txtStockQty";
+            // 
+            // txtReorder
+            // 
             resources.ApplyResources(this.txtReorder, "txtReorder");
             this.txtReorder.Name = "txtReorder";
-            // lblPrice + txtPrice — positioned at runtime in Load (next to txtReorder)
-            this.lblPrice.AutoSize = true;
+            // 
+            // lblPrice
+            // 
+            resources.ApplyResources(this.lblPrice, "lblPrice");
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Text = "Purchase Price:";
+            // 
+            // txtPrice
+            // 
+            resources.ApplyResources(this.txtPrice, "txtPrice");
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 27);
+            // 
+            // cmbSupplier
+            // 
             resources.ApplyResources(this.cmbSupplier, "cmbSupplier");
             this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupplier.FormattingEnabled = true;
             this.cmbSupplier.Name = "cmbSupplier";
+            // 
+            // btnAdd
+            // 
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClear
+            // 
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtSearch
+            // 
             resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
+            // 
+            // btnSearch
+            // 
             resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // UcMasterRawMaterial
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSearch);

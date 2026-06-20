@@ -37,6 +37,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // lvStaff
+            // 
             resources.ApplyResources(this.lvStaff, "lvStaff");
             this.lvStaff.FullRowSelect = true;
             this.lvStaff.GridLines = true;
@@ -45,60 +48,120 @@
             this.lvStaff.UseCompatibleStateImageBehavior = false;
             this.lvStaff.View = System.Windows.Forms.View.Details;
             this.lvStaff.SelectedIndexChanged += new System.EventHandler(this.lvStaff_SelectedIndexChanged);
+            // 
+            // lblID
+            // 
             resources.ApplyResources(this.lblID, "lblID");
             this.lblID.Name = "lblID";
+            // 
+            // lblName
+            // 
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
+            // 
+            // lblJob
+            // 
             resources.ApplyResources(this.lblJob, "lblJob");
             this.lblJob.Name = "lblJob";
+            // 
+            // lblUsername
+            // 
             resources.ApplyResources(this.lblUsername, "lblUsername");
             this.lblUsername.Name = "lblUsername";
+            // 
+            // lblPassword
+            // 
             resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.Name = "lblPassword";
+            // 
+            // lblPhone
+            // 
             resources.ApplyResources(this.lblPhone, "lblPhone");
             this.lblPhone.Name = "lblPhone";
+            // 
+            // txtID
+            // 
             resources.ApplyResources(this.txtID, "txtID");
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
+            // 
+            // txtName
+            // 
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
+            // 
+            // txtUsername
+            // 
             resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.Name = "txtUsername";
+            // 
+            // txtPassword
+            // 
             resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // txtPhone
+            // 
             resources.ApplyResources(this.txtPhone, "txtPhone");
             this.txtPhone.Name = "txtPhone";
+            // 
+            // cmbJob
+            // 
             resources.ApplyResources(this.cmbJob, "cmbJob");
             this.cmbJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJob.FormattingEnabled = true;
             this.cmbJob.Name = "cmbJob";
+            // 
+            // chkSupervisor
+            // 
             resources.ApplyResources(this.chkSupervisor, "chkSupervisor");
             this.chkSupervisor.Name = "chkSupervisor";
             this.chkSupervisor.UseVisualStyleBackColor = true;
+            // 
+            // chkActive
+            // 
             resources.ApplyResources(this.chkActive, "chkActive");
             this.chkActive.Checked = true;
             this.chkActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkActive.Name = "chkActive";
             this.chkActive.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClear
+            // 
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtSearch
+            // 
             resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
+            // 
+            // btnSearch
+            // 
             resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // UcMasterStaff
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSearch);

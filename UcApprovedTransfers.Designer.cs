@@ -53,10 +53,10 @@ namespace PremiumLivingSystem
             // 
             // listTransfers
             // 
+            resources.ApplyResources(this.listTransfers, "listTransfers");
             this.listTransfers.FullRowSelect = true;
             this.listTransfers.GridLines = true;
             this.listTransfers.HideSelection = false;
-            resources.ApplyResources(this.listTransfers, "listTransfers");
             this.listTransfers.MultiSelect = false;
             this.listTransfers.Name = "listTransfers";
             this.listTransfers.UseCompatibleStateImageBehavior = false;
@@ -65,10 +65,10 @@ namespace PremiumLivingSystem
             // 
             // listItems
             // 
+            resources.ApplyResources(this.listItems, "listItems");
             this.listItems.FullRowSelect = true;
             this.listItems.GridLines = true;
             this.listItems.HideSelection = false;
-            resources.ApplyResources(this.listItems, "listItems");
             this.listItems.Name = "listItems";
             this.listItems.UseCompatibleStateImageBehavior = false;
             this.listItems.View = System.Windows.Forms.View.Details;

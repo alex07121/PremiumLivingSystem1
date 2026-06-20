@@ -118,19 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
+  <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 30</value>
   </data>
-  <data name="lblSearch.Text" xml:space="preserve">
-    <value>轉撥單號：</value>
+  <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 12</value>
   </data>
-  <data name="btnSearch.Text" xml:space="preserve">
-    <value>搜尋</value>
+  <data name="lblID.Text" xml:space="preserve">
+    <value>員工編號:</value>
   </data>
-  <data name="btnApprove.Text" xml:space="preserve">
-    <value>核准</value>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>取消轉撥</value>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>姓名:</value>
+  </data>
+  <data name="lblJob.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblJob.Text" xml:space="preserve">
+    <value>工作:</value>
+  </data>
+  <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 58</value>
+  </data>
+  <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 12</value>
+  </data>
+  <data name="lblUsername.Text" xml:space="preserve">
+    <value>使用者名稱:</value>
+  </data>
+  <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="lblPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblPhone.Text" xml:space="preserve">
+    <value>電話:</value>
+  </data>
+  <data name="chkSupervisor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="chkSupervisor.Text" xml:space="preserve">
+    <value>主管</value>
+  </data>
+  <data name="chkActive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="chkActive.Text" xml:space="preserve">
+    <value>活躍</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>添加</value>
   </data>
 </root>

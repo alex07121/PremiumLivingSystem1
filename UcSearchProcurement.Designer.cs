@@ -17,6 +17,7 @@ namespace PremiumLivingSystem
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcSearchProcurement));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblPOID = new System.Windows.Forms.Label();
             this.txtPOID = new System.Windows.Forms.TextBox();
@@ -31,111 +32,73 @@ namespace PremiumLivingSystem
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(436, 30);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(695, 70);
-            this.lblTitle.TabIndex = 8;
-            this.lblTitle.Text = "Search Purchase Order";
             // 
             // lblPOID
             // 
-            this.lblPOID.AutoSize = true;
-            this.lblPOID.Location = new System.Drawing.Point(62, 112);
-            this.lblPOID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            resources.ApplyResources(this.lblPOID, "lblPOID");
             this.lblPOID.Name = "lblPOID";
-            this.lblPOID.Size = new System.Drawing.Size(84, 27);
-            this.lblPOID.TabIndex = 7;
-            this.lblPOID.Text = "PO ID:";
             // 
             // txtPOID
             // 
-            this.txtPOID.Location = new System.Drawing.Point(171, 108);
-            this.txtPOID.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            resources.ApplyResources(this.txtPOID, "txtPOID");
             this.txtPOID.Name = "txtPOID";
-            this.txtPOID.Size = new System.Drawing.Size(309, 40);
-            this.txtPOID.TabIndex = 6;
             // 
             // lblStatus
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(544, 112);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(81, 27);
-            this.lblStatus.TabIndex = 5;
-            this.lblStatus.Text = "Status:";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(980, 105);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(187, 52);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lvResults
             // 
+            resources.ApplyResources(this.lvResults, "lvResults");
             this.lvResults.FullRowSelect = true;
             this.lvResults.GridLines = true;
             this.lvResults.HideSelection = false;
-            this.lvResults.Location = new System.Drawing.Point(31, 38);
-            this.lvResults.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lvResults.MultiSelect = false;
             this.lvResults.Name = "lvResults";
-            this.lvResults.Size = new System.Drawing.Size(1476, 538);
-            this.lvResults.TabIndex = 0;
             this.lvResults.UseCompatibleStateImageBehavior = false;
             this.lvResults.View = System.Windows.Forms.View.Details;
             // 
             // grpResults
             // 
+            resources.ApplyResources(this.grpResults, "grpResults");
             this.grpResults.Controls.Add(this.lvResults);
-            this.grpResults.Location = new System.Drawing.Point(62, 195);
-            this.grpResults.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.grpResults.Name = "grpResults";
-            this.grpResults.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.grpResults.Size = new System.Drawing.Size(1540, 600);
-            this.grpResults.TabIndex = 0;
             this.grpResults.TabStop = false;
-            this.grpResults.Text = "Search Results";
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(1207, 99);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            resources.ApplyResources(this.btnEdit, "btnEdit");
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(187, 52);
-            this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // cmbStatusFilter
             // 
+            resources.ApplyResources(this.cmbStatusFilter, "cmbStatusFilter");
             this.cmbStatusFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatusFilter.FormattingEnabled = true;
             this.cmbStatusFilter.Items.AddRange(new object[] {
-            "All",
-            "Draft",
-            "Sent",
-            "PartiallyReceived",
-            "Received",
-            "Cancelled"});
-            this.cmbStatusFilter.Location = new System.Drawing.Point(653, 108);
-            this.cmbStatusFilter.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            resources.GetString("cmbStatusFilter.Items"),
+            resources.GetString("cmbStatusFilter.Items1"),
+            resources.GetString("cmbStatusFilter.Items2"),
+            resources.GetString("cmbStatusFilter.Items3"),
+            resources.GetString("cmbStatusFilter.Items4"),
+            resources.GetString("cmbStatusFilter.Items5")});
             this.cmbStatusFilter.Name = "cmbStatusFilter";
-            this.cmbStatusFilter.Size = new System.Drawing.Size(278, 35);
-            this.cmbStatusFilter.TabIndex = 4;
             // 
             // UcSearchProcurement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnEdit);
@@ -146,9 +109,7 @@ namespace PremiumLivingSystem
             this.Controls.Add(this.txtPOID);
             this.Controls.Add(this.lblPOID);
             this.Controls.Add(this.lblTitle);
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "UcSearchProcurement";
-            this.Size = new System.Drawing.Size(1958, 855);
             this.Load += new System.EventHandler(this.UcSearchProcurement_Load);
             this.grpResults.ResumeLayout(false);
             this.ResumeLayout(false);

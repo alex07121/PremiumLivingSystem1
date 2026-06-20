@@ -37,6 +37,9 @@
             this.pbProductImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbProductImage)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lvProducts
+            // 
             resources.ApplyResources(this.lvProducts, "lvProducts");
             this.lvProducts.FullRowSelect = true;
             this.lvProducts.GridLines = true;
@@ -45,57 +48,114 @@
             this.lvProducts.UseCompatibleStateImageBehavior = false;
             this.lvProducts.View = System.Windows.Forms.View.Details;
             this.lvProducts.SelectedIndexChanged += new System.EventHandler(this.lvProducts_SelectedIndexChanged);
+            // 
+            // lblID
+            // 
             resources.ApplyResources(this.lblID, "lblID");
             this.lblID.Name = "lblID";
+            // 
+            // lblName
+            // 
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
+            // 
+            // lblCategory
+            // 
             resources.ApplyResources(this.lblCategory, "lblCategory");
             this.lblCategory.Name = "lblCategory";
+            // 
+            // lblPrice
+            // 
             resources.ApplyResources(this.lblPrice, "lblPrice");
             this.lblPrice.Name = "lblPrice";
+            // 
+            // lblStock
+            // 
             resources.ApplyResources(this.lblStock, "lblStock");
             this.lblStock.Name = "lblStock";
+            // 
+            // txtID
+            // 
             resources.ApplyResources(this.txtID, "txtID");
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
+            // 
+            // txtName
+            // 
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
+            // 
+            // txtPrice
+            // 
             resources.ApplyResources(this.txtPrice, "txtPrice");
             this.txtPrice.Name = "txtPrice";
+            // 
+            // txtStock
+            // 
             resources.ApplyResources(this.txtStock, "txtStock");
             this.txtStock.Name = "txtStock";
+            // 
+            // cmbCategory
+            // 
             resources.ApplyResources(this.cmbCategory, "cmbCategory");
             this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Name = "cmbCategory";
+            // 
+            // btnAdd
+            // 
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClear
+            // 
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtSearch
+            // 
             resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
+            // 
+            // btnSearch
+            // 
             resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnUploadImage
+            // 
             resources.ApplyResources(this.btnUploadImage, "btnUploadImage");
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.UseVisualStyleBackColor = true;
             this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            // 
+            // openFileDialog1
+            // 
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
+            // 
+            // pbProductImage
+            // 
             resources.ApplyResources(this.pbProductImage, "pbProductImage");
             this.pbProductImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbProductImage.Name = "pbProductImage";
             this.pbProductImage.TabStop = false;
             this.pbProductImage.Click += new System.EventHandler(this.pbProductImage_Click);
+            // 
+            // UcMasterProduct
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnUploadImage);

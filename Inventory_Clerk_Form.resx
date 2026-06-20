@@ -123,13 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1342, 79</value>
-  </data>
-  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 7, 7, 7</value>
+    <value>575, 35</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 52</value>
+    <value>75, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button2.TabIndex" type="System.Int32, mscorlib">
@@ -157,13 +154,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnManageReturns.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 112</value>
-  </data>
-  <data name="btnManageReturns.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 7, 7, 7</value>
+    <value>0, 50</value>
   </data>
   <data name="btnManageReturns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 112</value>
+    <value>143, 50</value>
   </data>
   <data name="btnManageReturns.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -187,13 +181,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblUserInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1531, 68</value>
-  </data>
-  <data name="lblUserInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 0, 7, 0</value>
+    <value>656, 30</value>
   </data>
   <data name="lblUserInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 68</value>
+    <value>132, 30</value>
   </data>
   <data name="lblUserInfo.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -220,13 +211,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnApprovedTransfer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1370</value>
+    <value>0, 609</value>
   </data>
   <data name="btnApprovedTransfer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnApprovedTransfer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 117</value>
+    <value>111, 52</value>
   </data>
   <data name="btnApprovedTransfer.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
@@ -256,13 +247,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCreateTransfer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1253</value>
+    <value>0, 557</value>
   </data>
   <data name="btnCreateTransfer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnCreateTransfer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 117</value>
+    <value>111, 52</value>
   </data>
   <data name="btnCreateTransfer.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -292,13 +283,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnApproveTransfers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1136</value>
+    <value>0, 505</value>
   </data>
   <data name="btnApproveTransfers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnApproveTransfers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 117</value>
+    <value>111, 52</value>
   </data>
   <data name="btnApproveTransfers.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -328,13 +319,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnSearchMaterialRequest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1010</value>
+    <value>0, 449</value>
   </data>
   <data name="btnSearchMaterialRequest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnSearchMaterialRequest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnSearchMaterialRequest.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
@@ -364,13 +355,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCreateProcur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 884</value>
+    <value>0, 393</value>
   </data>
   <data name="btnCreateProcur.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnCreateProcur.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnCreateProcur.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -400,13 +391,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnSearchProcurement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 758</value>
+    <value>0, 337</value>
   </data>
   <data name="btnSearchProcurement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnSearchProcurement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnSearchProcurement.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -436,13 +427,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnMasterCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 632</value>
+    <value>0, 281</value>
   </data>
   <data name="btnMasterCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnMasterCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnMasterCategory.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -472,13 +463,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRawMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 506</value>
+    <value>0, 225</value>
   </data>
   <data name="btnRawMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnRawMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnRawMaterial.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
@@ -508,13 +499,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnMasterProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 380</value>
+    <value>0, 169</value>
   </data>
   <data name="btnMasterProduct.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnMasterProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnMasterProduct.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
@@ -544,13 +535,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnMasterSupplier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 254</value>
+    <value>0, 113</value>
   </data>
   <data name="btnMasterSupplier.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnMasterSupplier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="btnMasterSupplier.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -580,13 +571,13 @@
     <value>NoControl</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 128</value>
+    <value>0, 57</value>
   </data>
   <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
+    <value>111, 56</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -618,11 +609,8 @@
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 7, 7, 7</value>
-  </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 128</value>
+    <value>111, 57</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -646,13 +634,13 @@
     <value>Left</value>
   </data>
   <data name="pnlSidebar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 144</value>
+    <value>3, 64</value>
   </data>
   <data name="pnlSidebar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="pnlSidebar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 2367</value>
+    <value>111, 724</value>
   </data>
   <data name="pnlSidebar.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -676,13 +664,10 @@
     <value>繁體中文</value>
   </data>
   <data name="cmbLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1155, 79</value>
-  </data>
-  <data name="cmbLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 7, 7, 7</value>
+    <value>495, 35</value>
   </data>
   <data name="cmbLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 35</value>
+    <value>74, 20</value>
   </data>
   <data name="cmbLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -700,13 +685,13 @@
     <value>2</value>
   </data>
   <data name="btnCreateProcurement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 144</value>
+    <value>118, 64</value>
   </data>
   <data name="btnCreateProcurement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="btnCreateProcurement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>3763, 2490</value>
+    <value>1613, 1107</value>
   </data>
   <data name="btnCreateProcurement.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
@@ -15920,10 +15905,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 22</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 0, 7, 0</value>
+    <value>1, 10</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 0</value>
@@ -15947,16 +15929,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>14, 27</value>
+    <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>3140, 2518</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 7, 7, 7</value>
-  </data>
-  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>7, 144, 7, 7</value>
+    <value>831, 791</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Inventory_Staff_Form</value>

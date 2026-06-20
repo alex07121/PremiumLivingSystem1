@@ -101,8 +101,8 @@
             // 
             // dtpTransferDate
             // 
-            this.dtpTransferDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dtpTransferDate, "dtpTransferDate");
+            this.dtpTransferDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTransferDate.Name = "dtpTransferDate";
             // 
             // lblOrderID
@@ -117,9 +117,9 @@
             // 
             // grpType
             // 
+            resources.ApplyResources(this.grpType, "grpType");
             this.grpType.Controls.Add(this.rbProduct);
             this.grpType.Controls.Add(this.rbMaterial);
-            resources.ApplyResources(this.grpType, "grpType");
             this.grpType.Name = "grpType";
             this.grpType.TabStop = false;
             // 
@@ -139,13 +139,13 @@
             // 
             // grpRequestor
             // 
+            resources.ApplyResources(this.grpRequestor, "grpRequestor");
             this.grpRequestor.Controls.Add(this.lblReqPhone);
             this.grpRequestor.Controls.Add(this.txtReqPhone);
             this.grpRequestor.Controls.Add(this.lblReqPos);
             this.grpRequestor.Controls.Add(this.txtReqPos);
             this.grpRequestor.Controls.Add(this.lblReqName);
             this.grpRequestor.Controls.Add(this.txtReqName);
-            resources.ApplyResources(this.grpRequestor, "grpRequestor");
             this.grpRequestor.Name = "grpRequestor";
             this.grpRequestor.TabStop = false;
             // 
@@ -184,6 +184,7 @@
             // 
             // grpItems
             // 
+            resources.ApplyResources(this.grpItems, "grpItems");
             this.grpItems.Controls.Add(this.btnRemoveRow);
             this.grpItems.Controls.Add(this.btnAddRow);
             this.grpItems.Controls.Add(this.nudQty);
@@ -191,7 +192,6 @@
             this.grpItems.Controls.Add(this.lblQty);
             this.grpItems.Controls.Add(this.lblItem);
             this.grpItems.Controls.Add(this.dgvItems);
-            resources.ApplyResources(this.grpItems, "grpItems");
             this.grpItems.Name = "grpItems";
             this.grpItems.TabStop = false;
             // 
@@ -211,8 +211,8 @@
             // 
             // nudQty
             // 
-            this.nudQty.DecimalPlaces = 2;
             resources.ApplyResources(this.nudQty, "nudQty");
+            this.nudQty.DecimalPlaces = 2;
             this.nudQty.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -232,9 +232,9 @@
             // 
             // cmbItem
             // 
+            resources.ApplyResources(this.cmbItem, "cmbItem");
             this.cmbItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbItem.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbItem, "cmbItem");
             this.cmbItem.Name = "cmbItem";
             // 
             // lblQty
@@ -249,9 +249,9 @@
             // 
             // dgvItems
             // 
+            resources.ApplyResources(this.dgvItems, "dgvItems");
             this.dgvItems.AllowUserToAddRows = false;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvItems, "dgvItems");
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.ReadOnly = true;
             this.dgvItems.RowHeadersVisible = false;
@@ -259,6 +259,7 @@
             // 
             // grpAuth
             // 
+            resources.ApplyResources(this.grpAuth, "grpAuth");
             this.grpAuth.Controls.Add(this.dtpReceivedDate);
             this.grpAuth.Controls.Add(this.lblReceivedDate);
             this.grpAuth.Controls.Add(this.cmbReceivedBy);
@@ -275,14 +276,13 @@
             this.grpAuth.Controls.Add(this.txtToLocation);
             this.grpAuth.Controls.Add(this.lblFrom);
             this.grpAuth.Controls.Add(this.txtFromLocation);
-            resources.ApplyResources(this.grpAuth, "grpAuth");
             this.grpAuth.Name = "grpAuth";
             this.grpAuth.TabStop = false;
             // 
             // dtpReceivedDate
             // 
-            this.dtpReceivedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dtpReceivedDate, "dtpReceivedDate");
+            this.dtpReceivedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpReceivedDate.Name = "dtpReceivedDate";
             // 
             // lblReceivedDate
@@ -292,9 +292,9 @@
             // 
             // cmbReceivedBy
             // 
+            resources.ApplyResources(this.cmbReceivedBy, "cmbReceivedBy");
             this.cmbReceivedBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReceivedBy.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbReceivedBy, "cmbReceivedBy");
             this.cmbReceivedBy.Name = "cmbReceivedBy";
             // 
             // lblReceivedBy
@@ -304,8 +304,8 @@
             // 
             // dtpApprovedDate
             // 
-            this.dtpApprovedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dtpApprovedDate, "dtpApprovedDate");
+            this.dtpApprovedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpApprovedDate.Name = "dtpApprovedDate";
             // 
             // lblApprovedDate
@@ -315,9 +315,9 @@
             // 
             // cmbApprovedBy
             // 
+            resources.ApplyResources(this.cmbApprovedBy, "cmbApprovedBy");
             this.cmbApprovedBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbApprovedBy.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbApprovedBy, "cmbApprovedBy");
             this.cmbApprovedBy.Name = "cmbApprovedBy";
             // 
             // lblApprovedBy
@@ -327,8 +327,8 @@
             // 
             // dtpReqDate
             // 
-            this.dtpReqDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dtpReqDate, "dtpReqDate");
+            this.dtpReqDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpReqDate.Name = "dtpReqDate";
             // 
             // lblReqDate
@@ -369,13 +369,13 @@
             // 
             // grpInventory
             // 
+            resources.ApplyResources(this.grpInventory, "grpInventory");
             this.grpInventory.Controls.Add(this.txtRemarks);
             this.grpInventory.Controls.Add(this.lblRemarks);
             this.grpInventory.Controls.Add(this.dtpIssuedDate);
             this.grpInventory.Controls.Add(this.lblIssuedDate);
             this.grpInventory.Controls.Add(this.cmbIssuedBy);
             this.grpInventory.Controls.Add(this.lblIssuedBy);
-            resources.ApplyResources(this.grpInventory, "grpInventory");
             this.grpInventory.Name = "grpInventory";
             this.grpInventory.TabStop = false;
             // 
@@ -391,8 +391,8 @@
             // 
             // dtpIssuedDate
             // 
-            this.dtpIssuedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dtpIssuedDate, "dtpIssuedDate");
+            this.dtpIssuedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpIssuedDate.Name = "dtpIssuedDate";
             // 
             // lblIssuedDate
@@ -402,9 +402,9 @@
             // 
             // cmbIssuedBy
             // 
+            resources.ApplyResources(this.cmbIssuedBy, "cmbIssuedBy");
             this.cmbIssuedBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIssuedBy.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbIssuedBy, "cmbIssuedBy");
             this.cmbIssuedBy.Name = "cmbIssuedBy";
             // 
             // lblIssuedBy

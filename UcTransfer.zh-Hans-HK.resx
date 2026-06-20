@@ -118,19 +118,172 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>原料／產品轉撥單</value>
+  </data>
+  <data name="lblTransferNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 12</value>
   </data>
-  <data name="lblSearch.Text" xml:space="preserve">
+  <data name="lblTransferNo.Text" xml:space="preserve">
     <value>轉撥單號：</value>
   </data>
-  <data name="btnSearch.Text" xml:space="preserve">
-    <value>搜尋</value>
+  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
   </data>
-  <data name="btnApprove.Text" xml:space="preserve">
-    <value>核准</value>
+  <data name="lblDate.Text" xml:space="preserve">
+    <value>開單日期：</value>
+  </data>
+  <data name="lblOrderID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="lblOrderID.Text" xml:space="preserve">
+    <value>訂單編號：</value>
+  </data>
+  <data name="grpType.Text" xml:space="preserve">
+    <value>轉撥類型</value>
+  </data>
+  <data name="rbProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="rbProduct.Text" xml:space="preserve">
+    <value>產品</value>
+  </data>
+  <data name="rbMaterial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 16</value>
+  </data>
+  <data name="rbMaterial.Text" xml:space="preserve">
+    <value>原材料</value>
+  </data>
+  <data name="grpRequestor.Text" xml:space="preserve">
+    <value>申請人資料</value>
+  </data>
+  <data name="lblReqPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="lblReqPhone.Text" xml:space="preserve">
+    <value>聯絡電話：</value>
+  </data>
+  <data name="lblReqPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblReqPos.Text" xml:space="preserve">
+    <value>職位：</value>
+  </data>
+  <data name="lblReqName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblReqName.Text" xml:space="preserve">
+    <value>姓名：</value>
+  </data>
+  <data name="grpItems.Text" xml:space="preserve">
+    <value>原料／產品明細</value>
+  </data>
+  <data name="btnRemoveRow.Text" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="btnAddRow.Text" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="lblQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblQty.Text" xml:space="preserve">
+    <value>數量：</value>
+  </data>
+  <data name="lblItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="lblItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 12</value>
+  </data>
+  <data name="lblItem.Text" xml:space="preserve">
+    <value>物料編號:</value>
+  </data>
+  <data name="lblReceivedDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblReceivedDate.Text" xml:space="preserve">
+    <value>日期：</value>
+  </data>
+  <data name="lblReceivedBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="lblReceivedBy.Text" xml:space="preserve">
+    <value>接收人：</value>
+  </data>
+  <data name="lblApprovedDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblApprovedDate.Text" xml:space="preserve">
+    <value>日期：</value>
+  </data>
+  <data name="lblApprovedBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="lblApprovedBy.Text" xml:space="preserve">
+    <value>核准人：</value>
+  </data>
+  <data name="lblReqDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblReqDate.Text" xml:space="preserve">
+    <value>日期：</value>
+  </data>
+  <data name="lblReqBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="lblReqBy.Text" xml:space="preserve">
+    <value>申請人：</value>
+  </data>
+  <data name="lblTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 24</value>
+  </data>
+  <data name="lblTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="lblTo.Text" xml:space="preserve">
+    <value>轉入單位：</value>
+  </data>
+  <data name="lblFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="lblFrom.Text" xml:space="preserve">
+    <value>轉出單位：</value>
+  </data>
+  <data name="grpAuth.Text" xml:space="preserve">
+    <value>審批簽核</value>
+  </data>
+  <data name="lblRemarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblRemarks.Text" xml:space="preserve">
+    <value>備註：</value>
+  </data>
+  <data name="lblIssuedDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="lblIssuedDate.Text" xml:space="preserve">
+    <value>日期：</value>
+  </data>
+  <data name="lblIssuedBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="lblIssuedBy.Text" xml:space="preserve">
+    <value>發料人：</value>
+  </data>
+  <data name="grpInventory.Text" xml:space="preserve">
+    <value>庫存管理部專用</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>列印為 PDF</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
-    <value>取消轉撥</value>
+    <value>清除表單</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>提交</value>
   </data>
 </root>

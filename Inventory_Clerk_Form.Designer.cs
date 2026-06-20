@@ -20,6 +20,7 @@
             this.btnManageReturns = new System.Windows.Forms.Button();
             this.lblUserInfo = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnApprovedTransfer = new System.Windows.Forms.Button();
             this.btnCreateTransfer = new System.Windows.Forms.Button();
             this.btnApproveTransfers = new System.Windows.Forms.Button();
             this.btnSearchMaterialRequest = new System.Windows.Forms.Button();
@@ -34,7 +35,6 @@
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.btnCreateProcurement = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnApprovedTransfer = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,13 @@
             this.pnlSidebar.Controls.Add(this.btnManageReturns);
             resources.ApplyResources(this.pnlSidebar, "pnlSidebar");
             this.pnlSidebar.Name = "pnlSidebar";
+            // 
+            // btnApprovedTransfer
+            // 
+            resources.ApplyResources(this.btnApprovedTransfer, "btnApprovedTransfer");
+            this.btnApprovedTransfer.Name = "btnApprovedTransfer";
+            this.btnApprovedTransfer.UseVisualStyleBackColor = true;
+            this.btnApprovedTransfer.Click += new System.EventHandler(this.btnApprovedTransfer_Click);
             // 
             // btnCreateTransfer
             // 
@@ -173,13 +180,6 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            // 
-            // btnApprovedTransfer
-            // 
-            resources.ApplyResources(this.btnApprovedTransfer, "btnApprovedTransfer");
-            this.btnApprovedTransfer.Name = "btnApprovedTransfer";
-            this.btnApprovedTransfer.UseVisualStyleBackColor = true;
-            this.btnApprovedTransfer.Click += new System.EventHandler(this.btnApprovedTransfer_Click);
             // 
             // Inventory_Clerk_Form
             // 

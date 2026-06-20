@@ -118,19 +118,109 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 32</value>
   </data>
-  <data name="lblSearch.Text" xml:space="preserve">
-    <value>轉撥單號：</value>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>建立採購訂單</value>
   </data>
-  <data name="btnSearch.Text" xml:space="preserve">
-    <value>搜尋</value>
+  <data name="lblOrderDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 12</value>
   </data>
-  <data name="btnApprove.Text" xml:space="preserve">
-    <value>核准</value>
+  <data name="lblOrderDate.Text" xml:space="preserve">
+    <value>訂單日期:</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>取消轉撥</value>
+  <data name="lblExpectedDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 12</value>
+  </data>
+  <data name="lblExpectedDate.Text" xml:space="preserve">
+    <value>預期交貨日期:</value>
+  </data>
+  <data name="lblSupplier.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 12</value>
+  </data>
+  <data name="lblSupplier.Text" xml:space="preserve">
+    <value>供應商:</value>
+  </data>
+  <data name="lblPaymentMethod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>433, 50</value>
+  </data>
+  <data name="lblPaymentMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 12</value>
+  </data>
+  <data name="lblPaymentMethod.Text" xml:space="preserve">
+    <value>付款方式:</value>
+  </data>
+  <data name="lblReqByID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 80</value>
+  </data>
+  <data name="lblReqByID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 12</value>
+  </data>
+  <data name="lblReqByID.Text" xml:space="preserve">
+    <value>建立者(編號):</value>
+  </data>
+  <data name="lblReqName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblReqName.Text" xml:space="preserve">
+    <value>姓名:</value>
+  </data>
+  <data name="grpHeader.Text" xml:space="preserve">
+    <value>採購訂單資訊</value>
+  </data>
+  <data name="lblMaterial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblMaterial.Text" xml:space="preserve">
+    <value>物料:</value>
+  </data>
+  <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblQuantity.Text" xml:space="preserve">
+    <value>數量:</value>
+  </data>
+  <data name="btnAddRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 29</value>
+  </data>
+  <data name="btnAddRow.Text" xml:space="preserve">
+    <value>新增項目</value>
+  </data>
+  <data name="btnRemoveRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 28</value>
+  </data>
+  <data name="btnRemoveRow.Text" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="grpItems.Text" xml:space="preserve">
+    <value>訂單項目</value>
+  </data>
+  <data name="lblSubTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblSubTotal.Text" xml:space="preserve">
+    <value>小計:</value>
+  </data>
+  <data name="lblTotal.Text" xml:space="preserve">
+    <value>總計:</value>
+  </data>
+  <data name="lblRemarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 12</value>
+  </data>
+  <data name="lblRemarks.Text" xml:space="preserve">
+    <value>備註:</value>
+  </data>
+  <data name="grpTotals.Text" xml:space="preserve">
+    <value>總計/備註</value>
+  </data>
+  <data name="btnSaveDraft.Text" xml:space="preserve">
+    <value>儲存草稿</value>
+  </data>
+  <data name="btnSubmit.Text" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>清除</value>
   </data>
 </root>
