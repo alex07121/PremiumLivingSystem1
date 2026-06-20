@@ -51,7 +51,7 @@
             // staffidtext
             // 
             this.staffidtext.Location = new System.Drawing.Point(422, 443);
-            this.staffidtext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.staffidtext.Margin = new System.Windows.Forms.Padding(2);
             this.staffidtext.Name = "staffidtext";
             this.staffidtext.Size = new System.Drawing.Size(370, 40);
             this.staffidtext.TabIndex = 2;
@@ -59,8 +59,9 @@
             // pswdtext
             // 
             this.pswdtext.Location = new System.Drawing.Point(422, 531);
-            this.pswdtext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pswdtext.Margin = new System.Windows.Forms.Padding(2);
             this.pswdtext.Name = "pswdtext";
+            this.pswdtext.PasswordChar = '*';
             this.pswdtext.Size = new System.Drawing.Size(370, 40);
             this.pswdtext.TabIndex = 3;
             // 
@@ -68,7 +69,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("新細明體", 12F);
             this.button1.Location = new System.Drawing.Point(649, 673);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 72);
             this.button1.TabIndex = 4;
@@ -80,7 +81,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("新細明體", 12F);
             this.button2.Location = new System.Drawing.Point(250, 673);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 72);
             this.button2.TabIndex = 5;
@@ -93,7 +94,7 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = global::PremiumLivingSystem.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(422, 155);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(268, 236);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +113,7 @@
             this.Controls.Add(this.staffidtext);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.staffid);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Padding = new System.Windows.Forms.Padding(2, 63, 2, 2);
             this.Text = "Login";
