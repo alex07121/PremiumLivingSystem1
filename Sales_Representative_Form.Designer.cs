@@ -26,40 +26,72 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnCreateOrder
+            // 
             resources.ApplyResources(this.btnCreateOrder, "btnCreateOrder");
             this.btnCreateOrder.Name = "btnCreateOrder";
             this.btnCreateOrder.UseVisualStyleBackColor = true;
             this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
+            // 
+            // label2
+            // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            // 
+            // label1
+            // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // btnLogout
+            // 
             resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // button2
+            // 
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // mainPanel
+            // 
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
+            // 
+            // button4
+            // 
             resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel1
+            // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnCreateOrder);
             this.panel1.Controls.Add(this.button4);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // btnCustomer
+            // 
             resources.ApplyResources(this.btnCustomer, "btnCustomer");
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.UseVisualStyleBackColor = true;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // cmbLanguage
+            // 
             this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLanguage.FormattingEnabled = true;
             this.cmbLanguage.Items.AddRange(new object[] {
@@ -68,6 +100,16 @@
             resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.Name = "cmbLanguage";
             this.cmbLanguage.SelectedIndexChanged += new System.EventHandler(this.cmbLanguage_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Sales_Representative_Form
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cmbLanguage);
@@ -96,5 +138,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbLanguage;
         private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button button1;
     }
 }

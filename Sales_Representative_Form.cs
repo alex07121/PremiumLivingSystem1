@@ -178,5 +178,11 @@ namespace PremiumLivingSystem
             UcMasterCustomer uc = new UcMasterCustomer();
             ShowUserControl(uc);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UcSalesSummaryReport uc = new UcSalesSummaryReport();
+            ShowUserControl(uc);
+        }
     }
 }
