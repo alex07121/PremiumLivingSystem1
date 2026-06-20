@@ -29,8 +29,7 @@ namespace PremiumLivingSystem
         }
         private void Admin_Load(object sender, EventArgs e)
         {
-            UcMasterStaff uc = new UcMasterStaff();
-            ShowUserControl(uc);
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -51,6 +50,12 @@ namespace PremiumLivingSystem
         private void btnSalesReport_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UcSalesSummaryReport());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UcMasterStaff uc = new UcMasterStaff();
+            ShowUserControl(uc);
         }
     }
 }
