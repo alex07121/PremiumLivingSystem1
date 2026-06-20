@@ -18,11 +18,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionClerkForm));
             this.MainPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCreateMaterialRequest = new System.Windows.Forms.Button();
+            this.btnMaterialRequest = new System.Windows.Forms.Button();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnMaterialRequest = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -35,16 +34,15 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel2.Controls.Add(this.btnMaterialRequest);
-            this.panel2.Controls.Add(this.btnCreateMaterialRequest);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // btnCreateMaterialRequest
+            // btnMaterialRequest
             // 
-            resources.ApplyResources(this.btnCreateMaterialRequest, "btnCreateMaterialRequest");
-            this.btnCreateMaterialRequest.Name = "btnCreateMaterialRequest";
-            this.btnCreateMaterialRequest.UseVisualStyleBackColor = true;
-            this.btnCreateMaterialRequest.Click += new System.EventHandler(this.btnCreateMaterialRequest_Click);
+            resources.ApplyResources(this.btnMaterialRequest, "btnMaterialRequest");
+            this.btnMaterialRequest.Name = "btnMaterialRequest";
+            this.btnMaterialRequest.UseVisualStyleBackColor = true;
+            this.btnMaterialRequest.Click += new System.EventHandler(this.btnMaterialRequest_Click);
             // 
             // cmbLanguage
             // 
@@ -69,13 +67,6 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // btnMaterialRequest
-            // 
-            resources.ApplyResources(this.btnMaterialRequest, "btnMaterialRequest");
-            this.btnMaterialRequest.Name = "btnMaterialRequest";
-            this.btnMaterialRequest.UseVisualStyleBackColor = true;
-            this.btnMaterialRequest.Click += new System.EventHandler(this.btnMaterialRequest_Click);
-            // 
             // ProductionClerkForm
             // 
             resources.ApplyResources(this, "$this");
@@ -95,7 +86,6 @@
 
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnCreateMaterialRequest;
         private System.Windows.Forms.ComboBox cmbLanguage;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label2;

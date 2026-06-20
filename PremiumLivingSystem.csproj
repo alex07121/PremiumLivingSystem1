@@ -622,6 +622,9 @@
     <EmbeddedResource Include="UcSearchOrder.zh-HK.resx">
       <DependentUpon>UcSearchOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcSearchProcurement.resx">
+      <DependentUpon>UcSearchProcurement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcSearchProduct.resx">
       <DependentUpon>UcSearchProduct.cs</DependentUpon>
     </EmbeddedResource>

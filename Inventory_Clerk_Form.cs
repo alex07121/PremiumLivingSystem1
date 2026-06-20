@@ -326,5 +326,11 @@ namespace PremiumLivingSystem
             UcTransfer uc = new UcTransfer();
             ShowUserControl(uc);
         }
+
+        private void btnApprovedTransfer_Click(object sender, EventArgs e)
+        {
+            UcPendingTransfers uc = new UcPendingTransfers();
+            ShowUserControl(uc);
+        }
     }
 }

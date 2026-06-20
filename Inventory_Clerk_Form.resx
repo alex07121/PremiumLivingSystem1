@@ -181,7 +181,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnManageReturns.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="lblUserInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -210,6 +210,42 @@
   <data name="&gt;&gt;lblUserInfo.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btnApprovedTransfer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnApprovedTransfer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 12pt</value>
+  </data>
+  <data name="btnApprovedTransfer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnApprovedTransfer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1370</value>
+  </data>
+  <data name="btnApprovedTransfer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnApprovedTransfer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 117</value>
+  </data>
+  <data name="btnApprovedTransfer.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="btnApprovedTransfer.Text" xml:space="preserve">
+    <value>Approved Transfer</value>
+  </data>
+  <data name="&gt;&gt;btnApprovedTransfer.Name" xml:space="preserve">
+    <value>btnApprovedTransfer</value>
+  </data>
+  <data name="&gt;&gt;btnApprovedTransfer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnApprovedTransfer.Parent" xml:space="preserve">
+    <value>pnlSidebar</value>
+  </data>
+  <data name="&gt;&gt;btnApprovedTransfer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnCreateTransfer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -220,7 +256,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCreateTransfer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1505</value>
+    <value>0, 1253</value>
   </data>
   <data name="btnCreateTransfer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -244,7 +280,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnCreateTransfer.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnApproveTransfers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -256,7 +292,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnApproveTransfers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1388</value>
+    <value>0, 1136</value>
   </data>
   <data name="btnApproveTransfers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -268,7 +304,7 @@
     <value>77</value>
   </data>
   <data name="btnApproveTransfers.Text" xml:space="preserve">
-    <value>Approve Transfers</value>
+    <value>Issue Transfers</value>
   </data>
   <data name="&gt;&gt;btnApproveTransfers.Name" xml:space="preserve">
     <value>btnApproveTransfers</value>
@@ -280,7 +316,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnApproveTransfers.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnSearchMaterialRequest.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -292,7 +328,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnSearchMaterialRequest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1262</value>
+    <value>0, 1010</value>
   </data>
   <data name="btnSearchMaterialRequest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -316,7 +352,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnSearchMaterialRequest.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnCreateProcur.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -328,7 +364,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCreateProcur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1136</value>
+    <value>0, 884</value>
   </data>
   <data name="btnCreateProcur.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -352,7 +388,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnCreateProcur.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnSearchProcurement.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -364,7 +400,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnSearchProcurement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1010</value>
+    <value>0, 758</value>
   </data>
   <data name="btnSearchProcurement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -388,7 +424,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnSearchProcurement.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnMasterCategory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -400,7 +436,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnMasterCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 884</value>
+    <value>0, 632</value>
   </data>
   <data name="btnMasterCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -424,7 +460,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnMasterCategory.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnRawMaterial.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -436,7 +472,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnRawMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 758</value>
+    <value>0, 506</value>
   </data>
   <data name="btnRawMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -460,7 +496,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnRawMaterial.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnMasterProduct.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -472,7 +508,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnMasterProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 632</value>
+    <value>0, 380</value>
   </data>
   <data name="btnMasterProduct.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -496,7 +532,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnMasterProduct.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnMasterSupplier.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -508,7 +544,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnMasterSupplier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 506</value>
+    <value>0, 254</value>
   </data>
   <data name="btnMasterSupplier.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -532,79 +568,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;btnMasterSupplier.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="button5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 12pt</value>
-  </data>
-  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 380</value>
-  </data>
-  <data name="button5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
-  </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="button5.Text" xml:space="preserve">
-    <value>Issue Transfer</value>
-  </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
-  </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>pnlSidebar</value>
-  </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
     <value>9</value>
-  </data>
-  <data name="button3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 12pt</value>
-  </data>
-  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 254</value>
-  </data>
-  <data name="button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 126</value>
-  </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>Search Transfer</value>
-  </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
-  </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>pnlSidebar</value>
-  </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -640,7 +604,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="button4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -676,7 +640,7 @@
     <value>pnlSidebar</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="pnlSidebar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -15987,9 +15951,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>3140, 2518</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>7, 7, 7, 7</value>

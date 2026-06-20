@@ -20,6 +20,7 @@
             this.btnManageReturns = new System.Windows.Forms.Button();
             this.lblUserInfo = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnCreateTransfer = new System.Windows.Forms.Button();
             this.btnApproveTransfers = new System.Windows.Forms.Button();
             this.btnSearchMaterialRequest = new System.Windows.Forms.Button();
             this.btnCreateProcur = new System.Windows.Forms.Button();
@@ -28,14 +29,12 @@
             this.btnRawMaterial = new System.Windows.Forms.Button();
             this.btnMasterProduct = new System.Windows.Forms.Button();
             this.btnMasterSupplier = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.btnCreateProcurement = new System.Windows.Forms.Panel();
-            this.btnCreateTransfer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnApprovedTransfer = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +60,7 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.pnlSidebar.Controls.Add(this.btnApprovedTransfer);
             this.pnlSidebar.Controls.Add(this.btnCreateTransfer);
             this.pnlSidebar.Controls.Add(this.btnApproveTransfers);
             this.pnlSidebar.Controls.Add(this.btnSearchMaterialRequest);
@@ -70,13 +70,18 @@
             this.pnlSidebar.Controls.Add(this.btnRawMaterial);
             this.pnlSidebar.Controls.Add(this.btnMasterProduct);
             this.pnlSidebar.Controls.Add(this.btnMasterSupplier);
-            this.pnlSidebar.Controls.Add(this.button5);
-            this.pnlSidebar.Controls.Add(this.button3);
             this.pnlSidebar.Controls.Add(this.button1);
             this.pnlSidebar.Controls.Add(this.button4);
             this.pnlSidebar.Controls.Add(this.btnManageReturns);
             resources.ApplyResources(this.pnlSidebar, "pnlSidebar");
             this.pnlSidebar.Name = "pnlSidebar";
+            // 
+            // btnCreateTransfer
+            // 
+            resources.ApplyResources(this.btnCreateTransfer, "btnCreateTransfer");
+            this.btnCreateTransfer.Name = "btnCreateTransfer";
+            this.btnCreateTransfer.UseVisualStyleBackColor = true;
+            this.btnCreateTransfer.Click += new System.EventHandler(this.btnCreateTransfer_Click);
             // 
             // btnApproveTransfers
             // 
@@ -134,20 +139,6 @@
             this.btnMasterSupplier.UseVisualStyleBackColor = true;
             this.btnMasterSupplier.Click += new System.EventHandler(this.btnMasterStaff_Click_1);
             // 
-            // button5
-            // 
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button1
             // 
             resources.ApplyResources(this.button1, "button1");
@@ -178,17 +169,17 @@
             resources.ApplyResources(this.btnCreateProcurement, "btnCreateProcurement");
             this.btnCreateProcurement.Name = "btnCreateProcurement";
             // 
-            // btnCreateTransfer
-            // 
-            resources.ApplyResources(this.btnCreateTransfer, "btnCreateTransfer");
-            this.btnCreateTransfer.Name = "btnCreateTransfer";
-            this.btnCreateTransfer.UseVisualStyleBackColor = true;
-            this.btnCreateTransfer.Click += new System.EventHandler(this.btnCreateTransfer_Click);
-            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // btnApprovedTransfer
+            // 
+            resources.ApplyResources(this.btnApprovedTransfer, "btnApprovedTransfer");
+            this.btnApprovedTransfer.Name = "btnApprovedTransfer";
+            this.btnApprovedTransfer.UseVisualStyleBackColor = true;
+            this.btnApprovedTransfer.Click += new System.EventHandler(this.btnApprovedTransfer_Click);
             // 
             // Inventory_Clerk_Form
             // 
@@ -216,8 +207,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel btnCreateProcurement;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnMasterSupplier;
         private System.Windows.Forms.Button btnMasterCategory;
         private System.Windows.Forms.Button btnRawMaterial;
@@ -227,5 +216,6 @@
         private System.Windows.Forms.Button btnSearchMaterialRequest;
         private System.Windows.Forms.Button btnApproveTransfers;
         private System.Windows.Forms.Button btnCreateTransfer;
+        private System.Windows.Forms.Button btnApprovedTransfer;
     }
 }

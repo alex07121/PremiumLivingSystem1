@@ -195,5 +195,34 @@ namespace PremiumLivingSystem
             cmbStatusFilter.SelectedIndex = 0;
             LoadAllProcurement();
         }
+
+        private void btnUpdateStatus_Click(object sender, EventArgs e)
+        {
+            string query = @"INSERT INTO products (
+                Status 
+            VALUES (
+                @status)";
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@status", cboUpdateStatus.SelectedValue.ToString());
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Status update successfully!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inserting record: " + ex.Message);
+            }
+
+        }
     }
 }
