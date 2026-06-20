@@ -117,162 +117,162 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dgvDelivery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="dgvDelivery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1094, 326</value>
+  <data name="&gt;&gt;txtDeliveryID.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvDelivery.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblDelivery.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnReplySlip.Name" xml:space="preserve">
+    <value>btnReplySlip</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReplySlip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
+  </data>
+  <data name="&gt;&gt;txtDeliveryID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDeliveryID.Name" xml:space="preserve">
+    <value>txtDeliveryID</value>
+  </data>
   <data name="&gt;&gt;dgvDelivery.Name" xml:space="preserve">
     <value>dgvDelivery</value>
   </data>
-  <data name="&gt;&gt;dgvDelivery.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblDelivery.Name" xml:space="preserve">
+    <value>lblDelivery</value>
   </data>
-  <data name="&gt;&gt;dgvDelivery.Parent" xml:space="preserve">
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 402</value>
+  </data>
+  <data name="btnReplySlip.Text" xml:space="preserve">
+    <value>Reply Slip</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1100, 554</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvDelivery.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;lblDelivery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UcSearchDelivery</value>
+  </data>
   <data name="lblDelivery.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblDelivery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 355</value>
+  <data name="&gt;&gt;btnGenerate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblDelivery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
+    <value>60, 12</value>
+  </data>
+  <data name="&gt;&gt;txtDeliveryID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 402</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 30</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Name" xml:space="preserve">
+    <value>btnGenerate</value>
+  </data>
+  <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 30</value>
+  </data>
+  <data name="txtDeliveryID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 22</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDelivery.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgvDelivery.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblDelivery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 328</value>
+  </data>
+  <data name="&gt;&gt;btnReplySlip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="dgvDelivery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="dgvDelivery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1094, 301</value>
+  </data>
+  <data name="btnReplySlip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 402</value>
   </data>
   <data name="lblDelivery.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="txtDeliveryID.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dgvDelivery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReplySlip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnGenerate.Text" xml:space="preserve">
+    <value>Generate Note</value>
+  </data>
+  <data name="btnReplySlip.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="lblDelivery.Text" xml:space="preserve">
     <value>Delivery ID</value>
   </data>
-  <data name="&gt;&gt;lblDelivery.Name" xml:space="preserve">
-    <value>lblDelivery</value>
-  </data>
-  <data name="&gt;&gt;lblDelivery.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDelivery.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblDelivery.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtDeliveryID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 392</value>
-  </data>
-  <data name="txtDeliveryID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 20</value>
-  </data>
-  <data name="txtDeliveryID.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtDeliveryID.Name" xml:space="preserve">
-    <value>txtDeliveryID</value>
-  </data>
-  <data name="&gt;&gt;txtDeliveryID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtDeliveryID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtDeliveryID.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 436</value>
-  </data>
-  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 33</value>
-  </data>
-  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnSearch.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 436</value>
-  </data>
-  <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 33</value>
-  </data>
-  <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnGenerate.Text" xml:space="preserve">
-    <value>Generate Note</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.Name" xml:space="preserve">
-    <value>btnGenerate</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnReplySlip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 436</value>
-  </data>
-  <data name="btnReplySlip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 33</value>
-  </data>
-  <data name="btnReplySlip.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnReplySlip.Text" xml:space="preserve">
-    <value>Reply Slip</value>
-  </data>
-  <data name="&gt;&gt;btnReplySlip.Name" xml:space="preserve">
-    <value>btnReplySlip</value>
-  </data>
-  <data name="&gt;&gt;btnReplySlip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;btnReplySlip.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnReplySlip.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="txtDeliveryID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 362</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1100, 600</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UcSearchDelivery</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

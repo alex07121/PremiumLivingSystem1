@@ -23,29 +23,50 @@
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnReplySlip = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // dgvDelivery
+            // 
+            resources.ApplyResources(this.dgvDelivery, "dgvDelivery");
             this.dgvDelivery.FullRowSelect = true;
             this.dgvDelivery.GridLines = true;
             this.dgvDelivery.HideSelection = false;
-            resources.ApplyResources(this.dgvDelivery, "dgvDelivery");
             this.dgvDelivery.Name = "dgvDelivery";
             this.dgvDelivery.UseCompatibleStateImageBehavior = false;
             this.dgvDelivery.View = System.Windows.Forms.View.Details;
+            // 
+            // lblDelivery
+            // 
             resources.ApplyResources(this.lblDelivery, "lblDelivery");
             this.lblDelivery.Name = "lblDelivery";
+            // 
+            // txtDeliveryID
+            // 
             resources.ApplyResources(this.txtDeliveryID, "txtDeliveryID");
             this.txtDeliveryID.Name = "txtDeliveryID";
+            // 
+            // btnSearch
+            // 
             resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnGenerate
+            // 
             resources.ApplyResources(this.btnGenerate, "btnGenerate");
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
+            // btnReplySlip
+            // 
             resources.ApplyResources(this.btnReplySlip, "btnReplySlip");
             this.btnReplySlip.Name = "btnReplySlip";
             this.btnReplySlip.UseVisualStyleBackColor = true;
             this.btnReplySlip.Click += new System.EventHandler(this.btnReplySlip_Click);
+            // 
+            // UcSearchDelivery
+            // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReplySlip);

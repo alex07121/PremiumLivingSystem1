@@ -118,40 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dgvDelivery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1096, 328</value>
+  <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 12</value>
   </data>
-  <data name="lblDelivery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 344</value>
-  </data>
-  <data name="lblDelivery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
-  </data>
-  <data name="lblDelivery.Text" xml:space="preserve">
-    <value>送貨號碼</value>
-  </data>
-  <data name="txtDeliveryID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 378</value>
-  </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 418</value>
+  <data name="lblSearch.Text" xml:space="preserve">
+    <value>送貨單編號:</value>
   </data>
   <data name="btnSearch.Text" xml:space="preserve">
     <value>搜尋</value>
   </data>
-  <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 418</value>
+  <data name="lblInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 16</value>
   </data>
-  <data name="btnGenerate.Text" xml:space="preserve">
-    <value>產生註釋</value>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>物品:</value>
   </data>
-  <data name="btnReplySlip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 418</value>
+  <data name="btnConfirm.Text" xml:space="preserve">
+    <value>確認收到</value>
   </data>
-  <data name="btnReplySlip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 31</value>
+  <data name="btnLoadAll.Text" xml:space="preserve">
+    <value>運輸途中的貨物</value>
   </data>
-  <data name="btnReplySlip.Text" xml:space="preserve">
-    <value>回條</value>
+  <data name="lblDeliveryNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 12</value>
+  </data>
+  <data name="lblDeliveryNotes.Text" xml:space="preserve">
+    <value>（選擇一行以查看下方項目）</value>
+  </data>
+  <data name="lblReceivedBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 12</value>
+  </data>
+  <data name="lblReceivedBy.Text" xml:space="preserve">
+    <value>接收者:</value>
+  </data>
+  <data name="lblActualQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 12</value>
+  </data>
+  <data name="lblActualQty.Text" xml:space="preserve">
+    <value>所選商品的實際數量：</value>
+  </data>
+  <data name="btnSetQty.Text" xml:space="preserve">
+    <value>設定</value>
   </data>
 </root>

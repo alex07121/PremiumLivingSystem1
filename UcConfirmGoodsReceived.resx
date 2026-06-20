@@ -117,4 +117,424 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtDNID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listDeliveryNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 32</value>
+  </data>
+  <data name="btnConfirm.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblSearch.Text" xml:space="preserve">
+    <value>Delivery Note ID:</value>
+  </data>
+  <data name="btnSetQty.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblCustomer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>8, 12</value>
+  </data>
+  <data name="txtDNID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 7</value>
+  </data>
+  <data name="&gt;&gt;listDeliveryNotes.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblDeliveryNotes.Text" xml:space="preserve">
+    <value>(select a row to view items below)</value>
+  </data>
+  <data name="&gt;&gt;listGoodsItems.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="lblCustomer.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;nudActualQty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nudActualQty.Name" xml:space="preserve">
+    <value>nudActualQty</value>
+  </data>
+  <data name="lblActualQty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>206, 318</value>
+  </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="&gt;&gt;btnConfirm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSetQty.Name" xml:space="preserve">
+    <value>btnSetQty</value>
+  </data>
+  <data name="btnLoadAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 6</value>
+  </data>
+  <data name="btnConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 28</value>
+  </data>
+  <data name="&gt;&gt;lblSearch.Name" xml:space="preserve">
+    <value>lblSearch</value>
+  </data>
+  <data name="lblCustomer.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtDNID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 22</value>
+  </data>
+  <data name="&gt;&gt;txtReceivedBy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtReceivedBy.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
+  <data name="&gt;&gt;lblActualQty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nudActualQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 22</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.Name" xml:space="preserve">
+    <value>lblInfo</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSetQty.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;txtDNID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listGoodsItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listDeliveryNotes.Name" xml:space="preserve">
+    <value>listDeliveryNotes</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>Items:</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtDNID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;txtDNID.Name" xml:space="preserve">
+    <value>txtDNID</value>
+  </data>
+  <data name="lblInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnLoadAll.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblReceivedBy.Name" xml:space="preserve">
+    <value>lblReceivedBy</value>
+  </data>
+  <data name="&gt;&gt;listDeliveryNotes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSetQty.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblActualQty.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblReceivedBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 12</value>
+  </data>
+  <data name="&gt;&gt;lblReceivedBy.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnLoadAll.Text" xml:space="preserve">
+    <value>Load In-Transit</value>
+  </data>
+  <data name="listGoodsItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 106</value>
+  </data>
+  <data name="btnConfirm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Bold</value>
+  </data>
+  <data name="lblActualQty.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblReceivedBy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblReceivedBy.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtReceivedBy.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnConfirm.Text" xml:space="preserve">
+    <value>Confirm Received</value>
+  </data>
+  <data name="lblSearch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblReceivedBy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCustomer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDeliveryNotes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtReceivedBy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblReceivedBy.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblActualQty.Name" xml:space="preserve">
+    <value>lblActualQty</value>
+  </data>
+  <data name="listGoodsItems.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="txtDNID.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSetQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>643, 381</value>
+  </data>
+  <data name="btnSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtReceivedBy.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblActualQty.Text" xml:space="preserve">
+    <value>Actual Qty for selected item:</value>
+  </data>
+  <data name="&gt;&gt;btnLoadAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblDeliveryNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 12</value>
+  </data>
+  <data name="&gt;&gt;lblActualQty.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtReceivedBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="&gt;&gt;lblCustomer.Name" xml:space="preserve">
+    <value>lblCustomer</value>
+  </data>
+  <data name="listGoodsItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>618, 199</value>
+  </data>
+  <data name="lblReceivedBy.Text" xml:space="preserve">
+    <value>Received By:</value>
+  </data>
+  <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 12</value>
+  </data>
+  <data name="nudActualQty.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;btnConfirm.Name" xml:space="preserve">
+    <value>btnConfirm</value>
+  </data>
+  <data name="&gt;&gt;btnConfirm.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblCustomer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 346</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="lblDeliveryNotes.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblActualQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 12</value>
+  </data>
+  <data name="&gt;&gt;lblSearch.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtReceivedBy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 332</value>
+  </data>
+  <data name="listDeliveryNotes.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnSetQty.Text" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="&gt;&gt;lblActualQty.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCustomer.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblDeliveryNotes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnLoadAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
+  </data>
+  <data name="&gt;&gt;btnSetQty.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblDeliveryNotes.Name" xml:space="preserve">
+    <value>lblDeliveryNotes</value>
+  </data>
+  <data name="&gt;&gt;txtReceivedBy.Name" xml:space="preserve">
+    <value>txtReceivedBy</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UcConfirmGoodsReceived</value>
+  </data>
+  <data name="&gt;&gt;nudActualQty.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnLoadAll.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDeliveryNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>470, 6</value>
+  </data>
+  <data name="listGoodsItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;btnSetQty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listDeliveryNotes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;lblDeliveryNotes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="nudActualQty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 332</value>
+  </data>
+  <data name="&gt;&gt;btnConfirm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblCustomer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 10</value>
+  </data>
+  <data name="btnSetQty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 330</value>
+  </data>
+  <data name="&gt;&gt;listGoodsItems.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nudActualQty.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoadAll.Name" xml:space="preserve">
+    <value>btnLoadAll</value>
+  </data>
+  <data name="&gt;&gt;lblInfo.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnConfirm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblReceivedBy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 318</value>
+  </data>
+  <data name="nudActualQty.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnLoadAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;txtDNID.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lblDeliveryNotes.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="&gt;&gt;listDeliveryNotes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="listDeliveryNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>618, 58</value>
+  </data>
+  <data name="&gt;&gt;listGoodsItems.Name" xml:space="preserve">
+    <value>listGoodsItems</value>
+  </data>
+  <data name="lblCustomer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnLoadAll.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 92</value>
+  </data>
+  <data name="btnConfirm.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
