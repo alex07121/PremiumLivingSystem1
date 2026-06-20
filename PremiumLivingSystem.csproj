@@ -550,6 +550,9 @@
     <EmbeddedResource Include="UcCreateMaterialRequest.resx">
       <DependentUpon>UcCreateMaterialRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcCreateMaterialRequest.zh-Hans-HK.resx">
+      <DependentUpon>UcCreateMaterialRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcCreateOrder.zh-Hans-HK.resx">
       <DependentUpon>UcCreateOrder.cs</DependentUpon>
     </EmbeddedResource>
