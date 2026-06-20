@@ -535,6 +535,9 @@
     <EmbeddedResource Include="UcConfirmGoodsReceived.resx">
       <DependentUpon>UcConfirmGoodsReceived.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcConfirmGoodsReceived.zh-Hans-HK.resx">
+      <DependentUpon>UcConfirmGoodsReceived.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcCreateMaterialRequest.resx">
       <DependentUpon>UcCreateMaterialRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -595,6 +598,9 @@
     <EmbeddedResource Include="UcReceivableTransfers.resx">
       <DependentUpon>UcReceivableTransfers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcReceivableTransfers.zh-Hans-HK.resx">
+      <DependentUpon>UcReceivableTransfers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcReceivableTransfers.zh-HK.resx">
       <DependentUpon>UcReceivableTransfers.cs</DependentUpon>
     </EmbeddedResource>
@@ -617,6 +623,9 @@
       <DependentUpon>UcProcessReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSearchDelivery.zh-Hans-HK.resx">
+      <DependentUpon>UCSearchDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSearchDelivery.zh-Hant.resx">
       <DependentUpon>UCSearchDelivery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcSearchMaterialRequest.resx">
