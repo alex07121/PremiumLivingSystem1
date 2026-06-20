@@ -115,6 +115,12 @@
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="DesignModeHelper.cs" />
+    <Compile Include="EditPruchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPruchaseOrder.Designer.cs">
+      <DependentUpon>EditPruchaseOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductionClerkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,18 @@
     <Compile Include="UcSearchProcurement.Designer.cs">
       <DependentUpon>UcSearchProcurement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcSalesSummaryReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcSalesSummaryReport.Designer.cs">
+      <DependentUpon>UcSalesSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcSearchProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -403,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditProductForm.zh-HK.resx">
       <DependentUpon>EditProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPruchaseOrder.resx">
+      <DependentUpon>EditPruchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finance_Staff_Form.zh-Hans-HK.resx">
       <DependentUpon>Finance_Staff_Form.cs</DependentUpon>
@@ -633,6 +654,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcSearchProcurement.resx">
       <DependentUpon>UcSearchProcurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcSalesSummaryReport.resx">
+      <DependentUpon>UcSalesSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcSearchProduct.resx">
       <DependentUpon>UcSearchProduct.cs</DependentUpon>

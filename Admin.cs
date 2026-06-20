@@ -47,5 +47,10 @@ namespace PremiumLivingSystem
                 this.Close();
             }
         }
+
+        private void btnSalesReport_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UcSalesSummaryReport());
+        }
     }
 }
