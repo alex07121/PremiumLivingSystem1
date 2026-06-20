@@ -43,7 +43,7 @@
             this.lblQuantity = new System.Windows.Forms.Label();
             this.btnAddRow = new System.Windows.Forms.Button();
             this.btnRemoveRow = new System.Windows.Forms.Button();
-            this.grpTotals = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.GroupBox();
             this.lblSubTotal = new System.Windows.Forms.Label();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -52,10 +52,11 @@
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnSaveDraft = new System.Windows.Forms.Button();
             this.grpHeader.SuspendLayout();
             this.grpItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
-            this.grpTotals.SuspendLayout();
+            this.btnSave.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -384,22 +385,22 @@
             this.btnRemoveRow.UseVisualStyleBackColor = true;
             this.btnRemoveRow.Click += new System.EventHandler(this.btnRemoveRow_Click);
             // 
-            // grpTotals
+            // btnSave
             // 
-            this.grpTotals.Controls.Add(this.lblSubTotal);
-            this.grpTotals.Controls.Add(this.txtSubTotal);
-            this.grpTotals.Controls.Add(this.lblTotal);
-            this.grpTotals.Controls.Add(this.txtTotal);
-            this.grpTotals.Controls.Add(this.lblRemarks);
-            this.grpTotals.Controls.Add(this.txtRemarks);
-            this.grpTotals.Location = new System.Drawing.Point(62, 840);
-            this.grpTotals.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.grpTotals.Name = "grpTotals";
-            this.grpTotals.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.grpTotals.Size = new System.Drawing.Size(1556, 240);
-            this.grpTotals.TabIndex = 3;
-            this.grpTotals.TabStop = false;
-            this.grpTotals.Text = "Totals & Remarks";
+            this.btnSave.Controls.Add(this.lblSubTotal);
+            this.btnSave.Controls.Add(this.txtSubTotal);
+            this.btnSave.Controls.Add(this.lblTotal);
+            this.btnSave.Controls.Add(this.txtTotal);
+            this.btnSave.Controls.Add(this.lblRemarks);
+            this.btnSave.Controls.Add(this.txtRemarks);
+            this.btnSave.Location = new System.Drawing.Point(62, 840);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnSave.Size = new System.Drawing.Size(1556, 240);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "Totals & Remarks";
             // 
             // lblSubTotal
             // 
@@ -480,7 +481,7 @@
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 11F);
-            this.btnClose.Location = new System.Drawing.Point(1244, 1110);
+            this.btnClose.Location = new System.Drawing.Point(1223, 1110);
             this.btnClose.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(249, 68);
@@ -489,14 +490,30 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnSaveDraft
+            // 
+            this.btnSaveDraft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.btnSaveDraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveDraft.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSaveDraft.ForeColor = System.Drawing.Color.White;
+            this.btnSaveDraft.Location = new System.Drawing.Point(705, 1110);
+            this.btnSaveDraft.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnSaveDraft.Name = "btnSaveDraft";
+            this.btnSaveDraft.Size = new System.Drawing.Size(249, 68);
+            this.btnSaveDraft.TabIndex = 8;
+            this.btnSaveDraft.Text = "Save Draft";
+            this.btnSaveDraft.UseVisualStyleBackColor = false;
+            this.btnSaveDraft.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // EditPruchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1680, 1200);
+            this.Controls.Add(this.btnSaveDraft);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.grpTotals);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.grpItems);
             this.Controls.Add(this.grpHeader);
             this.Controls.Add(this.lblTitle);
@@ -509,8 +526,8 @@
             this.grpItems.ResumeLayout(false);
             this.grpItems.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
-            this.grpTotals.ResumeLayout(false);
-            this.grpTotals.PerformLayout();
+            this.btnSave.ResumeLayout(false);
+            this.btnSave.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,7 +564,7 @@
         private System.Windows.Forms.Button btnAddRow;
         private System.Windows.Forms.Button btnRemoveRow;
 
-        private System.Windows.Forms.GroupBox grpTotals;
+        private System.Windows.Forms.GroupBox btnSave;
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.Label lblTotal;
@@ -556,5 +573,6 @@
         private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSaveDraft;
     }
 }
