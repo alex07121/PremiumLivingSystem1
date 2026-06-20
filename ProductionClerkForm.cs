@@ -11,11 +11,11 @@ using System.Threading;
 using System.Globalization;
 using MaterialSkin;
 using MaterialSkin.Controls;
-using PLFC_Project; // Ensure UserSession is accessible
+using PLFC_Project;
 
 namespace PremiumLivingSystem
 {
-    // Inherits from MaterialForm
+
     public partial class ProductionClerkForm : MaterialForm
     {
         private Type currentUcType = null;
@@ -26,9 +26,11 @@ namespace PremiumLivingSystem
             InitializeComponent();
 
             SetupMaterialSkin();
+
+            SetButtonTexts();
+
             UpdateStaffInfo();
             SetLanguageComboBoxValue();
-
         }
 
         private void SetupMaterialSkin()
@@ -37,7 +39,6 @@ namespace PremiumLivingSystem
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
-            // Use blue color scheme (Indigo) for Production Clerk, to distinguish from other roles
             materialSkinManager.ColorScheme = new ColorScheme(
                Primary.Indigo800,
                Primary.Indigo900,
@@ -50,7 +51,7 @@ namespace PremiumLivingSystem
         private void UpdateStaffInfo()
         {
             bool isChinese = UserSession.CurrentCulture == "zh-Hans-HK";
-            // Ensure label2 control exists in the Designer
+
             if (label2 != null)
             {
                 label2.Text = isChinese
@@ -78,13 +79,25 @@ namespace PremiumLivingSystem
             }
         }
 
+        private void SetButtonTexts()
+        {
+            bool isChinese = UserSession.CurrentCulture == "zh-Hans-HK";
+
+            if (btnMaterialRequest != null)
+                btnMaterialRequest.Text = isChinese ? "建立物料申請" : "Create Material Request";
+
+            if (btnLogout != null)
+                btnLogout.Text = isChinese ? "登出" : "Logout";
+        }
+
         private void RefreshFormText()
         {
             ApplyLanguage();
             UpdateStaffInfo();
             SetLanguageComboBoxValue();
 
-            // Button text update logic can be added here (SetButtonTexts())
+
+            SetButtonTexts();
 
             if (currentUcType != null)
             {
@@ -129,30 +142,6 @@ namespace PremiumLivingSystem
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-        }
-
-        private void btnCreateTransfer_Click(object sender, EventArgs e)
-        {
-            UcTransfer ucTransfer = new UcTransfer();
-            ShowUserControl(ucTransfer);
-        }
-
-        private void btnCreateMaterialRequest_Click(object sender, EventArgs e)
-        {
-            UcCreateMaterialRequest ucMaterialRequest = new UcCreateMaterialRequest();
-            ShowUserControl(ucMaterialRequest);
-        }
-
-        private void btnSearchTransfer_Click(object sender, EventArgs e)
-        {
-            UcReceivableTransfers ucReceivableTransfers = new UcReceivableTransfers();
-            ShowUserControl(ucReceivableTransfers);
-        }
-
-        private void btnApproveTransfers_Click(object sender, EventArgs e)
-        {
-            UcPendingTransfers ucPendingTransfers = new UcPendingTransfers();
-            ShowUserControl(ucPendingTransfers);
         }
 
         private void btnMaterialRequest_Click(object sender, EventArgs e)
