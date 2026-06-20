@@ -196,33 +196,20 @@ namespace PremiumLivingSystem
             LoadAllProcurement();
         }
 
-        private void btnUpdateStatus_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            string query = @"INSERT INTO products (
-                Status 
-            VALUES (
-                @status)";
-
-            try
+            if (lvResults.SelectedItems.Count == 0)
             {
-                using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
-                {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@status", cboUpdateStatus.SelectedValue.ToString());
-                    conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Status update successfully!");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error inserting record: " + ex.Message);
+                MessageBox.Show("Please select a purchase order to edit.");
+                return;
             }
 
+            string selectedPOID = lvResults.SelectedItems[0].Text;
+            EditPruchaseOrder editForm = new EditPruchaseOrder(selectedPOID);
+            editForm.ShowDialog();
+
+            // Refresh list after editing
+            LoadAllProcurement();
         }
     }
 }

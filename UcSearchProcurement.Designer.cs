@@ -24,9 +24,8 @@ namespace PremiumLivingSystem
             this.btnSearch = new System.Windows.Forms.Button();
             this.lvResults = new System.Windows.Forms.ListView();
             this.grpResults = new System.Windows.Forms.GroupBox();
-            this.btnUpdateStatus = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.cmbStatusFilter = new System.Windows.Forms.ComboBox();
-            this.cboUpdateStatus = new System.Windows.Forms.ComboBox();
             this.grpResults.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,16 +105,16 @@ namespace PremiumLivingSystem
             this.grpResults.TabStop = false;
             this.grpResults.Text = "Search Results";
             // 
-            // btnUpdateStatus
+            // btnEdit
             // 
-            this.btnUpdateStatus.Location = new System.Drawing.Point(1207, 99);
-            this.btnUpdateStatus.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnUpdateStatus.Name = "btnUpdateStatus";
-            this.btnUpdateStatus.Size = new System.Drawing.Size(187, 52);
-            this.btnUpdateStatus.TabIndex = 9;
-            this.btnUpdateStatus.Text = "Update Status";
-            this.btnUpdateStatus.UseVisualStyleBackColor = true;
-            this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
+            this.btnEdit.Location = new System.Drawing.Point(1207, 99);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(187, 52);
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // cmbStatusFilter
             // 
@@ -134,28 +133,12 @@ namespace PremiumLivingSystem
             this.cmbStatusFilter.Size = new System.Drawing.Size(278, 35);
             this.cmbStatusFilter.TabIndex = 4;
             // 
-            // cboUpdateStatus
-            // 
-            this.cboUpdateStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboUpdateStatus.FormattingEnabled = true;
-            this.cboUpdateStatus.Items.AddRange(new object[] {
-            "Sent",
-            "PartiallyReceived",
-            "Received",
-            "Cancelled"});
-            this.cboUpdateStatus.Location = new System.Drawing.Point(1429, 105);
-            this.cboUpdateStatus.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.cboUpdateStatus.Name = "cboUpdateStatus";
-            this.cboUpdateStatus.Size = new System.Drawing.Size(278, 35);
-            this.cboUpdateStatus.TabIndex = 10;
-            // 
             // UcSearchProcurement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cboUpdateStatus);
-            this.Controls.Add(this.btnUpdateStatus);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.grpResults);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbStatusFilter);
@@ -182,8 +165,7 @@ namespace PremiumLivingSystem
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView lvResults;
         private System.Windows.Forms.GroupBox grpResults;
-        private System.Windows.Forms.Button btnUpdateStatus;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ComboBox cmbStatusFilter;
-        private System.Windows.Forms.ComboBox cboUpdateStatus;
     }
 }
