@@ -353,12 +353,6 @@
     <Compile Include="UcSalesSummaryReport.Designer.cs">
       <DependentUpon>UcSalesSummaryReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransferForm.Designer.cs">
-      <DependentUpon>TransferForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UcSearchProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -657,9 +651,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcSalesSummaryReport.resx">
       <DependentUpon>UcSalesSummaryReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransferForm.resx">
-      <DependentUpon>TransferForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcSearchProduct.resx">
       <DependentUpon>UcSearchProduct.cs</DependentUpon>
