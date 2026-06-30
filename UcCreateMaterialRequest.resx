@@ -117,1030 +117,1030 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="grpHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 87</value>
-  </data>
-  <data name="txtReqPos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 48</value>
-  </data>
-  <data name="&gt;&gt;grpItems.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtReqName.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="&gt;&gt;cmbUrgency.Name" xml:space="preserve">
-    <value>cmbUrgency</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmbOrderItem.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnAutoFillBOM.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnAddRow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="cmbUrgency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;dtpRequiredDate.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblReqByID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 547</value>
-  </data>
-  <data name="&gt;&gt;txtRequestDate.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 30</value>
-  </data>
-  <data name="grpItems.Text" xml:space="preserve">
-    <value>Material List</value>
-  </data>
-  <data name="lblRequiredDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 20</value>
-  </data>
-  <data name="&gt;&gt;lblMaterial.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblOrderFilter.Parent" xml:space="preserve">
-    <value>grpSelection</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtRemarks.Parent" xml:space="preserve">
-    <value>grpCommon</value>
-  </data>
-  <data name="grpCommon.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;txtReqPos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;txtReqByID.Name" xml:space="preserve">
-    <value>txtReqByID</value>
-  </data>
-  <data name="lblQuantity.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="grpHeader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lblRequiredDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 12</value>
-  </data>
-  <data name="&gt;&gt;lblRemarks.Parent" xml:space="preserve">
-    <value>grpCommon</value>
-  </data>
-  <data name="btnRemoveRow.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpCommon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbUrgency.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblRequestDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblReqByID.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="lblUrgency.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 12</value>
-  </data>
-  <data name="lblOrderFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 12</value>
-  </data>
-  <data name="&gt;&gt;nudQuantity.Name" xml:space="preserve">
-    <value>nudQuantity</value>
-  </data>
-  <data name="lblRequestDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 12</value>
-  </data>
-  <data name="lblRemarks.Text" xml:space="preserve">
-    <value>Remarks:</value>
-  </data>
-  <data name="&gt;&gt;lblRemarks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbMaterial.Name" xml:space="preserve">
-    <value>cmbMaterial</value>
-  </data>
-  <data name="grpCommon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="cmbOrderItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 20</value>
-  </data>
-  <data name="btnAutoFillBOM.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="grpSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 73</value>
-  </data>
-  <data name="lblReqPos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 12</value>
-  </data>
-  <data name="&gt;&gt;txtReqName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblOrderItem.Name" xml:space="preserve">
-    <value>lblOrderItem</value>
-  </data>
-  <data name="&gt;&gt;lblRequiredDate.Name" xml:space="preserve">
-    <value>lblRequiredDate</value>
-  </data>
-  <data name="cmbMaterial.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblReqPos.Text" xml:space="preserve">
-    <value>Position:</value>
-  </data>
-  <data name="&gt;&gt;lblMaterial.Parent" xml:space="preserve">
-    <value>grpItems</value>
-  </data>
-  <data name="&gt;&gt;lblUrgency.Name" xml:space="preserve">
-    <value>lblUrgency</value>
-  </data>
-  <data name="lvMaterials.Size" type="System.Drawing.Size, System.Drawing">
-    <value>641, 155</value>
-  </data>
-  <data name="btnRemoveRow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>527, 16</value>
-  </data>
-  <data name="&gt;&gt;btnAutoFillBOM.Parent" xml:space="preserve">
-    <value>grpSelection</value>
-  </data>
-  <data name="&gt;&gt;lblReqPos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddRow.Parent" xml:space="preserve">
-    <value>grpItems</value>
-  </data>
-  <data name="&gt;&gt;lblMaterial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="grpCommon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 447</value>
-  </data>
-  <data name="txtRequestID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 22</value>
-  </data>
-  <data name="&gt;&gt;lblRequestID.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="&gt;&gt;lblReqByID.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;txtReqPos.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblRequestID.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lvMaterials.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 43</value>
-  </data>
-  <data name="&gt;&gt;grpHeader.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cmbMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txtRequestID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="cmbUrgency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 20</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Name" xml:space="preserve">
-    <value>btnSubmit</value>
-  </data>
-  <data name="&gt;&gt;grpSelection.Name" xml:space="preserve">
-    <value>grpSelection</value>
-  </data>
-  <data name="txtReqByID.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblUrgency.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lvMaterials.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblOrderFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 20</value>
-  </data>
-  <data name="txtRemarks.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblRequestID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtReqByID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 48</value>
-  </data>
-  <data name="&gt;&gt;txtReqByID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblRequestDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;btnAddRow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnRemoveRow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
-  </data>
-  <data name="&gt;&gt;txtRemarks.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 20pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;txtRequestDate.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dtpRequiredDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="lblRequestID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblOrderFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;lvMaterials.Parent" xml:space="preserve">
-    <value>grpItems</value>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 22</value>
   </data>
-  <data name="&gt;&gt;lblQuantity.Parent" xml:space="preserve">
-    <value>grpItems</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
-  <data name="&gt;&gt;cmbMaterial.Parent" xml:space="preserve">
-    <value>grpItems</value>
-  </data>
-  <data name="lblOrderItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="nudQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 17</value>
-  </data>
-  <data name="lblReqPos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 50</value>
-  </data>
-  <data name="grpHeader.Text" xml:space="preserve">
-    <value>Request Information</value>
-  </data>
-  <data name="&gt;&gt;lblRequestDate.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="cmbUrgency.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblRequiredDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtRequestDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 22</value>
-  </data>
-  <data name="btnAddRow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
-  </data>
-  <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
-    <value>lblQuantity</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblUrgency.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblOrderFilter.Name" xml:space="preserve">
-    <value>lblOrderFilter</value>
-  </data>
-  <data name="&gt;&gt;lblReqPos.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cmbUrgency.Items1" xml:space="preserve">
-    <value>Medium</value>
-  </data>
-  <data name="&gt;&gt;lblRemarks.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cmbUrgency.Items3" xml:space="preserve">
-    <value>Urgent</value>
-  </data>
-  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 30</value>
-  </data>
-  <data name="cmbOrderFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 19</value>
-  </data>
-  <data name="&gt;&gt;lblReqPos.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="&gt;&gt;grpCommon.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblRequiredDate.Text" xml:space="preserve">
-    <value>Required Delivery Date:</value>
-  </data>
-  <data name="lblRequestDate.Text" xml:space="preserve">
-    <value>Request Date:</value>
-  </data>
-  <data name="lblRequiredDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="grpItems.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lblReqName.Text" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="&gt;&gt;btnAddRow.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="nudQuantity.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblQuantity.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="grpItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 207</value>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>854, 70</value>
   </data>
   <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="grpCommon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 87</value>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Create Raw Material Request</value>
   </data>
-  <data name="txtRequestID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 18</value>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
   </data>
-  <data name="&gt;&gt;grpHeader.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnAutoFillBOM.Text" xml:space="preserve">
-    <value>Auto-Fill from BOM</value>
-  </data>
-  <data name="lblMaterial.Text" xml:space="preserve">
-    <value>Material:</value>
-  </data>
-  <data name="&gt;&gt;txtRemarks.Name" xml:space="preserve">
-    <value>txtRemarks</value>
-  </data>
-  <data name="lblRequiredDate.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblOrderItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblQuantity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtRequestID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 40</value>
+  </data>
+  <data name="txtRequestID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="txtRequestID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 40</value>
+  </data>
+  <data name="txtRequestID.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtRequestID.Name" xml:space="preserve">
+    <value>txtRequestID</value>
+  </data>
+  <data name="&gt;&gt;txtRequestID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRequestID.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;txtRequestID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblRequestID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRequestID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 45</value>
+  </data>
+  <data name="lblRequestID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblRequestID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 27</value>
+  </data>
+  <data name="lblRequestID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblRequestID.Text" xml:space="preserve">
+    <value>Request ID:</value>
+  </data>
+  <data name="&gt;&gt;lblRequestID.Name" xml:space="preserve">
+    <value>lblRequestID</value>
+  </data>
+  <data name="&gt;&gt;lblRequestID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRequestID.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;lblRequestID.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtRequestDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>670, 40</value>
+  </data>
+  <data name="txtRequestDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="txtRequestDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 40</value>
+  </data>
+  <data name="txtRequestDate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtRequestDate.Name" xml:space="preserve">
+    <value>txtRequestDate</value>
+  </data>
+  <data name="&gt;&gt;txtRequestDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRequestDate.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;txtRequestDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRequestDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRequestDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 45</value>
+  </data>
+  <data name="lblRequestDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblRequestDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 27</value>
+  </data>
+  <data name="lblRequestDate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblRequestDate.Text" xml:space="preserve">
+    <value>Request Date:</value>
+  </data>
+  <data name="&gt;&gt;lblRequestDate.Name" xml:space="preserve">
+    <value>lblRequestDate</value>
+  </data>
+  <data name="&gt;&gt;lblRequestDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRequestDate.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;lblRequestDate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtReqPos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1104, 108</value>
+  </data>
+  <data name="txtReqPos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
   </data>
   <data name="txtReqPos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 22</value>
+    <value>310, 40</value>
+  </data>
+  <data name="txtReqPos.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtReqPos.Name" xml:space="preserve">
+    <value>txtReqPos</value>
+  </data>
+  <data name="&gt;&gt;txtReqPos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtReqPos.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;txtReqPos.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblReqPos.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblReqPos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>996, 112</value>
+  </data>
+  <data name="lblReqPos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblReqPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 27</value>
+  </data>
+  <data name="lblReqPos.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblReqPos.Text" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="&gt;&gt;lblReqPos.Name" xml:space="preserve">
+    <value>lblReqPos</value>
+  </data>
+  <data name="&gt;&gt;lblReqPos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblReqPos.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;lblReqPos.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtReqName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 108</value>
+  </data>
+  <data name="txtReqName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="txtReqName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 40</value>
   </data>
   <data name="txtReqName.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtReqName.Name" xml:space="preserve">
+    <value>txtReqName</value>
+  </data>
+  <data name="&gt;&gt;txtReqName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtReqName.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;txtReqName.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="lblReqName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtRequestDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txtRemarks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 31</value>
-  </data>
-  <data name="lblOrderItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 45</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveRow.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveRow.Name" xml:space="preserve">
-    <value>btnRemoveRow</value>
-  </data>
-  <data name="btnAddRow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="btnRemoveRow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="grpCommon.Text" xml:space="preserve">
-    <value>Common Settings (applies to all materials)</value>
-  </data>
-  <data name="&gt;&gt;lblRemarks.Name" xml:space="preserve">
-    <value>lblRemarks</value>
-  </data>
-  <data name="&gt;&gt;lblReqName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAutoFillBOM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 42</value>
-  </data>
-  <data name="&gt;&gt;btnAutoFillBOM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblRequestID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 20</value>
-  </data>
-  <data name="&gt;&gt;lblReqName.Name" xml:space="preserve">
-    <value>lblReqName</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="btnAddRow.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="txtReqPos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lblRequestID.Text" xml:space="preserve">
-    <value>Request ID:</value>
-  </data>
-  <data name="grpHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lblUrgency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 12</value>
-  </data>
-  <data name="cmbUrgency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 18</value>
-  </data>
-  <data name="lblRequestID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 12</value>
-  </data>
-  <data name="txtReqByID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lblQuantity.Text" xml:space="preserve">
-    <value>Qty:</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="cmbOrderItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderItem.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnAutoFillBOM.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
   <data name="lblReqName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 50</value>
+    <value>436, 112</value>
   </data>
-  <data name="&gt;&gt;grpHeader.Name" xml:space="preserve">
-    <value>grpHeader</value>
+  <data name="lblReqName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
-  <data name="grpSelection.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txtRemarks.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtReqPos.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderFilter.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtRemarks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 48</value>
-  </data>
-  <data name="&gt;&gt;txtReqName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btnAutoFillBOM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt, style=Bold</value>
-  </data>
-  <data name="txtReqByID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 22</value>
-  </data>
-  <data name="&gt;&gt;txtRemarks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpSelection.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblUrgency.Parent" xml:space="preserve">
-    <value>grpCommon</value>
-  </data>
-  <data name="btnAddRow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 16</value>
-  </data>
-  <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="grpSelection.Text" xml:space="preserve">
-    <value>Select Order Item (auto-fills BOM materials)</value>
-  </data>
-  <data name="&gt;&gt;txtRequestDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderItem.Name" xml:space="preserve">
-    <value>cmbOrderItem</value>
-  </data>
-  <data name="cmbUrgency.Items" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="btnRemoveRow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="lblReqName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 27</value>
   </data>
   <data name="lblReqName.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;lblRequiredDate.Parent" xml:space="preserve">
-    <value>grpCommon</value>
+  <data name="lblReqName.Text" xml:space="preserve">
+    <value>Name:</value>
   </data>
-  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>389, 32</value>
+  <data name="&gt;&gt;lblReqName.Name" xml:space="preserve">
+    <value>lblReqName</value>
   </data>
-  <data name="&gt;&gt;txtRequestID.Name" xml:space="preserve">
-    <value>txtRequestID</value>
-  </data>
-  <data name="lblRemarks.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="btnRemoveRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
-  <data name="&gt;&gt;nudQuantity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dtpRequiredDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 18</value>
-  </data>
-  <data name="btnAutoFillBOM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveRow.Parent" xml:space="preserve">
-    <value>grpItems</value>
-  </data>
-  <data name="lblRemarks.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cmbMaterial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lvMaterials.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtRequestDate.Name" xml:space="preserve">
-    <value>txtRequestDate</value>
-  </data>
-  <data name="&gt;&gt;lblMaterial.Name" xml:space="preserve">
-    <value>lblMaterial</value>
-  </data>
-  <data name="grpHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 40</value>
-  </data>
-  <data name="&gt;&gt;lblOrderFilter.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblOrderItem.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblReqPos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;btnRemoveRow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblUrgency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;grpSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAutoFillBOM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 21</value>
-  </data>
-  <data name="btnSubmit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;dtpRequiredDate.Parent" xml:space="preserve">
-    <value>grpCommon</value>
-  </data>
-  <data name="grpItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 227</value>
-  </data>
-  <data name="lblReqPos.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;dtpRequiredDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblReqPos.Name" xml:space="preserve">
-    <value>lblReqPos</value>
-  </data>
-  <data name="&gt;&gt;nudQuantity.Parent" xml:space="preserve">
-    <value>grpItems</value>
-  </data>
-  <data name="txtRequestID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="cmbOrderFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;grpCommon.Name" xml:space="preserve">
-    <value>grpCommon</value>
-  </data>
-  <data name="btnRemoveRow.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtReqPos.Name" xml:space="preserve">
-    <value>txtReqPos</value>
-  </data>
-  <data name="&gt;&gt;lblReqName.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderFilter.Name" xml:space="preserve">
-    <value>cmbOrderFilter</value>
-  </data>
-  <data name="txtReqName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;nudQuantity.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UcCreateMaterialRequest</value>
-  </data>
-  <data name="grpHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblRequestDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 20</value>
-  </data>
-  <data name="lblRequiredDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnClear.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="&gt;&gt;lblUrgency.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtRequestDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 18</value>
-  </data>
-  <data name="&gt;&gt;cmbUrgency.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblReqByID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;lvMaterials.Name" xml:space="preserve">
-    <value>lvMaterials</value>
-  </data>
-  <data name="grpSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;txtRequestID.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderFilter.Parent" xml:space="preserve">
-    <value>grpSelection</value>
-  </data>
-  <data name="lblReqByID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 12</value>
-  </data>
-  <data name="&gt;&gt;lblRequestDate.Name" xml:space="preserve">
-    <value>lblRequestDate</value>
-  </data>
-  <data name="btnAddRow.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="grpCommon.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="txtReqName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
-  </data>
-  <data name="cmbUrgency.Items2" xml:space="preserve">
-    <value>High</value>
-  </data>
-  <data name="btnClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txtReqName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 48</value>
-  </data>
-  <data name="&gt;&gt;lblOrderFilter.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblReqName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbOrderItem.Parent" xml:space="preserve">
-    <value>grpSelection</value>
-  </data>
-  <data name="lblRequestID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="lblOrderItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
-  </data>
-  <data name="lblMaterial.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
-    <value>btnClear</value>
-  </data>
-  <data name="lblReqByID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 50</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
-    <value>lblTitle</value>
-  </data>
-  <data name="&gt;&gt;txtReqByID.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblOrderItem.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblRequestID.Name" xml:space="preserve">
-    <value>lblRequestID</value>
-  </data>
-  <data name="lblOrderFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="grpItems.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblRemarks.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblRequestDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblOrderFilter.Text" xml:space="preserve">
-    <value>Filter by Order:</value>
-  </data>
-  <data name="cmbMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 17</value>
-  </data>
-  <data name="lblMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="txtRequestDate.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="grpItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;lblOrderItem.Parent" xml:space="preserve">
-    <value>grpSelection</value>
-  </data>
-  <data name="&gt;&gt;dtpRequiredDate.Name" xml:space="preserve">
-    <value>dtpRequiredDate</value>
   </data>
   <data name="&gt;&gt;lblReqName.Parent" xml:space="preserve">
     <value>grpHeader</value>
   </data>
-  <data name="lblMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 19</value>
+  <data name="&gt;&gt;lblReqName.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;grpItems.Name" xml:space="preserve">
-    <value>grpItems</value>
+  <data name="txtReqByID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 108</value>
   </data>
-  <data name="&gt;&gt;cmbUrgency.Parent" xml:space="preserve">
-    <value>grpCommon</value>
+  <data name="txtReqByID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
   </data>
-  <data name="txtReqPos.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="txtReqByID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 40</value>
   </data>
-  <data name="dtpRequiredDate.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="txtReqByID.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;txtReqByID.Name" xml:space="preserve">
+    <value>txtReqByID</value>
   </data>
-  <data name="lblRequestDate.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnClear.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSubmit.Text" xml:space="preserve">
-    <value>Submit All</value>
-  </data>
-  <data name="dtpRequiredDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 12</value>
-  </data>
-  <data name="&gt;&gt;lvMaterials.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;grpCommon.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblUrgency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 20</value>
-  </data>
-  <data name="txtRemarks.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;lblReqByID.Name" xml:space="preserve">
-    <value>lblReqByID</value>
-  </data>
-  <data name="&gt;&gt;grpItems.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>413, 547</value>
-  </data>
-  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblOrderItem.Text" xml:space="preserve">
-    <value>Order Item:</value>
-  </data>
-  <data name="lblRemarks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 50</value>
-  </data>
-  <data name="lblReqName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
-  </data>
-  <data name="&gt;&gt;lblRequestDate.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 10</value>
-  </data>
-  <data name="lblReqName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="btnSubmit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="lblMaterial.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtRequestID.Parent" xml:space="preserve">
-    <value>grpHeader</value>
-  </data>
-  <data name="grpSelection.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="nudQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 22</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtReqName.Name" xml:space="preserve">
-    <value>txtReqName</value>
-  </data>
-  <data name="cmbOrderItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 43</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="lvMaterials.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="cmbOrderFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 18</value>
-  </data>
-  <data name="&gt;&gt;lblReqByID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt, style=Bold</value>
-  </data>
-  <data name="lblRemarks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 12</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 593</value>
-  </data>
-  <data name="lblOrderFilter.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblReqByID.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btnAddRow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;btnAutoFillBOM.Name" xml:space="preserve">
-    <value>btnAutoFillBOM</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblUrgency.Text" xml:space="preserve">
-    <value>Urgency:</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtRequestID.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtReqByID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblRequiredDate.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
-  </data>
-  <data name="&gt;&gt;cmbMaterial.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblRequestID.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblOrderItem.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="cmbMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 20</value>
-  </data>
-  <data name="cmbOrderFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 20</value>
-  </data>
-  <data name="&gt;&gt;grpSelection.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grpItems.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtReqByID.Parent" xml:space="preserve">
     <value>grpHeader</value>
   </data>
-  <data name="lblTitle.Text" xml:space="preserve">
-    <value>Create Raw Material Request</value>
+  <data name="&gt;&gt;txtReqByID.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblReqByID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblReqByID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 112</value>
+  </data>
+  <data name="lblReqByID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblReqByID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 27</value>
+  </data>
+  <data name="lblReqByID.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="lblReqByID.Text" xml:space="preserve">
     <value>Requested By:</value>
   </data>
-  <data name="nudQuantity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="&gt;&gt;lblReqByID.Name" xml:space="preserve">
+    <value>lblReqByID</value>
   </data>
-  <data name="&gt;&gt;btnAddRow.Name" xml:space="preserve">
-    <value>btnAddRow</value>
+  <data name="&gt;&gt;lblReqByID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblReqPos.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;lblReqByID.Parent" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;lblReqByID.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="grpHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 90</value>
+  </data>
+  <data name="grpHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpHeader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1556, 196</value>
+  </data>
+  <data name="grpHeader.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="grpHeader.Text" xml:space="preserve">
+    <value>Request Information</value>
+  </data>
+  <data name="&gt;&gt;grpHeader.Name" xml:space="preserve">
+    <value>grpHeader</value>
+  </data>
+  <data name="&gt;&gt;grpHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpHeader.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpHeader.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbOrderFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 40</value>
+  </data>
+  <data name="cmbOrderFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="cmbOrderFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>930, 35</value>
+  </data>
+  <data name="cmbOrderFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderFilter.Name" xml:space="preserve">
+    <value>cmbOrderFilter</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderFilter.Parent" xml:space="preserve">
+    <value>grpSelection</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderFilter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblOrderFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblOrderFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 45</value>
+  </data>
+  <data name="lblOrderFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblOrderFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 27</value>
+  </data>
+  <data name="lblOrderFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblOrderFilter.Text" xml:space="preserve">
+    <value>Filter by Order:</value>
+  </data>
+  <data name="&gt;&gt;lblOrderFilter.Name" xml:space="preserve">
+    <value>lblOrderFilter</value>
+  </data>
+  <data name="&gt;&gt;lblOrderFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOrderFilter.Parent" xml:space="preserve">
+    <value>grpSelection</value>
+  </data>
+  <data name="&gt;&gt;lblOrderFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbOrderItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 97</value>
+  </data>
+  <data name="cmbOrderItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="cmbOrderItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>930, 35</value>
+  </data>
+  <data name="cmbOrderItem.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderItem.Name" xml:space="preserve">
+    <value>cmbOrderItem</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderItem.Parent" xml:space="preserve">
+    <value>grpSelection</value>
+  </data>
+  <data name="&gt;&gt;cmbOrderItem.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblOrderItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblOrderItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 101</value>
+  </data>
+  <data name="lblOrderItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblOrderItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 27</value>
+  </data>
+  <data name="lblOrderItem.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblOrderItem.Text" xml:space="preserve">
+    <value>Order Item:</value>
+  </data>
+  <data name="&gt;&gt;lblOrderItem.Name" xml:space="preserve">
+    <value>lblOrderItem</value>
+  </data>
+  <data name="&gt;&gt;lblOrderItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOrderItem.Parent" xml:space="preserve">
+    <value>grpSelection</value>
+  </data>
+  <data name="&gt;&gt;lblOrderItem.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnAutoFillBOM.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAutoFillBOM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Bold</value>
+  </data>
+  <data name="btnAutoFillBOM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1167, 94</value>
+  </data>
+  <data name="btnAutoFillBOM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="btnAutoFillBOM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 47</value>
+  </data>
+  <data name="btnAutoFillBOM.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnAutoFillBOM.Text" xml:space="preserve">
+    <value>Auto-Fill from BOM</value>
+  </data>
+  <data name="&gt;&gt;btnAutoFillBOM.Name" xml:space="preserve">
+    <value>btnAutoFillBOM</value>
+  </data>
+  <data name="&gt;&gt;btnAutoFillBOM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAutoFillBOM.Parent" xml:space="preserve">
+    <value>grpSelection</value>
+  </data>
+  <data name="&gt;&gt;btnAutoFillBOM.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="grpSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 315</value>
+  </data>
+  <data name="grpSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpSelection.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1556, 164</value>
+  </data>
+  <data name="grpSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="grpSelection.Text" xml:space="preserve">
+    <value>Select Order Item (auto-fills BOM materials)</value>
+  </data>
+  <data name="&gt;&gt;grpSelection.Name" xml:space="preserve">
+    <value>grpSelection</value>
+  </data>
+  <data name="&gt;&gt;grpSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpSelection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpSelection.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lvMaterials.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 97</value>
+  </data>
+  <data name="lvMaterials.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="lvMaterials.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1490, 344</value>
+  </data>
+  <data name="lvMaterials.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lvMaterials.Name" xml:space="preserve">
+    <value>lvMaterials</value>
+  </data>
+  <data name="&gt;&gt;lvMaterials.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvMaterials.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;lvMaterials.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbMaterial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 38</value>
+  </data>
+  <data name="cmbMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="cmbMaterial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 35</value>
+  </data>
+  <data name="cmbMaterial.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbMaterial.Name" xml:space="preserve">
+    <value>cmbMaterial</value>
+  </data>
+  <data name="&gt;&gt;cmbMaterial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbMaterial.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;cmbMaterial.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblMaterial.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaterial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 43</value>
+  </data>
+  <data name="lblMaterial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblMaterial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 27</value>
+  </data>
+  <data name="lblMaterial.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblMaterial.Text" xml:space="preserve">
+    <value>Material:</value>
+  </data>
+  <data name="&gt;&gt;lblMaterial.Name" xml:space="preserve">
+    <value>lblMaterial</value>
+  </data>
+  <data name="&gt;&gt;lblMaterial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaterial.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;lblMaterial.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="nudQuantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 38</value>
+  </data>
+  <data name="nudQuantity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="nudQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 40</value>
+  </data>
+  <data name="nudQuantity.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nudQuantity.Name" xml:space="preserve">
+    <value>nudQuantity</value>
+  </data>
+  <data name="&gt;&gt;nudQuantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudQuantity.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;nudQuantity.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="lblQuantity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="grpSelection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 140</value>
+  <data name="lblQuantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>777, 43</value>
+  </data>
+  <data name="lblQuantity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 27</value>
+  </data>
+  <data name="lblQuantity.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblQuantity.Text" xml:space="preserve">
+    <value>Qty:</value>
+  </data>
+  <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
+    <value>lblQuantity</value>
+  </data>
+  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblQuantity.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;lblQuantity.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnAddRow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddRow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnAddRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1057, 36</value>
+  </data>
+  <data name="btnAddRow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="btnAddRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 45</value>
+  </data>
+  <data name="btnAddRow.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnAddRow.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;btnAddRow.Name" xml:space="preserve">
+    <value>btnAddRow</value>
+  </data>
+  <data name="&gt;&gt;btnAddRow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddRow.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;btnAddRow.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnRemoveRow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnRemoveRow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="btnRemoveRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1230, 36</value>
+  </data>
+  <data name="btnRemoveRow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="btnRemoveRow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 45</value>
+  </data>
+  <data name="btnRemoveRow.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnRemoveRow.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveRow.Name" xml:space="preserve">
+    <value>btnRemoveRow</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveRow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveRow.Parent" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveRow.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="grpItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 511</value>
+  </data>
+  <data name="grpItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpItems.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1556, 466</value>
+  </data>
+  <data name="grpItems.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="grpItems.Text" xml:space="preserve">
+    <value>Material List</value>
+  </data>
+  <data name="&gt;&gt;grpItems.Name" xml:space="preserve">
+    <value>grpItems</value>
+  </data>
+  <data name="&gt;&gt;grpItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpItems.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpItems.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbUrgency.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="cmbUrgency.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="cmbUrgency.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="cmbUrgency.Items3" xml:space="preserve">
+    <value>Urgent</value>
+  </data>
+  <data name="cmbUrgency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 40</value>
+  </data>
+  <data name="cmbUrgency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="cmbUrgency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 35</value>
+  </data>
+  <data name="cmbUrgency.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbUrgency.Name" xml:space="preserve">
+    <value>cmbUrgency</value>
+  </data>
+  <data name="&gt;&gt;cmbUrgency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbUrgency.Parent" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;cmbUrgency.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblUrgency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblUrgency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 45</value>
+  </data>
+  <data name="lblUrgency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblUrgency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 27</value>
+  </data>
+  <data name="lblUrgency.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblUrgency.Text" xml:space="preserve">
+    <value>Urgency:</value>
+  </data>
+  <data name="&gt;&gt;lblUrgency.Name" xml:space="preserve">
+    <value>lblUrgency</value>
+  </data>
+  <data name="&gt;&gt;lblUrgency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUrgency.Parent" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;lblUrgency.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtpRequiredDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>670, 40</value>
+  </data>
+  <data name="dtpRequiredDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="dtpRequiredDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 40</value>
+  </data>
+  <data name="dtpRequiredDate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dtpRequiredDate.Name" xml:space="preserve">
+    <value>dtpRequiredDate</value>
+  </data>
+  <data name="&gt;&gt;dtpRequiredDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpRequiredDate.Parent" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;dtpRequiredDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRequiredDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRequiredDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 45</value>
+  </data>
+  <data name="lblRequiredDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblRequiredDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 27</value>
+  </data>
+  <data name="lblRequiredDate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblRequiredDate.Text" xml:space="preserve">
+    <value>Required Delivery Date:</value>
+  </data>
+  <data name="&gt;&gt;lblRequiredDate.Name" xml:space="preserve">
+    <value>lblRequiredDate</value>
+  </data>
+  <data name="&gt;&gt;lblRequiredDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRequiredDate.Parent" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;lblRequiredDate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtRemarks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 108</value>
+  </data>
+  <data name="txtRemarks.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="txtRemarks.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRemarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1350, 65</value>
+  </data>
+  <data name="txtRemarks.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtRemarks.Name" xml:space="preserve">
+    <value>txtRemarks</value>
+  </data>
+  <data name="&gt;&gt;txtRemarks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRemarks.Parent" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;txtRemarks.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblRemarks.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRemarks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 112</value>
+  </data>
+  <data name="lblRemarks.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="lblRemarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 27</value>
+  </data>
+  <data name="lblRemarks.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblRemarks.Text" xml:space="preserve">
+    <value>Remarks:</value>
+  </data>
+  <data name="&gt;&gt;lblRemarks.Name" xml:space="preserve">
+    <value>lblRemarks</value>
+  </data>
+  <data name="&gt;&gt;lblRemarks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRemarks.Parent" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;lblRemarks.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grpCommon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 1006</value>
+  </data>
+  <data name="grpCommon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpCommon.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="grpCommon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1556, 196</value>
+  </data>
+  <data name="grpCommon.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="grpCommon.Text" xml:space="preserve">
+    <value>Common Settings (applies to all materials)</value>
+  </data>
+  <data name="&gt;&gt;grpCommon.Name" xml:space="preserve">
+    <value>grpCommon</value>
+  </data>
+  <data name="&gt;&gt;grpCommon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpCommon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpCommon.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnSubmit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11pt, style=Bold</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>964, 1231</value>
+  </data>
+  <data name="btnSubmit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 68</value>
+  </data>
+  <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSubmit.Text" xml:space="preserve">
+    <value>Submit All</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Name" xml:space="preserve">
+    <value>btnSubmit</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnClear.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11pt</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1244, 1231</value>
+  </data>
+  <data name="btnClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 68</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>14, 27</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1680, 1334</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UcCreateMaterialRequest</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

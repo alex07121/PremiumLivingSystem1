@@ -103,7 +103,7 @@ namespace PremiumLivingSystem
                 SELECT OrderID,
                        CONCAT(OrderID, '  |  ', CustomerID, '  |  ', OrderDate, '  |  ', Status) AS DisplayText
                 FROM `Order`
-                WHERE Status <> 'Cancelled'
+                WHERE Status = 'InProduction'
                 ORDER BY OrderDate DESC, OrderID DESC";
 
             try
@@ -553,6 +553,11 @@ namespace PremiumLivingSystem
             txtRequestDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             if (cmbOrderFilter.Items.Count > 0) cmbOrderFilter.SelectedIndex = 0;
             if (cmbMaterial.Items.Count > 0) cmbMaterial.SelectedIndex = 0;
+        }
+
+        private void cmbOrderFilter_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

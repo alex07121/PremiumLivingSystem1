@@ -67,7 +67,6 @@ namespace PremiumLivingSystem
             // 
             // grpHeader
             // 
-            resources.ApplyResources(this.grpHeader, "grpHeader");
             this.grpHeader.Controls.Add(this.txtRequestID);
             this.grpHeader.Controls.Add(this.lblRequestID);
             this.grpHeader.Controls.Add(this.txtRequestDate);
@@ -78,6 +77,7 @@ namespace PremiumLivingSystem
             this.grpHeader.Controls.Add(this.lblReqName);
             this.grpHeader.Controls.Add(this.txtReqByID);
             this.grpHeader.Controls.Add(this.lblReqByID);
+            resources.ApplyResources(this.grpHeader, "grpHeader");
             this.grpHeader.Name = "grpHeader";
             this.grpHeader.TabStop = false;
             // 
@@ -138,20 +138,21 @@ namespace PremiumLivingSystem
             // 
             // grpSelection
             // 
-            resources.ApplyResources(this.grpSelection, "grpSelection");
             this.grpSelection.Controls.Add(this.cmbOrderFilter);
             this.grpSelection.Controls.Add(this.lblOrderFilter);
             this.grpSelection.Controls.Add(this.cmbOrderItem);
             this.grpSelection.Controls.Add(this.lblOrderItem);
             this.grpSelection.Controls.Add(this.btnAutoFillBOM);
+            resources.ApplyResources(this.grpSelection, "grpSelection");
             this.grpSelection.Name = "grpSelection";
             this.grpSelection.TabStop = false;
             // 
             // cmbOrderFilter
             // 
-            resources.ApplyResources(this.cmbOrderFilter, "cmbOrderFilter");
             this.cmbOrderFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbOrderFilter, "cmbOrderFilter");
             this.cmbOrderFilter.Name = "cmbOrderFilter";
+            this.cmbOrderFilter.SelectedIndexChanged += new System.EventHandler(this.cmbOrderFilter_SelectedIndexChanged_1);
             // 
             // lblOrderFilter
             // 
@@ -160,8 +161,8 @@ namespace PremiumLivingSystem
             // 
             // cmbOrderItem
             // 
-            resources.ApplyResources(this.cmbOrderItem, "cmbOrderItem");
             this.cmbOrderItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbOrderItem, "cmbOrderItem");
             this.cmbOrderItem.Name = "cmbOrderItem";
             // 
             // lblOrderItem
@@ -171,15 +172,14 @@ namespace PremiumLivingSystem
             // 
             // btnAutoFillBOM
             // 
-            resources.ApplyResources(this.btnAutoFillBOM, "btnAutoFillBOM");
             this.btnAutoFillBOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.btnAutoFillBOM, "btnAutoFillBOM");
             this.btnAutoFillBOM.ForeColor = System.Drawing.Color.White;
             this.btnAutoFillBOM.Name = "btnAutoFillBOM";
             this.btnAutoFillBOM.UseVisualStyleBackColor = false;
             // 
             // grpItems
             // 
-            resources.ApplyResources(this.grpItems, "grpItems");
             this.grpItems.Controls.Add(this.lvMaterials);
             this.grpItems.Controls.Add(this.cmbMaterial);
             this.grpItems.Controls.Add(this.lblMaterial);
@@ -187,15 +187,16 @@ namespace PremiumLivingSystem
             this.grpItems.Controls.Add(this.lblQuantity);
             this.grpItems.Controls.Add(this.btnAddRow);
             this.grpItems.Controls.Add(this.btnRemoveRow);
+            resources.ApplyResources(this.grpItems, "grpItems");
             this.grpItems.Name = "grpItems";
             this.grpItems.TabStop = false;
             // 
             // lvMaterials
             // 
-            resources.ApplyResources(this.lvMaterials, "lvMaterials");
             this.lvMaterials.FullRowSelect = true;
             this.lvMaterials.GridLines = true;
             this.lvMaterials.HideSelection = false;
+            resources.ApplyResources(this.lvMaterials, "lvMaterials");
             this.lvMaterials.MultiSelect = false;
             this.lvMaterials.Name = "lvMaterials";
             this.lvMaterials.UseCompatibleStateImageBehavior = false;
@@ -203,8 +204,8 @@ namespace PremiumLivingSystem
             // 
             // cmbMaterial
             // 
-            resources.ApplyResources(this.cmbMaterial, "cmbMaterial");
             this.cmbMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbMaterial, "cmbMaterial");
             this.cmbMaterial.Name = "cmbMaterial";
             // 
             // lblMaterial
@@ -214,8 +215,8 @@ namespace PremiumLivingSystem
             // 
             // nudQuantity
             // 
-            resources.ApplyResources(this.nudQuantity, "nudQuantity");
             this.nudQuantity.DecimalPlaces = 2;
+            resources.ApplyResources(this.nudQuantity, "nudQuantity");
             this.nudQuantity.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -240,8 +241,8 @@ namespace PremiumLivingSystem
             // 
             // btnAddRow
             // 
-            resources.ApplyResources(this.btnAddRow, "btnAddRow");
             this.btnAddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            resources.ApplyResources(this.btnAddRow, "btnAddRow");
             this.btnAddRow.ForeColor = System.Drawing.Color.White;
             this.btnAddRow.Name = "btnAddRow";
             this.btnAddRow.UseVisualStyleBackColor = false;
@@ -254,25 +255,25 @@ namespace PremiumLivingSystem
             // 
             // grpCommon
             // 
-            resources.ApplyResources(this.grpCommon, "grpCommon");
             this.grpCommon.Controls.Add(this.cmbUrgency);
             this.grpCommon.Controls.Add(this.lblUrgency);
             this.grpCommon.Controls.Add(this.dtpRequiredDate);
             this.grpCommon.Controls.Add(this.lblRequiredDate);
             this.grpCommon.Controls.Add(this.txtRemarks);
             this.grpCommon.Controls.Add(this.lblRemarks);
+            resources.ApplyResources(this.grpCommon, "grpCommon");
             this.grpCommon.Name = "grpCommon";
             this.grpCommon.TabStop = false;
             // 
             // cmbUrgency
             // 
-            resources.ApplyResources(this.cmbUrgency, "cmbUrgency");
             this.cmbUrgency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUrgency.Items.AddRange(new object[] {
             resources.GetString("cmbUrgency.Items"),
             resources.GetString("cmbUrgency.Items1"),
             resources.GetString("cmbUrgency.Items2"),
             resources.GetString("cmbUrgency.Items3")});
+            resources.ApplyResources(this.cmbUrgency, "cmbUrgency");
             this.cmbUrgency.Name = "cmbUrgency";
             // 
             // lblUrgency
@@ -282,8 +283,8 @@ namespace PremiumLivingSystem
             // 
             // dtpRequiredDate
             // 
-            resources.ApplyResources(this.dtpRequiredDate, "dtpRequiredDate");
             this.dtpRequiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.dtpRequiredDate, "dtpRequiredDate");
             this.dtpRequiredDate.MinDate = new System.DateTime(2026, 6, 20, 0, 0, 0, 0);
             this.dtpRequiredDate.Name = "dtpRequiredDate";
             this.dtpRequiredDate.Value = new System.DateTime(2026, 6, 23, 0, 0, 0, 0);
@@ -305,8 +306,8 @@ namespace PremiumLivingSystem
             // 
             // btnSubmit
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
