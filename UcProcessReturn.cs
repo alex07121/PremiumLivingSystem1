@@ -271,6 +271,12 @@ namespace PremiumLivingSystem
                 return;
             }
 
+            if (cboStatus.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a return status.");
+                return;
+            }
+
             decimal? refundAmount = null;
             if (!string.IsNullOrWhiteSpace(txtRefundAmount.Text))
             {
@@ -283,33 +289,92 @@ namespace PremiumLivingSystem
                 }
             }
 
-            string staffId = UserSession.CurrentStaffId ?? "S-007"; 
+            string staffId = UserSession.CurrentStaffId ?? "S-007";
+            string newStatus = cboStatus.SelectedItem.ToString();
 
-            string query = @"
-                UPDATE ReturnRequest SET 
-                Status = @status, 
-                ProcessedByID = @staff, 
-                RefundAmount = @refund, 
-                Remarks = @remarks 
-                WHERE ReturnID = @id";
+            string getReturnQuery = @"
+        SELECT OrderID, Status
+        FROM ReturnRequest
+        WHERE ReturnID = @id
+        FOR UPDATE";
+
+            string updateReturnQuery = @"
+        UPDATE ReturnRequest SET 
+        Status = @status, 
+        ProcessedByID = @staff, 
+        RefundAmount = @refund, 
+        Remarks = @remarks 
+        WHERE ReturnID = @id";
+
+            string restockProductsQuery = @"
+        UPDATE Product p
+        JOIN OrderItem oi ON p.ProductID = oi.ProductID
+        SET p.Stock = p.Stock + oi.Quantity
+        WHERE oi.OrderID = @orderId";
 
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(Program.ConnectionString))
                 {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@status", cboStatus.SelectedItem?.ToString());
-                    cmd.Parameters.AddWithValue("@staff", staffId);
-                    cmd.Parameters.AddWithValue("@refund", refundAmount);
-                    cmd.Parameters.AddWithValue("@remarks", txtRemarks.Text.Trim());
-                    cmd.Parameters.AddWithValue("@id", txtReturnID.Text.Trim());
-
                     conn.Open();
-                    int affected = cmd.ExecuteNonQuery();
-                    if (affected > 0)
+
+                    using (MySqlTransaction trans = conn.BeginTransaction())
                     {
-                        MessageBox.Show("Return request updated successfully.");
-                        LoadReturnRequests();
+                        try
+                        {
+                            string orderId = "";
+                            string oldStatus = "";
+
+                            using (MySqlCommand getCmd = new MySqlCommand(getReturnQuery, conn, trans))
+                            {
+                                getCmd.Parameters.AddWithValue("@id", txtReturnID.Text.Trim());
+
+                                using (MySqlDataReader reader = getCmd.ExecuteReader())
+                                {
+                                    if (!reader.Read())
+                                        throw new Exception("Return request not found.");
+
+                                    orderId = reader["OrderID"].ToString();
+                                    oldStatus = reader["Status"].ToString();
+                                }
+                            }
+
+                            using (MySqlCommand updateCmd = new MySqlCommand(updateReturnQuery, conn, trans))
+                            {
+                                updateCmd.Parameters.AddWithValue("@status", newStatus);
+                                updateCmd.Parameters.AddWithValue("@staff", staffId);
+                                updateCmd.Parameters.AddWithValue("@refund", refundAmount.HasValue ? (object)refundAmount.Value : DBNull.Value);
+                                updateCmd.Parameters.AddWithValue("@remarks", txtRemarks.Text.Trim());
+                                updateCmd.Parameters.AddWithValue("@id", txtReturnID.Text.Trim());
+                                updateCmd.ExecuteNonQuery();
+                            }
+
+                            int restockedProducts = 0;
+                            bool shouldRestock = newStatus == "Completed" && oldStatus != "Completed";
+
+                            if (shouldRestock)
+                            {
+                                using (MySqlCommand restockCmd = new MySqlCommand(restockProductsQuery, conn, trans))
+                                {
+                                    restockCmd.Parameters.AddWithValue("@orderId", orderId);
+                                    restockedProducts = restockCmd.ExecuteNonQuery();
+                                }
+                            }
+
+                            trans.Commit();
+
+                            string message = "Return request updated successfully.";
+                            if (shouldRestock)
+                                message += $"\nProduct stock restored for {restockedProducts} product item(s).";
+
+                            MessageBox.Show(message);
+                            LoadReturnRequests();
+                        }
+                        catch
+                        {
+                            trans.Rollback();
+                            throw;
+                        }
                     }
                 }
             }
