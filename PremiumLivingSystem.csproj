@@ -37,19 +37,19 @@
       <HintPath>packages\BCrypt.Net-Next.4.2.0\lib\net472\BCrypt-Net-Next.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>..\Lab03\packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <HintPath>packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.35.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.35.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
-      <HintPath>..\Lab03\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
-      <HintPath>..\Lab03\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
-      <HintPath>..\Lab03\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialSkin.2.RTL.2.3.1.1\lib\net472\MaterialSkin.dll</HintPath>
@@ -121,6 +121,12 @@
     <Compile Include="EditPruchaseOrder.Designer.cs">
       <DependentUpon>EditPruchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductionClerkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,12 +186,6 @@
     </Compile>
     <Compile Include="Inventory_Clerk_Form.Designer.cs">
       <DependentUpon>Inventory_Clerk_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InvoiceFomr.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="InvoiceFomr.Designer.cs">
-      <DependentUpon>InvoiceFomr.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -440,8 +440,8 @@
     <EmbeddedResource Include="Inventory_Clerk_Form.zh-HK.resx">
       <DependentUpon>Inventory_Clerk_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InvoiceFomr.zh-Hans-HK.resx">
-      <DependentUpon>InvoiceFomr.cs</DependentUpon>
+    <EmbeddedResource Include="InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logistics_Staff_Form.zh-Hans-HK.resx">
       <DependentUpon>Logistics_Staff_Form.cs</DependentUpon>
@@ -485,9 +485,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory_Clerk_Form.resx">
       <DependentUpon>Inventory_Clerk_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InvoiceFomr.resx">
-      <DependentUpon>InvoiceFomr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

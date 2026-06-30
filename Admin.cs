@@ -24,6 +24,7 @@ namespace PremiumLivingSystem
         {
             ApplyLanguage();
             InitializeComponent();
+            InitializeLanguageComboBox();
             SetupMaterialSkin();
 
             // 🔹 初始化按鈕文字
@@ -103,10 +104,20 @@ namespace PremiumLivingSystem
         }
 
         // 🔹 設定語言下拉選單初始值
+        private void InitializeLanguageComboBox()
+        {
+            if (cmbLanguage == null || cmbLanguage.Items.Count > 0)
+                return;
+
+            cmbLanguage.Items.Add("English");
+            cmbLanguage.Items.Add("中文");
+        }
+
         private void SetLanguageComboBoxValue()
         {
             if (cmbLanguage != null)
             {
+                InitializeLanguageComboBox();
                 cmbLanguage.SelectedIndexChanged -= cmbLanguage_SelectedIndexChanged;
                 cmbLanguage.SelectedIndex = UserSession.CurrentCulture == "zh-Hans-HK" ? 1 : 0;
                 cmbLanguage.SelectedIndexChanged += cmbLanguage_SelectedIndexChanged;

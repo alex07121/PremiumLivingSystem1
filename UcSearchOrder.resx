@@ -253,7 +253,7 @@
     <value>6</value>
   </data>
   <data name="btnInvoice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>401, 983</value>
+    <value>394, 983</value>
   </data>
   <data name="btnInvoice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -283,7 +283,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 983</value>
+    <value>394, 983</value>
   </data>
   <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

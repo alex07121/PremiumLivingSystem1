@@ -153,19 +153,7 @@ namespace PremiumLivingSystem
         {
         }
 
-        private void btnAddCustomer_Click(object sender, EventArgs e)
-        {
-            UcAddCustomer uc = new UcAddCustomer();
-            ShowUserControl(uc);
-        }
-
-        private void btnCreateOrder_Click(object sender, EventArgs e)
-        {
-            UcCreateOrder uc = new UcCreateOrder();
-            ShowUserControl(uc);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             UcSearchOrder uc = new UcSearchOrder();
             ShowUserControl(uc);

@@ -148,13 +148,13 @@
     <value>4</value>
   </data>
   <data name="mainpanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 151</value>
+    <value>452, 151</value>
   </data>
   <data name="mainpanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>7, 7, 7, 7</value>
   </data>
   <data name="mainpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2371, 1260</value>
+    <value>2376, 1551</value>
   </data>
   <data name="mainpanel.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -171,6 +171,42 @@
   <data name="&gt;&gt;mainpanel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 12pt</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 126</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Search Product</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 151</value>
   </data>
@@ -178,7 +214,7 @@
     <value>7, 7, 7, 7</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 1260</value>
+    <value>434, 1587</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -253,7 +289,7 @@
     <value>14, 27</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>2622, 1100</value>
+    <value>2622, 1698</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>7, 7, 7, 7</value>

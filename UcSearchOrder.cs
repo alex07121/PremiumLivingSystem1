@@ -31,6 +31,9 @@ namespace PremiumLivingSystem
             dgvOrder.Columns.Add("PaymentStatus", 120);
             LoadAllOrder();
             btnEdit.Enabled = false;
+            btnCancel.Visible = UserSession.jobId != "J-002";
+            btnEdit.Visible = UserSession.jobId != "J-002";
+            btnInvoice.Visible = UserSession.jobId == "J-002"; 
         }
 
         private void LoadAllOrder()
@@ -128,8 +131,24 @@ namespace PremiumLivingSystem
 
         private void btnInvoice_Click(object sender, EventArgs e)
         {
-            InvoiceFomr ucinvoice = new InvoiceFomr();
-            //ucinvoice.LoadInvoiceByOrderID(txtOrderID.Text.Trim());
+            string orderId = txtOrderID.Text.Trim();
+            if (dgvOrder.SelectedItems.Count > 0)
+            {
+                orderId = dgvOrder.SelectedItems[0].Text;
+                txtOrderID.Text = orderId;
+            }
+
+            if (string.IsNullOrWhiteSpace(orderId))
+            {
+                MessageBox.Show("Please select or enter an Order ID first.");
+                return;
+            }
+
+            using (InvoiceForm invoiceForm = new InvoiceForm())
+            {
+                invoiceForm.LoadInvoiceByOrderID(orderId);
+                invoiceForm.ShowDialog(this.FindForm());
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
