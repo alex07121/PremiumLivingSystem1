@@ -14,6 +14,10 @@ namespace PremiumLivingSystem
 
         private List<string> selectedFiles = new List<string>();
 
+        // [v5.5] Stores the raw bytes of every selected image so they can be
+        // persisted directly into CustomizationImage.ImageData (LONGBLOB).
+        private List<byte[]> selectedImageBytes = new List<byte[]>();
+
         public decimal FinalCustomPrice { get; private set; }
 
         public frmCustomization(decimal basePrice)
@@ -49,7 +53,8 @@ namespace PremiumLivingSystem
                     Color = txtColor.Text,
                     FinishType = txtFinishType.Text,
                     CustomDescription = txtDescription.Text,
-                    ImagePaths = this.selectedFiles
+                    ImagePaths = this.selectedFiles,
+                    ImageDataList = this.selectedImageBytes
                 };
                 FinalCustomPrice = decimal.Parse(txtCustomPrice.Text);
 
@@ -79,8 +84,24 @@ namespace PremiumLivingSystem
                 {
                     foreach (string filePath in ofd.FileNames)
                     {
-                        selectedFiles.Add(filePath);
-                        listBoxImages.Items.Add(Path.GetFileName(filePath));
+                        try
+                        {
+                            // [v5.5] Read the file bytes once at upload time so the
+                            // LONGBLOB payload is ready for direct DB insertion later.
+                            byte[] imageBytes = File.ReadAllBytes(filePath);
+
+                            selectedFiles.Add(filePath);
+                            selectedImageBytes.Add(imageBytes);
+                            listBoxImages.Items.Add(Path.GetFileName(filePath));
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(
+                                $"Failed to read image '{Path.GetFileName(filePath)}'.\n{ex.Message}",
+                                "Upload Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

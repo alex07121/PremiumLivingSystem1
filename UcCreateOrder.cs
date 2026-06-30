@@ -367,35 +367,23 @@ namespace PremiumLivingSystem
                                 cmdCustom.Parameters.AddWithValue("@desc", item.CustomDetails.CustomDescription);
                                 cmdCustom.ExecuteNonQuery();
 
-                                if (item.CustomDetails.ImagePaths.Count > 0)
+                                if (item.CustomDetails.ImageDataList.Count > 0)
                                 {
                                     MySqlCommand cmdGetCustomId = new MySqlCommand("SELECT CustomID FROM OrderItemCustomization WHERE OrderItemID = @itemId", conn, trans);
                                     cmdGetCustomId.Parameters.AddWithValue("@itemId", newItemId);
                                     string newCustomId = cmdGetCustomId.ExecuteScalar().ToString();
 
-                                    string uploadFolder = System.IO.Path.Combine(Application.StartupPath, "uploads", "custom");
-
-                                    if (!System.IO.Directory.Exists(uploadFolder))
-                                    {
-                                        System.IO.Directory.CreateDirectory(uploadFolder);
-                                    }
-
-                                    string sqlImage = "INSERT INTO CustomizationImage (ImageID, CustomID, ImageURL) VALUES (NULL, @cId, @imgUrl)";
+                                    // [v5.5] Images are now stored as LONGBLOB directly in the DB;
+                                    // no file-system copy / upload folder is needed anymore.
+                                    string sqlImage = "INSERT INTO CustomizationImage (ImageID, CustomID, ImageData) VALUES (NULL, @cId, @imgData)";
                                     MySqlCommand cmdImage = new MySqlCommand(sqlImage, conn, trans);
                                     cmdImage.Parameters.Add("@cId", MySqlDbType.VarChar);
-                                    cmdImage.Parameters.Add("@imgUrl", MySqlDbType.VarChar);
+                                    cmdImage.Parameters.Add("@imgData", MySqlDbType.LongBlob);
 
-                                    foreach (string sourcePath in item.CustomDetails.ImagePaths)
+                                    foreach (byte[] imgBytes in item.CustomDetails.ImageDataList)
                                     {
-                                        string extension = System.IO.Path.GetExtension(sourcePath);
-                                        string uniqueFileName = $"{newCustomId}_{Guid.NewGuid().ToString().Substring(0, 6)}{extension}";
-                                        string destPath = System.IO.Path.Combine(uploadFolder, uniqueFileName);
-
-                                        System.IO.File.Copy(sourcePath, destPath, true);
-                                        string relativeDbPath = $"uploads/custom/{uniqueFileName}";
-
                                         cmdImage.Parameters["@cId"].Value = newCustomId;
-                                        cmdImage.Parameters["@imgUrl"].Value = relativeDbPath;
+                                        cmdImage.Parameters["@imgData"].Value = imgBytes;
                                         cmdImage.ExecuteNonQuery();
                                     }
                                 }
@@ -441,7 +429,9 @@ namespace PremiumLivingSystem
         public string Color { get; set; }
         public string FinishType { get; set; }
         public string CustomDescription { get; set; }
-        public List<string> ImagePaths { get; set; } = new List<string>(); 
+        public List<string> ImagePaths { get; set; } = new List<string>();
+        // [v5.5] Raw image bytes — persisted as CustomizationImage.ImageData (LONGBLOB)
+        public List<byte[]> ImageDataList { get; set; } = new List<byte[]>();
     }
 
     public class CartItem

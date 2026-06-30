@@ -1,7 +1,12 @@
 -- ============================================================
 -- Premium Living Furniture Co. Ltd.
 -- ITP4915M System Development Project 2025/2026
--- Complete SQL v5.0
+-- Complete SQL v5.5
+--
+-- What's new in v5.5:
+--   [Customization]  CustomizationImage.ImageURL (VARCHAR 500) replaced with
+--                    ImageData (LONGBLOB NOT NULL) — images now stored directly
+--                    in the database as binary blobs (no more file-system copy)
 --
 -- What's new in v5.4:
 --   [Transfer]       ADD 'Delivering' status + DeliveredBy/DeliveringDate columns
@@ -267,9 +272,9 @@ CREATE TABLE OrderItemCustomization (
 );
 
 CREATE TABLE CustomizationImage (
-  ImageID  VARCHAR(20) PRIMARY KEY,
-  CustomID VARCHAR(20) NOT NULL,
-  ImageURL VARCHAR(500) NOT NULL,
+  ImageID   VARCHAR(20) PRIMARY KEY,
+  CustomID  VARCHAR(20) NOT NULL,
+  ImageData LONGBLOB NOT NULL,            -- [v5.5 CHANGED] was ImageURL VARCHAR(500)
   FOREIGN KEY (CustomID) REFERENCES OrderItemCustomization(CustomID)
 );
 
@@ -1131,11 +1136,12 @@ INSERT INTO OrderItemCustomization (CustomID, OrderItemID, DimensionL, Dimension
 (NULL, 'OI-014', 300.0,  60.0,240.0, 'MDF Board',        'White',        'Glossy',NULL,            'Floor to ceiling, 4 sliding doors with mirrors',   FALSE, FALSE, NULL,                  'Pending site measurement by S-003'),
 (NULL, 'OI-017', 220.0, 100.0, 75.0, 'Walnut Wood',      'Dark Walnut',  'Satin', NULL,            'Round edges, matching set of 6 custom chairs',      FALSE, FALSE, NULL,                  'Waiting for customer to confirm wood stain samples');
 
-INSERT INTO CustomizationImage (ImageID, CustomID, ImageURL) VALUES
-(NULL, 'CUST-001', 'uploads/custom/CUST-001_reference_from_client.jpg'),
-(NULL, 'CUST-001', 'uploads/custom/CUST-001_3D_render.png'),
-(NULL, 'CUST-002', 'uploads/custom/CUST-002_sketch_dimensions.pdf'),
-(NULL, 'CUST-004', 'uploads/custom/CUST-004_floor_plan.jpg');
+-- Sample customization images (ImageData stored as empty blob for sample data; real data uploaded via application)
+INSERT INTO CustomizationImage (ImageID, CustomID, ImageData) VALUES
+(NULL, 'CUST-001', ''),
+(NULL, 'CUST-001', ''),
+(NULL, 'CUST-002', ''),
+(NULL, 'CUST-004', '');
 
 -- ============================================================
 -- [v4.0 NEW] ProductionTracking, MaterialRequest, RawMaterialTransfer

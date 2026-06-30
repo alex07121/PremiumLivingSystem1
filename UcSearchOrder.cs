@@ -31,8 +31,9 @@ namespace PremiumLivingSystem
             dgvOrder.Columns.Add("PaymentStatus", 120);
             LoadAllOrder();
             btnEdit.Enabled = false;
-            btnCancel.Visible = UserSession.jobId != "J-002";
-            btnEdit.Visible = UserSession.jobId != "J-002";
+            btnMakeProduct.Visible = UserSession.jobId == "J-006";
+            btnCancel.Visible = UserSession.jobId != "J-002" && UserSession.jobId != "J-006";
+            btnEdit.Visible = UserSession.jobId != "J-002" && UserSession.jobId != "J-006";
             btnInvoice.Visible = UserSession.jobId == "J-002"; 
         }
 
@@ -233,6 +234,9 @@ namespace PremiumLivingSystem
             }
         }
 
+        private void btnMakeProduct_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -86,6 +86,9 @@ namespace PremiumLivingSystem
             if (btnMaterialRequest != null)
                 btnMaterialRequest.Text = isChinese ? "建立物料申請" : "Create Material Request";
 
+            if (btnProductManufacturing != null)
+                btnProductManufacturing.Text = isChinese ? "產品製造" : "Product Manufacturing";
+
             if (btnLogout != null)
                 btnLogout.Text = isChinese ? "登出" : "Logout";
         }
@@ -147,6 +150,12 @@ namespace PremiumLivingSystem
         private void btnMaterialRequest_Click(object sender, EventArgs e)
         {
             UcCreateMaterialRequest uc = new UcCreateMaterialRequest();
+            ShowUserControl(uc);
+        }
+
+        private void btnProductManufacturing_Click(object sender, EventArgs e)
+        {
+            UcProductManufacturing uc = new UcProductManufacturing();
             ShowUserControl(uc);
         }
     }

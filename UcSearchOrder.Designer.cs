@@ -23,6 +23,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnInvoice = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnMakeProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dgvOrder
@@ -73,10 +74,18 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // btnMakeProduct
+            // 
+            resources.ApplyResources(this.btnMakeProduct, "btnMakeProduct");
+            this.btnMakeProduct.Name = "btnMakeProduct";
+            this.btnMakeProduct.UseVisualStyleBackColor = true;
+            this.btnMakeProduct.Click += new System.EventHandler(this.btnMakeProduct_Click);
+            // 
             // UcSearchOrder
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMakeProduct);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnInvoice);
             this.Controls.Add(this.dgvOrder);
@@ -100,5 +109,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInvoice;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnMakeProduct;
     }
 }

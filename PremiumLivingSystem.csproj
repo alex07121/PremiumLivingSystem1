@@ -299,6 +299,12 @@
     <Compile Include="UcPendingTransfers.Designer.cs">
       <DependentUpon>UcPendingTransfers.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcProductManufacturing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcProductManufacturing.Designer.cs">
+      <DependentUpon>UcProductManufacturing.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcReceivableTransfers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -624,6 +630,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcProcessReturn.zh-Hans-HK.resx">
       <DependentUpon>UcProcessReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcProductManufacturing.resx">
+      <DependentUpon>UcProductManufacturing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcReceivableTransfers.resx">
       <DependentUpon>UcReceivableTransfers.cs</DependentUpon>
